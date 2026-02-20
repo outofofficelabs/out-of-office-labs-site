@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Out of Office Lab – AI Automation Video Engines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Out of Office Lab builds AI automation video engines that find products, make videos, and post them with your affiliate links on repeat.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #020617;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+      color: #e5e7eb;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: #38bdf8;
+    }
+    .tagline {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      text-align: right;
+    }
+    h1 {
+      font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+      margin-bottom: 12px;
+      color: #f9fafb;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 32px 0 8px;
+      color: #f9fafb;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin: 14px 0 4px;
+      color: #e5e7eb;
+    }
+    p {
+      margin-bottom: 10px;
+      color: #e5e7eb;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: #cbd5f5;
+      max-width: 680px;
+    }
+    .hero {
+      margin-bottom: 32px;
+    }
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary, .btn-secondary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: #38bdf8;
+      color: #020617;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #4b5563;
+      color: #e5e7eb;
+    }
+    .small {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+    section {
+      margin-bottom: 28px;
+      padding-top: 4px;
+      border-top: 1px solid #111827;
+    }
+    ul {
+      margin-top: 6px;
+      margin-left: 18px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: #111827;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .card {
+      background: #020617;
+      border-radius: 10px;
+      border: 1px solid #1f2937;
+      padding: 12px 12px 10px;
+    }
+    form {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+      max-width: 420px;
+    }
+    label {
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #4b5563;
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 0.9rem;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #6b7280;
+    }
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+    footer {
+      margin-top: 32px;
+      font-size: 0.75rem;
+      color: #6b7280;
+      border-top: 1px solid #111827;
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 780px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .tagline { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">OUT OF OFFICE LAB</div>
+      <div class="tagline">AI automation for money, not busywork.</div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="pill">AI Automation • Video • Affiliate Income</div>
+        <h1>AI‑Automated Video Engines That Make Money While You’re Out of Office</h1>
+        <p class="hero-sub">
+          Out of Office Lab stitches AI tools together into no‑touch engines. You tell us your niche and affiliate programs; the Lab finds products, writes scripts, makes videos, and posts them with your links across YouTube, TikTok, and Instagram on repeat.
+        </p>
+        <div class="buttons">
+          <a href="#early-access"><button class="btn-primary">Get Early Access</button></a>
+          <a href="#engine"><button class="btn-secondary">See the Video Engine</button></a>
+        </div>
+        <p class="small">
+          No editing. No daily grind. Just AI automation built to make money, not content for content’s sake.
+        </p>
+      </section>
+
+      <!-- WHAT OOO LAB DOES -->
+      <section id="what">
+        <h2>What Out of Office Lab Does</h2>
+        <p>
+          Out of Office Lab is an automation lab for people who want AI to make them money. We build repeatable, no‑touch workflows that turn what you care about into outputs that earn: content, distribution, and promotion that you don’t have to babysit.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>AI Automation, Not Tools</h3>
+            <p>
+              We stitch together the latest AI models, agents, and services into pipelines that actually do the work for you instead of giving you yet another dashboard to click around in.
+            </p>
+          </div>
+          <div class="card">
+            <h3>No‑Touch Workflows</h3>
+            <p>
+              You set the niche, rules, and channels once. The Lab runs the workflows in the background, turning ideas into outputs on a schedule without you manually touching every step.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Built to Make Money</h3>
+            <p>
+              Every workflow is designed around revenue: affiliate clicks, product sales, leads, and deals—not vanity metrics or hobby‑grade content.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO ENGINE -->
+      <section id="engine">
+        <h2>AI Automation Video Creation &amp; Distribution Engine</h2>
+        <p>
+          This is the first engine inside Out of Office Lab: an AI‑driven video engine designed to push affiliate and offer income with as little human touch as possible.
+        </p>
+
+        <h3>1. You Define the Money Niche</h3>
+        <p>
+          You describe your niche, ideal viewer, and the affiliate networks or shops you use. You set basic rules like price range, minimum commission, and which platforms you care about.
+        </p>
+
+        <h3>2. The Engine Finds Products and Angles</h3>
+        <p>
+          The engine continuously discovers products in your niche that match your rules, then groups them into content concepts: reviews, “Top 5” lists, comparisons, tutorials, and more—all aimed at clicks and conversions.
+        </p>
+
+        <h3>3. AI Writes, Mixes, and Assembles</h3>
+        <p>
+          For each piece, the engine generates scripts and hooks tailored to YouTube, Shorts, TikTok, and Reels. It uses your recorded clips when you want to be on camera, or runs fully faceless with AI voice and AI/stock b‑roll when you don’t.
+        </p>
+
+        <h3>4. It Posts Everywhere With Your Links</h3>
+        <p>
+          The engine writes titles, descriptions, tags, and CTA blocks, inserts your affiliate links and codes, and then schedules or publishes across channels on a recurring schedule you set once.
+        </p>
+      </section>
+
+      <!-- WHO IT'S FOR -->
+      <section id="who">
+        <h2>Who Out of Office Lab Is For</h2>
+        <ul>
+          <li>People who want AI and automation to make them money, not give them more busywork.</li>
+          <li>Affiliate marketers who want systematic, automated video promotion instead of one‑off posts.</li>
+          <li>Operators who care about cashflow more than learning to edit or juggling tools.</li>
+        </ul>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how">
+        <h2>How It Works</h2>
+        <h3>Step 1 – Tell Us Your Niche &amp; Offers</h3>
+        <p>
+          Plug in your niche, audience, and affiliate networks. This gives the engine the boundaries it needs to choose products and angles that fit you.
+        </p>
+
+        <h3>Step 2 – Choose Your Automation Level</h3>
+        <p>
+          Decide how often to post, which channels to use, and how visible you want to be on camera versus faceless AI content.
+        </p>
+
+        <h3>Step 3 – Turn On the Engine</h3>
+        <p>
+          The Lab researches, scripts, generates, and posts videos with your links—on repeat—so you can stay out of the weeds and focus on bigger moves.
+        </p>
+      </section>
+
+      <!-- EARLY ACCESS -->
+      <section id="early-access">
+        <h2>Get In Early</h2>
+        <p>
+          We’re rolling this out in waves. If you want an AI video engine that runs mostly without you and is built to move products, join the list below.
+        </p>
+
+        <!-- This form is static; hook it to your backend, Netlify Forms, Formspree, etc. -->
+        <form>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="niche">What niche are you in?</label>
+            <input id="niche" type="text" placeholder="Example: AI tools for creators, home gym gear, TikTok shop beauty">
+          </div>
+          <div>
+            <label for="serious">How serious are you about making money with this?</label>
+            <select id="serious">
+              <option>Just curious</option>
+              <option>Ready to test</option>
+              <option>Ready to go hard</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Join Out of Office Lab</button>
+          <p class="small">Submitting this form won’t charge you. We’ll contact you as we open new spots.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Out of Office Lab. All rights reserved.</div>
+      <div>Built for AI automation, no‑touch workflows, and money‑first experiments.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
