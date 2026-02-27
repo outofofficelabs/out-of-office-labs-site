@@ -1,230 +1,184 @@
 ---
-
-
-const heroHighlights = [
-  { label: "Desk-optional", text: "Design revenue streams you can run anywhere." },
-  { label: "Automation-first", text: "AI, no-code, and lightweight ops are the defaults." },
-  { label: "Gen X DNA", text: "Built by someone who survived the 70s/80s grind and wants Life 2.0." }
-];
+import Layout from "../layouts/Layout.astro";
 
 const pillars = [
   {
-    title: "Media & Attention",
-    body: "Faceless video channels, nostalgic storytelling, and short-form systems that build audience without showing your face.",
-    accent: "Channel kits"
+    title: "Mentorship that actually fits your school",
+    body:
+      "We start with your constraints: schedules, staffing, culture, and safety requirements. Then we design a mentorship rhythm that can actually run in your building."
   },
   {
-    title: "Digital Assets & Flips",
-    body: "URL scouting, micro-brand packaging, and small product launches that can be bought, sold, or automated in weeks.",
-    accent: "Asset plays"
+    title: "Systems instead of heroics",
+    body:
+      "Clear roles, clear flows, and pre-built templates for everything: signups, matching, communication, meetings, and reporting."
   },
   {
-    title: "AI Desk Assistants",
-    body: "Personal workflows that replace meetings with automations, from inbox triage to prospect research and content drafting.",
-    accent: "Stack recipes"
+    title: "AI that does the grunt work",
+    body:
+      "From inbox triage to data summaries and program reports, we use AI where it helps your staff get hours back—not where it adds noise."
   }
 ];
 
-const kits = [
+const failureList = [
   {
-    title: "Faceless Video Factory",
-    summary: "Scripts, SOPs, and tool presets for two long-form videos + five Shorts per week using AI avatar + stock footage.",
-    badge: "Kit #01",
-    link: "#"
+    heading: "Built on goodwill",
+    bullets: [
+      "One enthusiastic staff member runs everything… until they burn out.",
+      "Mentors say yes once, then disappear when schedules get tight.",
+      "No one owns the data, so leadership never really sees the impact."
+    ]
   },
   {
-    title: "URL Flip System",
-    summary: "How to research, acquire, and package nostalgia-friendly domains (plus listing templates for marketplace flips).",
-    badge: "Kit #02",
-    link: "#"
+    heading: "No clear structure",
+    bullets: [
+      "Mentors and mentees show up and ask, “So… what should we talk about?”",
+      "Meetings get skipped because there’s no cadence and no nudges.",
+      "Everyone cares, but no one knows what “good” looks like."
+    ]
   },
   {
-    title: "Desk AI Starter",
-    summary: "Build your personal AI operator: inbox triage, topic research, and draft creation using our prompt library + automations.",
-    badge: "Kit #03",
-    link: "#"
+    heading: "Invisible work",
+    bullets: [
+      "Coordinators live in spreadsheets and “just checking in” emails.",
+      "Reporting takes days, so you only do it at the end of the year.",
+      "You’re constantly re-explaining the program to new stakeholders."
+    ]
   }
 ];
 
-const services = [
+const worldStories = [
   {
-    title: "Life 2.0 Blueprint Call",
-    detail: "60-minute working session. We map your revenue mix, pick the first automation, and leave with a 30-day plan.",
-    cta: "Book a blueprint"
+    title: "How a rural high school made mentorship part of the school day",
+    summary:
+      "Instead of asking teachers to do more after hours, this school reorganized advisory time and used simple guardrails to make mentoring feel safe and predictable.",
+    link: "/world-of-mentorship/rural-high-school"
   },
   {
-    title: "Build-It Studio",
-    detail: "Done-for-you spin-up of one kit (faceless channel, URL lab, or AI desk assistant). 4–6 weeks, flat project fee.",
-    cta: "Request scope"
+    title: "From ‘buddy program’ to data-backed mentoring",
+    summary:
+      "A small charter network turned a loosely defined buddy system into a measurable intervention aligned to graduation and belonging outcomes.",
+    link: "/world-of-mentorship/charter-network"
   },
   {
-    title: "OOoLabs Partner",
-    detail: "Retainer support for companies that want the lifestyle but need an operator to run it behind the scenes.",
-    cta: "Talk to Ron"
+    title: "Letting alumni do the heavy lifting (without burning them out)",
+    summary:
+      "One urban campus built an opt-in alumni mentor pool with clear expectations, light-touch automation, and real support for first-gen students.",
+    link: "/world-of-mentorship/alumni-pool"
   }
+];
+
+const kitHighlights = [
+  "Plug-and-play communication flows for students, families, mentors, and staff.",
+  "Session guides for the first 3–5 meetings so no one has to “wing it.”",
+  "Intake forms and consent language tuned for K–12 and higher ed.",
+  "Simple matching tools you can run in Sheets—or plug into your SIS or CRM.",
+  "Dashboards and report templates you can hand directly to leadership."
 ];
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Out of Office Labs | Life 2.0 Automation Studio</title>
-    <meta
-      name="description"
-      content="Out of Office Labs helps Gen X and older Millennials build desk-optional income with AI automation, faceless media, domain flips, and turn-key kits."
-    />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="logo">Out of Office Labs</div>
-      <nav>
-        <a href="#pillars">Pillars</a>
-        <a href="#kits">Kits</a>
-        <a href="#services">Services</a>
-      </nav>
-      <a class="pill" href="#newsletter">Join the list</a>
-    </header>
 
-    <main>
-      <section class="hero" id="hero">
-        <div class="hero__content">
-          <p class="eyebrow">Life 2.0 automation for Gen X</p>
-          <h1>Built by a 70s/80s kid who left the desk. Shared with everyone who wants out.</h1>
-          <p class="lead">
-            After 25 years in cybersecurity, I turned Out of Office Labs into an incubator for low-touch revenue: faceless channels, URL flips, AI desk
-            assistants, and systems you can run without clocking in. This is the playbook.
-          </p>
-          <div class="hero__cta">
-            <a class="btn primary" href="#kits">Explore the kits</a>
-            <a class="btn secondary" href="#services">Work with the studio</a>
-          </div>
-          <div class="hero__highlights">
-            {heroHighlights.map((item) => (
-              <article>
-                <p class="label">{item.label}</p>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-        <div class="hero__visual">
-          <div class="image-stack">
-            <img src="/hero-collab.jpg" alt="Out of Office workspace" />
-            <div class="card">
-              <p class="tag">OOoLabs ethos</p>
-              <p class="card-title">Ideas in. Automations out. Revenue without another staff meeting.</p>
-              <p class="card-note">Faceless media · Digital assets · AI desk co-pilots</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about" id="about">
-        <div class="about__image">
-          <img src="/brainstorm.jpg" alt="Automation planning" />
-        </div>
-        <div class="about__content">
-          <p class="eyebrow">Why Out of Office Labs exists</p>
-          <h2>Because the people who survived metal slides deserve a softer second act.</h2>
-          <p>
-            I grew up jumping fences, riding bikes without helmets, and showing up by dinner. That grit carried me through decades of tech leadership—
-            but it doesn’t have to define Life 2.0. OOoLabs collects the systems, stacks, and experiments that let us earn well, build things we care
-            about, and stay “out of office” whenever we want.
-          </p>
-          <ul>
-            <li>Run experiments: media channels, product flips, AI assistants.</li>
-            <li>Share what works—kits, templates, and playbooks so you can copy/paste.</li>
-            <li>Offer help for the folks who want it done for them.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="programs" id="pillars">
-        <div class="section-heading">
-          <p class="eyebrow">Lifestyle pillars</p>
-          <h2>The four lanes we keep cycling through until something hits.</h2>
-        </div>
-        <div class="programs__grid">
-          {pillars.map((card) => (
-            <article class="program-card">
-              <span class="accent">{card.accent}</span>
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-            </article>
-          ))}
-          <article class="program-card program-card--visual">
-            <img src="/community.jpg" alt="Life 2.0 community" />
-            <div>
-              <h3>Incubator ethos</h3>
-              <p>Every project is a lab. If it works, we templatize it. If it doesn’t, we salvage the lessons and ship the next one.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="why" id="kits">
-        <div class="section-heading">
-          <p class="eyebrow">OOoLabs Kits</p>
-          <h2>Buy the exact system we’re using, plug it in, and stay out of office.</h2>
-        </div>
-        <div class="kits-grid">
-          {kits.map((kit) => (
-            <article class="kit-card">
-              <span>{kit.badge}</span>
-              <h3>{kit.title}</h3>
-              <p>{kit.summary}</p>
-              <a href={kit.link} class="btn secondary">View details</a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section class="testimonials" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">Studio services</p>
-          <h2>Want the lifestyle but not the build? We’ll run point.</h2>
-        </div>
-        <div class="services-grid">
-          {services.map((service) => (
-            <article>
-              <h3>{service.title}</h3>
-              <p>{service.detail}</p>
-              <a class="btn secondary" href="#contact">{service.cta}</a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section class="resources" id="newsletter">
-        <div class="resources__content">
-          <p class="eyebrow">Out of Office Dispatch</p>
-          <h2>Weekly experiments, deal flow, and stack recipes.</h2>
-          <p>
-            Subscribe for teardown videos, automation recipes, domain finds, and behind-the-scenes notes from the labs. You’ll also get early access to
-            every kit release.
-          </p>
-          <form class="resources__form">
-            <input type="email" placeholder="you@life20.com" aria-label="Email" required />
-            <button type="submit">Join the dispatch</button>
-          </form>
-          <small>No spam. Just Life 2.0 fuel.</small>
-        </div>
-      </section>
-    </main>
-
-    <section class="contact" id="contact">
-      <div class="contact__inner">
-        <p class="eyebrow">Say hi</p>
-        <h2>Ready to incubate your Out of Office life?</h2>
-        <p>
-          Email <a href="mailto:hello@outofofficelabs.com">hello@outofofficelabs.com</a> or drop a note with context. We’ll decide if you need a kit,
-          a studio sprint, or just a push in the right direction.
+<Layout title="Out of Office Labs – Mentorship, but operational">
+  <main>
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Out of Office Labs</p>
+        <h1>Mentorship, but with systems.</h1>
+        <p class="lead">
+          We help schools, districts, and programs run mentorship that feels human,
+          stays safe, and actually fits inside the school day.
         </p>
-        <div class="contact__cta">
-          <a class="btn primary" href="mailto:hello@outofofficelabs.com">Email Ron</a>
-          <a class="btn secondary" href="#hero">Back to top</a>
+        <div class="hero__actions">
+          <a class="btn primary" href="/contact">Talk about your program</a>
+          <a class="btn secondary" href="/resources">Browse the Mentorship Kit</a>
         </div>
+        <p class="muted">
+          Built with administrators, counselors, and coordinators who are already doing three jobs.
+        </p>
+      </div>
+      <div class="hero__meta">
+        <p>Designed for:</p>
+        <ul>
+          <li>K–12 mentorship and advisory programs</li>
+          <li>College access and persistence teams</li>
+          <li>Alumni and peer mentoring initiatives</li>
+        </ul>
       </div>
     </section>
-  </body>
-</html>
+
+    <section class="pillars">
+      <div class="section-heading">
+        <p class="eyebrow">What we actually do</p>
+        <h2>We turn “we should have a mentorship program” into an operational system.</h2>
+      </div>
+      <div class="pillars__grid">
+        {pillars.map((pillar) => (
+          <article class="card">
+            <h3>{pillar.title}</h3>
+            <p>{pillar.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="section-heading">
+        <p class="eyebrow">Why mentorship fails (and how to fix it)</p>
+        <h2>Most programs collapse because they rely on goodwill instead of systems.</h2>
+      </div>
+      <div class="why__grid">
+        {failureList.map((set) => (
+          <article>
+            <h3>{set.heading}</h3>
+            <ul>
+              {set.bullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="world">
+      <div class="section-heading">
+        <p class="eyebrow">World of Mentorship</p>
+        <h2>Guides, stories, and real-life lessons from programs in the field.</h2>
+      </div>
+      <div class="world__grid">
+        {worldStories.map((story) => (
+          <article>
+            <h3>{story.title}</h3>
+            <p>{story.summary}</p>
+            <a href={story.link}>Read the story →</a>
+          </article>
+        ))}
+      </div>
+      <div class="center">
+        <a class="btn secondary" href="/world-of-mentorship">View all stories</a>
+      </div>
+    </section>
+
+    <section class="kit">
+      <div class="kit__text">
+        <p class="eyebrow">Mentorship Program In-a-Box</p>
+        <h2>Everything you need to launch a safe, structured mentorship cycle this semester.</h2>
+        <ul>
+          {kitHighlights.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+        <p class="muted">
+          What you don’t have to do: build custom software, convene a giant committee,
+          or guess what mentors should talk about.
+        </p>
+        <a class="btn primary" href="/resources">See what’s inside</a>
+      </div>
+      <div class="kit__card">
+        <p>
+          “The kit gave us the forms, the emails, and the meeting guides. We launched
+          a mentorship season in four weeks and finally had data to share with admin.”
+        </p>
+        <span>— Assistant Principal, Ohio</span>
+      </div>
+    </section>
+  </main>
+</Layout>
