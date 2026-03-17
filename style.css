@@ -398,7 +398,7 @@ button { cursor: pointer; background: none; border: none; }
 
 /* === SECTIONS === */
 .section {
-  padding-block: clamp(var(--space-16), 10vw, var(--space-32));
+  padding-block: clamp(var(--space-10), 6vw, var(--space-20));
 }
 .section--light { background: var(--color-surface); }
 
@@ -1397,11 +1397,17 @@ button { cursor: pointer; background: none; border: none; }
   margin-bottom: var(--space-3);
 }
 .stat-source {
+  display: inline-block;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-top: var(--space-2);
+}
+.stat-source:hover {
+  text-decoration: underline;
 }
 .stats-callout {
   background: var(--color-primary);
@@ -1425,4 +1431,19 @@ button { cursor: pointer; background: none; border: none; }
   .stats-grid { grid-template-columns: 1fr; }
   .stats-callout { padding: var(--space-6); }
   .stats-callout-text { font-size: var(--text-lg); }
+}
+
+/* === TIGHTER SECTION SPACING (inner pages) === */
+.programs-page .section,
+.resources-page .section,
+.about-page .section,
+.contact-page .section {
+  padding-block: clamp(var(--space-10), 6vw, var(--space-16));
+}
+.section-header {
+  margin-bottom: var(--space-10);
+}
+.section-intro {
+  margin-top: var(--space-4);
+  max-width: 640px;
 }
