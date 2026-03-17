@@ -1,377 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <title>Out of Office Lab – AI Automation Video Engines</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Out of Office Lab builds AI automation video engines that find products, make videos, and post them with your affiliate links on repeat.">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #0f172a;
-      background: #020617;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 32px 16px 64px;
-      color: #e5e7eb;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 32px;
-    }
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      color: #38bdf8;
-    }
-    .tagline {
-      font-size: 0.8rem;
-      color: #9ca3af;
-      text-align: right;
-    }
-    h1 {
-      font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
-      margin-bottom: 12px;
-      color: #f9fafb;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin: 32px 0 8px;
-      color: #f9fafb;
-    }
-    h3 {
-      font-size: 1.05rem;
-      margin: 14px 0 4px;
-      color: #e5e7eb;
-    }
-    p {
-      margin-bottom: 10px;
-      color: #e5e7eb;
-    }
-    .hero-sub {
-      font-size: 1rem;
-      color: #cbd5f5;
-      max-width: 680px;
-    }
-    .hero {
-      margin-bottom: 32px;
-    }
-    .buttons {
-      margin-top: 20px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .btn-primary, .btn-secondary {
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: none;
-    }
-    .btn-primary {
-      background: #38bdf8;
-      color: #020617;
-    }
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid #4b5563;
-      color: #e5e7eb;
-    }
-    .small {
-      font-size: 0.85rem;
-      color: #9ca3af;
-      margin-top: 8px;
-    }
-    section {
-      margin-bottom: 28px;
-      padding-top: 4px;
-      border-top: 1px solid #111827;
-    }
-    ul {
-      margin-top: 6px;
-      margin-left: 18px;
-    }
-    li {
-      margin-bottom: 6px;
-    }
-    .pill {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      background: #111827;
-      color: #9ca3af;
-      margin-bottom: 8px;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 12px;
-    }
-    .card {
-      background: #020617;
-      border-radius: 10px;
-      border: 1px solid #1f2937;
-      padding: 12px 12px 10px;
-    }
-    form {
-      margin-top: 12px;
-      display: grid;
-      gap: 10px;
-      max-width: 420px;
-    }
-    label {
-      font-size: 0.85rem;
-      color: #e5e7eb;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid #4b5563;
-      background: #020617;
-      color: #e5e7eb;
-      font-size: 0.9rem;
-    }
-    input::placeholder, textarea::placeholder {
-      color: #6b7280;
-    }
-    textarea {
-      min-height: 70px;
-      resize: vertical;
-    }
-    footer {
-      margin-top: 32px;
-      font-size: 0.75rem;
-      color: #6b7280;
-      border-top: 1px solid #111827;
-      padding-top: 16px;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    @media (max-width: 780px) {
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-      .tagline { text-align: left; }
-    }
-  </style>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Out of Office Labs — Mentorship, but with systems.</title>
+<meta name="description" content="We help schools, districts, and programs run mentorship that feels human, stays safe, and actually fits inside the school day.">
+<meta property="og:title" content="Out of Office Labs — Mentorship, but with systems.">
+<meta property="og:description" content="We help schools, districts, and programs run mentorship that feels human, stays safe, and actually fits inside the school day.">
+<meta property="og:type" content="website">
+
+<!-- Fonts: Plus Jakarta Sans (body) + Instrument Serif (display) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="logo">OUT OF OFFICE LAB</div>
-      <div class="tagline">AI automation for money, not busywork.</div>
-    </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero" id="top">
-        <div class="pill">AI Automation • Video • Affiliate Income</div>
-        <h1>AI‑Automated Video Engines That Make Money While You’re Out of Office</h1>
-        <p class="hero-sub">
-          Out of Office Lab stitches AI tools together into no‑touch engines. You tell us your niche and affiliate programs; the Lab finds products, writes scripts, makes videos, and posts them with your links across YouTube, TikTok, and Instagram on repeat.
-        </p>
-        <div class="buttons">
-          <a href="#early-access"><button class="btn-primary">Get Early Access</button></a>
-          <a href="#engine"><button class="btn-secondary">See the Video Engine</button></a>
-        </div>
-        <p class="small">
-          No editing. No daily grind. Just AI automation built to make money, not content for content’s sake.
-        </p>
-      </section>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Out of Office Labs home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+        </svg>
+        <span class="logo-text">Out of Office Labs</span>
+      </a>
 
-      <!-- WHAT OOO LAB DOES -->
-      <section id="what">
-        <h2>What Out of Office Lab Does</h2>
-        <p>
-          Out of Office Lab is an automation lab for people who want AI to make them money. We build repeatable, no‑touch workflows that turn what you care about into outputs that earn: content, distribution, and promotion that you don’t have to babysit.
-        </p>
-        <div class="grid-3">
-          <div class="card">
-            <h3>AI Automation, Not Tools</h3>
-            <p>
-              We stitch together the latest AI models, agents, and services into pipelines that actually do the work for you instead of giving you yet another dashboard to click around in.
-            </p>
-          </div>
-          <div class="card">
-            <h3>No‑Touch Workflows</h3>
-            <p>
-              You set the niche, rules, and channels once. The Lab runs the workflows in the background, turning ideas into outputs on a schedule without you manually touching every step.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Built to Make Money</h3>
-            <p>
-              Every workflow is designed around revenue: affiliate clicks, product sales, leads, and deals—not vanity metrics or hobby‑grade content.
-            </p>
-          </div>
-        </div>
-      </section>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/contact" class="nav-link">Talk about your program</a>
+        <a href="/resources" class="nav-link nav-link--cta">Browse the Kit</a>
+      </nav>
 
-      <!-- ENGINES OVERVIEW -->
-      <section id="engines">
-        <h2>The Laboratory of No‑Touch Engines</h2>
-        <p>
-          Out of Office Lab is a place to turn on engines—not tools. Each engine is a stitched‑together workflow of AI models, agents, and automations that takes an input and produces a money‑focused output with almost no human touch. <!-- [web:620][web:618] -->
-        </p>
-        <div class="grid-3">
-          <div class="card">
-            <h3>AI Video Creation &amp; Distribution Engine</h3>
-            <p>
-              Turns your niche and affiliate networks into a constant stream of long and short‑form videos posted to YouTube, TikTok, and Instagram with your links built in. <!-- [web:620] -->
-            </p>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="/contact" class="mobile-nav-link">Talk about your program</a>
+      <a href="/resources" class="mobile-nav-link">Browse the Mentorship Kit</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">Mentorship infrastructure for schools</div>
+          <h1 class="hero-heading">Mentorship,<br><em>but with systems.</em></h1>
+          <p class="hero-sub">We help schools, districts, and programs run mentorship that feels human, stays safe, and actually fits inside the school day.</p>
+          <p class="hero-built">Built with administrators, counselors, and coordinators who are already doing three jobs.</p>
+          <div class="hero-ctas">
+            <a href="/contact" class="btn btn--primary">Talk about your program</a>
+            <a href="/resources" class="btn btn--ghost">Browse the Mentorship Kit →</a>
           </div>
-          <div class="card">
-            <h3>Coming Soon: Etsy &amp; Product Engines</h3>
-            <p>
-              AI‑assisted listing creation, image generation, and promo content so you can test and scale digital products and offers with minimal manual work. <!-- [web:618] -->
-            </p>
-          </div>
-          <div class="card">
-            <h3>Coming Soon: Lead &amp; Deal Engines</h3>
-            <p>
-              Automated outreach, follow‑up, and nurture flows that turn attention into booked calls and deals without you chasing every lead yourself. <!-- [web:618] -->
-            </p>
+          <div class="hero-tags">
+            <span class="tag">K–12 programs</span>
+            <span class="tag">College access teams</span>
+            <span class="tag">Alumni mentoring</span>
           </div>
         </div>
-      </section>
-
-      <!-- VIDEO ENGINE -->
-      <section id="engine">
-
-        <h2>AI Video Creation &amp; Distribution Engine</h2>
-                <p>
-          This engine turns a short onboarding questionnaire into a steady stream of videos tailored to your niche, offers, and channels. You answer once, then the engine plans, drafts, and prepares content to go out across YouTube, TikTok, and Instagram. <!-- [web:684][web:685] -->
-        </p>
-        <div class="grid-3">
-          <div class="card">
-            <h3>From questions to concepts</h3>
-            <p>
-              The engine uses your niche, audience, and offer details to generate video concepts and hooks designed to attract the right people, not just more views. <!-- [web:684] -->
-            </p>
-          </div>
-          <div class="card">
-            <h3>From concepts to ready‑to‑post videos</h3>
-            <p>
-              Scripts, captions, and suggested visuals are produced for long and short‑form clips so you have a pipeline of content instead of one‑off posts. <!-- [web:686] -->
-            </p>
-          </div>
-          <div class="card">
-            <h3>From videos to automated distribution</h3>
-            <p>
-              The engine prepares your content for the channels you choose, with your links and CTAs built in, and can be set to auto‑post or wait for a quick review. <!-- [web:687][web:688] -->
-            </p>
-          </div>
-        </div>
-</section>
-
-
-      
-      <!-- HOW IT WORKS -->
-      <section id="how">
-        <h2>How It Works</h2>
-        <h3>Step 1 – Tell Us Your Niche &amp; Offers</h3>
-        <p>
-          Plug in your niche, audience, and affiliate networks. This gives the engine the boundaries it needs to choose products and angles that fit you.
-        </p>
-
-        <h3>Step 2 – Choose Your Automation Level</h3>
-        <p>
-          Decide how often to post, which channels to use, and how visible you want to be on camera versus faceless AI content.
-        </p>
-
-        <h3>Step 3 – Turn On the Engine</h3>
-        <p>
-          The Lab researches, scripts, generates, and posts videos with your links—on repeat—so you can stay out of the weeds and focus on bigger moves.
-        </p>
-      </section>
-
-      <!-- EARLY ACCESS -->
-      <section id="early-access">
-        <h2>Get In Early</h2>
-        <p>
-          We’re rolling this out in waves. If you want an AI video engine that runs mostly without you and is built to move products, join the list below.
-        </p>
-
-        <!-- This form is static; hook it to your backend, Netlify Forms, Formspree, etc. -->
-        <form>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="you@example.com">
-          </div>
-          <div>
-            <label for="niche">What niche are you in?</label>
-            <input id="niche" type="text" placeholder="Example: AI tools for creators, home gym gear, TikTok shop beauty">
-          </div>
-          <div>
-            <label for="serious">How serious are you about making money with this?</label>
-            <select id="serious">
-              <option>Just curious</option>
-              <option>Ready to test</option>
-              <option>Ready to go hard</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-primary">Join Out of Office Lab</button>
-          <p class="small">Submitting this form won’t charge you. We’ll contact you as we open new spots.</p>
-        </form>
-      </section>
-    </main>
-    <!-- WHO THIS IS FOR -->
-    <section id="who">
-      <h2>Who This Is For</h2>
-      <p>
-        Out of Office Lab is for people who want to plug an engine into their life and let it work in the background, not add another job to their calendar. <!-- [web:694][web:699] -->
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Creators &amp; solopreneurs</h3>
-          <p>
-            You have ideas, expertise, or offers—but you don’t have the time or desire to plan, script, edit, and post videos every day yourself. <!-- [web:694] -->
-          </p>
-        </div>
-        <div class="card">
-          <h3>Operators &amp; marketers</h3>
-          <p>
-            You see opportunities in niches and networks and want a repeatable engine that can turn them into attention and clicks without manual babysitting. <!-- [web:699] -->
-          </p>
-        </div>
-        <div class="card">
-          <h3>Builders experimenting with AI</h3>
-          <p>
-            You’re excited about AI, but you’d rather turn it into concrete outputs and experiments than spend hours wiring every tool together yourself. <!-- [web:687][web:700] -->
-          </p>
+        <div class="hero-image-wrap">
+          <img src="images/ool-hero.png" alt="Mentor and students in a structured mentorship session" class="hero-img" loading="eager">
         </div>
       </div>
     </section>
 
-    <footer>
-      <div>© <span id="year"></span> Out of Office Lab. All rights reserved.</div>
-      <div>Built for AI automation, no‑touch workflows, and money‑first experiments.</div>
-    </footer>
-  </div>
+    <!-- ===== WHAT WE DO ===== -->
+    <section class="section section--light" id="what-we-do">
+      <div class="container">
+        <div class="section-label">What we actually do</div>
+        <h2 class="section-heading">We turn <em>"we should have a mentorship program"</em> into an operational system.</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="card-title">Mentorship that actually fits your school</h3>
+            <p class="card-body">We start with your constraints: schedules, staffing, culture, and safety requirements. Then we design a mentorship rhythm that can actually run in your building.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </div>
+            <h3 class="card-title">Systems instead of heroics</h3>
+            <p class="card-body">Clear roles, clear flows, and pre-built templates for everything: signups, matching, communication, meetings, and reporting.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <h3 class="card-title">AI that does the grunt work</h3>
+            <p class="card-body">From inbox triage to data summaries and program reports, we use AI where it helps your staff get hours back — not where it adds noise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY MENTORSHIP FAILS ===== -->
+    <section class="section section--split" id="why-it-fails">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-text">
+            <div class="section-label">Why mentorship fails (and how to fix it)</div>
+            <h2 class="section-heading">Most programs collapse because they rely on goodwill instead of systems.</h2>
+            <div class="fail-groups">
+              <div class="fail-group">
+                <h3 class="fail-group-title">Built on goodwill</h3>
+                <ul class="fail-list">
+                  <li>One enthusiastic staff member runs everything… until they burn out.</li>
+                  <li>Mentors say yes once, then disappear when schedules get tight.</li>
+                  <li>No one owns the data, so leadership never really sees the impact.</li>
+                </ul>
+              </div>
+              <div class="fail-group">
+                <h3 class="fail-group-title">No clear structure</h3>
+                <ul class="fail-list">
+                  <li>Mentors and mentees show up and ask, "So… what should we talk about?"</li>
+                  <li>Meetings get skipped because there's no cadence and no nudges.</li>
+                  <li>Everyone cares, but no one knows what "good" looks like.</li>
+                </ul>
+              </div>
+              <div class="fail-group">
+                <h3 class="fail-group-title">Invisible work</h3>
+                <ul class="fail-list">
+                  <li>Coordinators live in spreadsheets and "just checking in" emails.</li>
+                  <li>Reporting takes days, so you only do it at the end of the year.</li>
+                  <li>You're constantly re-explaining the program to new stakeholders.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="split-visual">
+            <img src="images/ool-system.png" alt="Diagram showing a structured mentorship system flow" class="split-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KIT / CTA BAND ===== -->
+    <section class="section section--teal" id="kit">
+      <div class="container">
+        <div class="kit-inner">
+          <div class="kit-text">
+            <div class="section-label section-label--inverse">Mentorship Program In-a-Box</div>
+            <h2 class="section-heading section-heading--inverse">Everything you need to launch a safe, structured mentorship cycle this semester.</h2>
+            <ul class="kit-list">
+              <li>Plug-and-play communication flows for students, families, mentors, and staff.</li>
+              <li>Session guides for the first 3–5 meetings so no one has to "wing it."</li>
+              <li>Intake forms and consent language tuned for K–12 and higher ed.</li>
+              <li>Simple matching tools you can run in Sheets — or plug into your SIS or CRM.</li>
+              <li>Dashboards and report templates you can hand directly to leadership.</li>
+            </ul>
+            <p class="kit-no-need"><strong>What you don't have to do:</strong> build custom software, convene a giant committee, or guess what mentors should talk about.</p>
+            <a href="/resources" class="btn btn--white">See what's inside →</a>
+          </div>
+          <div class="kit-visual">
+            <img src="images/ool-school.png" alt="Modern school building with students" class="kit-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORLD OF MENTORSHIP / STORIES ===== -->
+    <section class="section section--light" id="stories">
+      <div class="container">
+        <div class="section-label">World of Mentorship</div>
+        <h2 class="section-heading">Guides, stories, and real-life lessons<br>from programs in the field.</h2>
+        <div class="stories-grid">
+          <a href="/world-of-mentorship/rural-high-school" class="story-card">
+            <div class="story-num">01</div>
+            <h3 class="story-title">How a rural high school made mentorship part of the school day</h3>
+            <p class="story-body">Instead of asking teachers to do more after hours, this school reorganized advisory time and used simple guardrails to make mentoring feel safe and predictable.</p>
+            <span class="story-read">Read the story →</span>
+          </a>
+          <a href="/world-of-mentorship/charter-network" class="story-card">
+            <div class="story-num">02</div>
+            <h3 class="story-title">From 'buddy program' to data-backed mentoring</h3>
+            <p class="story-body">A small charter network turned a loosely defined buddy system into a measurable intervention aligned to graduation and belonging outcomes.</p>
+            <span class="story-read">Read the story →</span>
+          </a>
+          <a href="/world-of-mentorship/alumni-pool" class="story-card">
+            <div class="story-num">03</div>
+            <h3 class="story-title">Letting alumni do the heavy lifting (without burning them out)</h3>
+            <p class="story-body">One urban campus built an opt-in alumni mentor pool with clear expectations, light-touch automation, and real support for first-gen students.</p>
+            <span class="story-read">Read the story →</span>
+          </a>
+        </div>
+        <div class="stories-footer">
+          <a href="/world-of-mentorship" class="link-arrow">View all stories →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL ===== -->
+    <section class="section section--testimonial">
+      <div class="container container--narrow">
+        <blockquote class="testimonial">
+          <svg class="quote-mark" width="48" height="36" viewBox="0 0 48 36" fill="none" aria-hidden="true">
+            <path d="M0 36V22.5C0 10.5 6 3 18 0l3 4.5C14 6.5 10.5 10.5 10.5 16.5H18V36H0ZM30 36V22.5C30 10.5 36 3 48 0l3 4.5C44 6.5 40.5 10.5 40.5 16.5H48V36H30Z" fill="var(--color-primary)" opacity="0.15"/>
+          </svg>
+          <p class="testimonial-text">"The kit gave us the forms, the emails, and the meeting guides. We launched a mentorship season in four weeks and finally had data to share with admin."</p>
+          <footer class="testimonial-attr">
+            <span class="testimonial-name">Assistant Principal</span>
+            <span class="testimonial-loc">Ohio</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="section section--cta-final">
+      <div class="container text-center">
+        <h2 class="cta-final-heading">Ready to build something that actually runs?</h2>
+        <p class="cta-final-sub">Talk to us about your program. No pitch, no pressure — just a real conversation about what mentorship could look like at your school.</p>
+        <div class="cta-final-actions">
+          <a href="/contact" class="btn btn--primary btn--lg">Talk about your program</a>
+          <a href="/resources" class="btn btn--outline btn--lg">Browse the Mentorship Kit</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo logo--sm" aria-label="Out of Office Labs">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          </svg>
+          <span>Out of Office Labs</span>
+        </a>
+        <p class="footer-tagline">Mentorship infrastructure for schools and programs.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/contact">Talk about your program</a>
+        <a href="/resources">Browse the Kit</a>
+        <a href="/world-of-mentorship">World of Mentorship</a>
+        <a href="mailto:hello@outofofficelabs.com">hello@outofofficelabs.com</a>
+      </nav>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Out of Office Labs</span>
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Dark/light mode toggle
+    (function(){
+      const t = document.querySelector('[data-theme-toggle]');
+      const r = document.documentElement;
+      let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      r.setAttribute('data-theme', d);
+      if(t) {
+        const sunIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+        const moonIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        t.addEventListener('click', () => {
+          d = d === 'dark' ? 'light' : 'dark';
+          r.setAttribute('data-theme', d);
+          t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+          t.innerHTML = d === 'dark' ? sunIcon : moonIcon;
+        });
+      }
+    })();
+
+    // Mobile menu
+    (function(){
+      const toggle = document.getElementById('mobileToggle');
+      const nav = document.getElementById('mobileNav');
+      if(!toggle || !nav) return;
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.setAttribute('aria-hidden', String(open));
+        nav.classList.toggle('is-open', !open);
+        toggle.classList.toggle('is-open', !open);
+      });
+    })();
+
+    // Scroll-aware header
+    (function(){
+      const header = document.getElementById('header');
+      let lastY = 0;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        header.classList.toggle('header--scrolled', y > 10);
+        header.classList.toggle('header--hidden', y > lastY && y > 120);
+        lastY = y;
+      }, { passive: true });
+    })();
+
+    // Fade-in on scroll
+    (function(){
+      const els = document.querySelectorAll('.card, .story-card, .fail-group, .kit-text, .kit-visual');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(el => obs.observe(el));
+    })();
   </script>
 </body>
 </html>
