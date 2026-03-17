@@ -1,14 +1,7 @@
 {
-  "name": "technological-trappist",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "out-of-office-labs-site",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.17.1"
+    "build": "echo 'Static site - no build needed'"
   }
 }
