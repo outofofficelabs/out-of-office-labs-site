@@ -1170,7 +1170,7 @@ button { cursor: pointer; background: none; border: none; }
 .mistake-body { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
 
 /* kit-inner centered variant */
-.kit-inner--centered { text-align: center; grid-template-columns: 1fr; }
+.kit-inner--centered { grid-template-columns: 1fr; max-width: 760px; }
 
 /* CTA section */
 .cta-section {
@@ -1446,4 +1446,10 @@ button { cursor: pointer; background: none; border: none; }
 .section-intro {
   margin-top: var(--space-4);
   max-width: 640px;
+}
+
+/* === SINGLE COLUMN OVERRIDES (image removed) === */
+.split-layout--single {
+  grid-template-columns: 1fr;
+  max-width: 760px;
 }
