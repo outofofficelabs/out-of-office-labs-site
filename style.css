@@ -1453,3 +1453,9 @@ button { cursor: pointer; background: none; border: none; }
   grid-template-columns: 1fr;
   max-width: 760px;
 }
+
+/* === KIT SECTION (dark teal band) === */
+.kit-section {
+  background: var(--color-teal-dark);
+  padding-block: clamp(var(--space-10), 6vw, var(--space-20));
+}
