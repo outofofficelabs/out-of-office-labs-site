@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Launch a Greek Alumni Mentorship Program | Out of Office Labs</title>
+<meta name="description" content="A complete guide to launching a fraternity or sorority alumni mentorship program. Covers program structure, alumni outreach, mentor-mentee matching, and accountability systems. Built for chapter advisors and alumni boards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<style>
+  .breadcrumb {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: rgba(255,255,255,0.55);
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35em;
+  }
+  .breadcrumb a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover { color: #fff; }
+  .breadcrumb .sep { opacity: 0.4; }
+  .breadcrumb .current { color: rgba(255,255,255,0.85); }
+
+  .article-read-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: rgba(255,255,255,0.6);
+    margin-top: var(--space-4);
+  }
+  .article-read-meta span { display: inline-flex; align-items: center; gap: 0.35em; }
+
+  .container--article ul,
+  .container--article ol {
+    font-size: var(--text-base);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    color: var(--color-text);
+    margin: 0 0 var(--space-5);
+    padding-left: var(--space-6);
+  }
+  .container--article li {
+    margin-bottom: var(--space-2);
+  }
+
+  .article-cta-box {
+    background: #0A4A4E;
+    border-radius: var(--radius-xl, 16px);
+    padding: var(--space-10) var(--space-8);
+    text-align: center;
+    margin: var(--space-12) 0 0;
+  }
+  .article-cta-box h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 var(--space-4);
+  }
+  .article-cta-box p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: rgba(255,255,255,0.75);
+    margin: 0 0 var(--space-6) !important;
+    line-height: 1.6;
+  }
+  .article-cta-box .btn--cta {
+    display: inline-block;
+    background: #fff;
+    color: #0A4A4E;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-base);
+    padding: 0.85em 2em;
+    border-radius: var(--radius-full, 100px);
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .article-cta-box .btn--cta:hover {
+    background: #e8e5df;
+    transform: translateY(-1px);
+  }
+
+  .related-section {
+    padding: var(--space-16, 4rem) 0;
+    background: var(--color-bg, #f8f6f1);
+  }
+  .related-section .section-eyebrow {
+    margin-bottom: var(--space-6);
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  @media (max-width: 640px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+  .related-card {
+    background: var(--color-surface-2, #fff);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg, 12px);
+    padding: var(--space-7, 1.75rem);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  }
+  .related-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+  }
+  .related-card-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: rgba(10,74,78,0.08);
+    padding: 3px 10px;
+    border-radius: 100px;
+    width: fit-content;
+  }
+  .related-card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    color: var(--color-primary);
+    line-height: 1.35;
+    margin: 0;
+  }
+  .related-card-desc {
+    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0;
+    flex: 1;
+  }
+  .related-card-read {
+    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: var(--space-2);
+  }
+
+  .container--article h2 {
+    color: #0A4A4E;
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Launch a Greek Alumni Mentorship Program","author":{"@type":"Organization","name":"Out of Office Labs"},"publisher":{"@type":"Organization","name":"Out of Office Labs","url":"https://outofofficelabs.com"},"url":"https://outofofficelabs.com/the-lab/greek-alumni-mentorship/"}
+</script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Out of Office Labs home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+        </svg>
+        <span class="logo-text">Out of Office Labs</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/programs" class="nav-link">Programs</a>
+        <a href="/the-lab" class="nav-link nav-link--active">The Lab</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/shop" class="nav-link nav-link--cta">Shop</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="/programs" class="mobile-nav-link">Programs</a>
+      <a href="/the-lab" class="mobile-nav-link">The Lab</a>
+      <a href="/about" class="mobile-nav-link">About</a>
+      <a href="/contact" class="mobile-nav-link">Contact</a>
+      <a href="/shop" class="mobile-nav-link">Shop</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">›</span>
+          <a href="/the-lab">The Lab</a>
+          <span class="sep">›</span>
+          <span class="current">Greek Alumni Mentorship</span>
+        </nav>
+        <div class="article-meta">
+          <span class="article-tag">Greek Life</span>
+        </div>
+        <h1 class="article-heading">How to Launch a Greek Alumni Mentorship Program</h1>
+        <p class="article-sub">Most Greek alumni don't ignore outreach because they don't care. Here's a 4-step re-engagement framework to rebuild your greek alumni mentorship program.</p>
+        <div class="article-read-meta">
+          <span>📖 7 min read</span>
+          <span>·</span>
+          <span>From the Lab — Out of Office Labs | March 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-body-section">
+      <div class="container--article">
+
+        <div class="article-lede">
+          You sent the email. Maybe two. You posted in the Facebook group and got three likes, all from current actives. The alumni who should be mentoring, networking, and showing up are nowhere to be found. You start wondering if they just don't care anymore.
+        </div>
+
+        <p>They do. You're just asking the wrong way, at the wrong time, with the wrong format.</p>
+
+        <p>Research consistently shows that Greek alumni carry deep loyalty to their organizations — a <a href="https://npcwomen.org/new-gallup-survey-shows-fraternity-and-sorority-membership-tied-to-strong-college-experiences-development-of-career-skills-and-post-graduate-wellbeing/" target="_blank" rel="noopener noreferrer">Gallup survey of more than 10,000 college alumni</a> found that 84% of affiliated alumni say they would join their fraternity or sorority again if given the chance. The connection is real. What's broken is the system for activating it.</p>
+
+        <p>This is the actual problem behind a struggling greek alumni mentorship program — and the fix isn't more emails.</p>
+
+        <h2>Why Alumni Go Silent (It's Not What You Think)</h2>
+
+        <p>The instinct is to blame life stage. Alumni are busy, they've moved on, they have kids. That's true. But it's not the whole story.</p>
+
+        <p>When alumni stop responding, it usually comes down to three structural failures.</p>
+
+        <p><strong>The ask is too vague.</strong> "We'd love to have you more involved!" doesn't tell anyone what you actually need. Busy professionals respond to specific, bounded requests — not open-ended invitations to engage. When you don't define the role, alumni default to assuming it's a big time commitment they can't handle. They opt out before they've even started.</p>
+
+        <p><strong>The timing is off.</strong> Chapter-year thinking doesn't map to alumni life. You send a mass outreach in September because that's when recruitment starts. Your alumni are in the middle of quarterly close, a new baby, or a job transition. September is someone else's worst month. Batch outreach ignores this entirely.</p>
+
+        <p><strong>The format is wrong.</strong> A virtual coffee chat is not the same as being asked to do something concrete with a clear start and end. Many alumni who genuinely want to give back don't know how to begin an unstructured conversation with a 20-year-old they've never met. The ambiguity creates friction. Friction creates silence.</p>
+
+        <p>There's also a fourth factor that doesn't get discussed enough: the transition out of active membership often feels like a quiet exile. Members spend the vast majority of their lives as "alumni" yet the experience is often treated as a lesser form of membership. When alumni don't feel like they still belong, they don't act like it either.</p>
+
+        <h2>The 4-Step Re-Engagement Framework for Greek Alumni</h2>
+
+        <p>This isn't about sending better subject lines. It's about restructuring the ask entirely.</p>
+
+        <h2>Step 1: Segment Before You Reach Out</h2>
+
+        <p>Not every quiet alumni is the same. Sort your list into three groups before you draft a single message:</p>
+
+        <ul>
+          <li><strong>Recently out (0–3 years post-graduation):</strong> These alumni are often the easiest to re-engage. They remember the experience vividly. They're early in their careers and may have the most to gain from staying connected. The right ask here is peer mentorship or resume/interview support for current members.</li>
+          <li><strong>Mid-career (4–12 years out):</strong> This group is settled enough to be confident but still close enough to feel the connection. They have real professional currency to share. The right ask is structured mentorship, career panels, or advisory roles.</li>
+          <li><strong>Senior alumni (12+ years out):</strong> These are your highest-value connectors. The right ask is sponsorship, advisory positions, or a one-time contribution like a keynote or industry Q&A — not ongoing mentorship they can't schedule.</li>
+        </ul>
+
+        <p>When you send the same message to all three groups, you guarantee it lands right for none of them.</p>
+
+        <h2>Step 2: Lead with Specificity</h2>
+
+        <p>Replace "stay involved" with a defined ask. The difference looks like this:</p>
+
+        <p><em>Vague:</em> "We'd love for you to be a mentor this year."</p>
+
+        <p><em>Specific:</em> "We're pairing 8 seniors with alumni mentors for a structured 6-session program running February through April. Sessions are 45 minutes each, scheduled at your availability, and we provide the agenda. Would you be open to being matched with one student?"</p>
+
+        <p>The specific version removes every objection except the one that actually matters: do they have 4.5 hours available over three months? Most do. Most will say yes.</p>
+
+        <h2>Step 3: Meet Them Where They Are</h2>
+
+        <p>Email is fine for initial outreach, but it's the worst channel for follow-up. LinkedIn direct messages, text, or even a quick phone call from a current chapter member or advisor have dramatically higher response rates than a second mass email.</p>
+
+        <p>When a current student reaches out directly — "I'm a junior studying accounting and I'd love to connect with someone in public finance" — it changes the entire dynamic. It's not an institution asking for volunteer hours. It's a person asking for help. That's a much easier yes.</p>
+
+        <p>For sorority alumni engagement specifically, peer-to-peer outreach through regional alumnae chapters tends to outperform national or chapter-level mass communication. The closer the connection, the higher the response.</p>
+
+        <h2>Step 4: Make the First Step Frictionless</h2>
+
+        <p>The biggest drop-off point in any greek alumni outreach sequence is the gap between "yes, I'm interested" and the first actual interaction. That gap — often filled with unclear next steps, scheduling back-and-forth, and no structure — kills momentum.</p>
+
+        <p>Solve it before it happens. When someone says yes, the next message should include: their match's name and a short bio, a suggested first conversation agenda, three time slots to choose from, and a clear end date for the commitment. Everything in one email. No back-and-forth required.</p>
+
+        <p>This is the difference between a program that starts strong and fades, and one that delivers consistent results every cycle.</p>
+
+        <h2>The Problem with One-Off Outreach</h2>
+
+        <p>Most chapters treat alumni re-engagement as an event, not a system. They run a mentorship push before alumni weekend, see some participation, then go quiet until next year. The alumni who engaged drift back to silence. The cycle repeats.</p>
+
+        <p>A fraternity mentorship program that works is one that runs on a repeatable structure — intake, matching, onboarding, check-in, and close — not one that relies on whoever has the most energy this semester to improvise their way through the process.</p>
+
+        <p>This is especially true at the chapter level, where leadership turns over every year. When the system lives in a Google Doc or one person's inbox, it doesn't survive graduation.</p>
+
+        <h2>What Makes It Repeatable</h2>
+
+        <p>The organizations that run strong greek alumni mentorship programs year after year have a few things in common: they have documented processes, standardized intake forms for both alumni and current members, a matching framework that accounts for goals and career stage, and a clear communication cadence that doesn't rely on anyone remembering to send things manually.</p>
+
+        <p>The Out of Office Labs <strong>Greek Alumni Kit</strong> was built to be exactly this kind of system. It includes everything needed to run a mentorship program from first outreach to final reflection — intake forms, matching tools, session agendas, re-engagement email sequences, and a tracking sheet — so the program survives leadership transitions and scales without adding coordinator hours.</p>
+
+        <p>If your greek alumni mentorship program has been running on good intentions and sporadic emails, it's time to build the infrastructure behind it.</p>
+
+        <div class="article-cta-box">
+          <h3>Ready to stop building from scratch?</h3>
+          <p>Our mentorship kits include everything you need — session guides, matching tools, check-in frameworks, and reporting templates.</p>
+          <a href="/shop" class="btn--cta">Browse the kits →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="related-section">
+      <div class="container">
+        <div class="section-eyebrow">Related Articles</div>
+        <div class="related-grid">
+          <a href="/the-lab/why-mentorship-programs-fail" class="related-card">
+            <span class="related-card-tag">Program Design</span>
+            <h3 class="related-card-title">Why 80% of Mentorship Programs Fail in Year 1 (And How to Fix It)</h3>
+            <p class="related-card-desc">Most mentorship programs fail in year one — not from lack of caring, but lack of systems. Here are the 5 real failure points and how to fix each one.</p>
+            <span class="related-card-read">Read article →</span>
+          </a>
+          <a href="/the-lab/mentorship-board-report" class="related-card">
+            <span class="related-card-tag">Reporting</span>
+            <h3 class="related-card-title">What Your Board Actually Wants to See in a Mentorship Report</h3>
+            <p class="related-card-desc">Boards don't want stories — they want three numbers. Here's what to put in your mentorship program report to protect your budget and earn year two.</p>
+            <span class="related-card-read">Read article →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Out of Office Labs home">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          </svg>
+          <span class="logo-text">Out of Office Labs</span>
+        </a>
+        <p class="footer-tagline">Templates, guides, and tools to launch or strengthen any mentorship program.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/programs" class="footer-link">Programs</a>
+        <a href="/the-lab" class="footer-link">The Lab</a>
+        <a href="/resources" class="footer-link">Resources</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <p class="footer-copy">© 2026 Out of Office Labs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('header--scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    themeToggle?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    });
+
+    (() => {
+      const toggle = document.getElementById('mobileToggle');
+      const nav = document.getElementById('mobileNav');
+      if(!toggle || !nav) return;
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.setAttribute('aria-hidden', String(open));
+        nav.classList.toggle('is-open', !open);
+        toggle.classList.toggle('is-open', !open);
+      });
+    })();
+
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fade-in--visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

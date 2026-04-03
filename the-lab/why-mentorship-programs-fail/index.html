@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Mentorship Programs Fail (And How to Fix Them) | Out of Office Labs</title>
+<meta name="description" content="Most school and campus mentorship programs fail within the first semester. Here are the 5 most common reasons — and exactly what to do instead. A guide for counselors, coordinators, and student affairs teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<style>
+  .breadcrumb {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: rgba(255,255,255,0.55);
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35em;
+  }
+  .breadcrumb a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover { color: #fff; }
+  .breadcrumb .sep { opacity: 0.4; }
+  .breadcrumb .current { color: rgba(255,255,255,0.85); }
+
+  .article-read-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: rgba(255,255,255,0.6);
+    margin-top: var(--space-4);
+  }
+  .article-read-meta span { display: inline-flex; align-items: center; gap: 0.35em; }
+
+  .container--article ul,
+  .container--article ol {
+    font-size: var(--text-base);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    color: var(--color-text);
+    margin: 0 0 var(--space-5);
+    padding-left: var(--space-6);
+  }
+  .container--article li {
+    margin-bottom: var(--space-2);
+  }
+
+  .article-cta-box {
+    background: #0A4A4E;
+    border-radius: var(--radius-xl, 16px);
+    padding: var(--space-10) var(--space-8);
+    text-align: center;
+    margin: var(--space-12) 0 0;
+  }
+  .article-cta-box h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 var(--space-4);
+  }
+  .article-cta-box p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: rgba(255,255,255,0.75);
+    margin: 0 0 var(--space-6) !important;
+    line-height: 1.6;
+  }
+  .article-cta-box .btn--cta {
+    display: inline-block;
+    background: #fff;
+    color: #0A4A4E;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-base);
+    padding: 0.85em 2em;
+    border-radius: var(--radius-full, 100px);
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .article-cta-box .btn--cta:hover {
+    background: #e8e5df;
+    transform: translateY(-1px);
+  }
+
+  .related-section {
+    padding: var(--space-16, 4rem) 0;
+    background: var(--color-bg, #f8f6f1);
+  }
+  .related-section .section-eyebrow {
+    margin-bottom: var(--space-6);
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  @media (max-width: 640px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+  .related-card {
+    background: var(--color-surface-2, #fff);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg, 12px);
+    padding: var(--space-7, 1.75rem);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  }
+  .related-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+  }
+  .related-card-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: rgba(10,74,78,0.08);
+    padding: 3px 10px;
+    border-radius: 100px;
+    width: fit-content;
+  }
+  .related-card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    color: var(--color-primary);
+    line-height: 1.35;
+    margin: 0;
+  }
+  .related-card-desc {
+    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0;
+    flex: 1;
+  }
+  .related-card-read {
+    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: var(--space-2);
+  }
+
+  .container--article h2 {
+    color: #0A4A4E;
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Why Mentorship Programs Fail (And How to Fix Them)","author":{"@type":"Organization","name":"Out of Office Labs"},"publisher":{"@type":"Organization","name":"Out of Office Labs","url":"https://outofofficelabs.com"},"url":"https://outofofficelabs.com/the-lab/why-mentorship-programs-fail/"}
+</script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Out of Office Labs home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+        </svg>
+        <span class="logo-text">Out of Office Labs</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/programs" class="nav-link">Programs</a>
+        <a href="/the-lab" class="nav-link nav-link--active">The Lab</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/shop" class="nav-link nav-link--cta">Shop</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="/programs" class="mobile-nav-link">Programs</a>
+      <a href="/the-lab" class="mobile-nav-link">The Lab</a>
+      <a href="/about" class="mobile-nav-link">About</a>
+      <a href="/contact" class="mobile-nav-link">Contact</a>
+      <a href="/shop" class="mobile-nav-link">Shop</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">›</span>
+          <a href="/the-lab">The Lab</a>
+          <span class="sep">›</span>
+          <span class="current">Why 80% of Mentorship Programs Fail</span>
+        </nav>
+        <div class="article-meta">
+          <span class="article-tag">Program Design</span>
+        </div>
+        <h1 class="article-heading">Why Mentorship Programs Fail (And How to Fix Them)</h1>
+        <p class="article-sub">Everyone who launches a mentorship program means well. Here's why that isn't enough — and the five infrastructure failures that sink programs before they have a chance to work.</p>
+        <div class="article-read-meta">
+          <span>📖 8 min read</span>
+          <span>·</span>
+          <span>March 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-body-section">
+      <div class="container--article">
+
+        <div class="article-lede">
+          Everyone who launches a mentorship program means well. A coordinator raises her hand, a principal gives the green light, a department head writes it into the semester plan. The first kickoff meeting goes great. Students show up. Mentors are enthusiastic. Someone takes a photo for the newsletter.
+        </div>
+
+        <p>Then six weeks later, half the pairs have stopped meeting. By month four, the program is held together by three people who feel too guilty to quit. By year two, it doesn't exist.</p>
+
+        <p>This isn't a story about bad intentions. It's a story about what happens when a program built on caring runs headlong into the reality of missing infrastructure. Understanding why a mentorship program fails — and what to do about it — starts with being honest about the five places where almost every program breaks down.</p>
+
+        <h2>Failure Point 1: No Clear Structure From Day One</h2>
+
+        <p>The most common reason a mentorship program fails in year one has nothing to do with the quality of the mentors or the willingness of the mentees. It's that nobody defined what the program actually is.</p>
+
+        <p>What does a session look like? How often do pairs meet? What do they talk about? Is there an agenda, a prompt, a shared goal? When these questions go unanswered at launch, mentors improvise — and improvisation, when you're a volunteer with twelve other things on your plate, quickly becomes nothing.</p>
+
+        <p>The fix is straightforward: your program needs a session-by-session structure before it launches. Not a loose framework. Actual session guides with topics, talking points, and activities. When mentors show up to a meeting with a clear agenda already written for them, the program runs. When they're expected to fill 45 minutes from scratch every two weeks, it quietly collapses.</p>
+
+        <p>A solid mentorship program template removes the guesswork for everyone involved — coordinators, mentors, and mentees alike.</p>
+
+        <h2>Failure Point 2: Mismatched Pairs</h2>
+
+        <p>Poor mentor-mentee matching is one of the most underestimated ways a mentorship program fails. A bad match doesn't just produce a neutral outcome — research suggests it can actually be worse for a mentee than having no mentor at all. When a student is paired with someone who has nothing in common with their goals, background, or communication style, the relationship stalls fast.</p>
+
+        <p>The problem usually starts before matching even happens: programs often don't define what a "good match" looks like for their specific goals. A program designed to build career readiness needs different matching criteria than a program focused on academic persistence or belonging.</p>
+
+        <p>The fix is to build your matching process around the program's purpose first, then layer in shared interests, availability, and communication preferences. You don't need an algorithm. You need a thoughtful intake form and a clear set of criteria that you actually apply. The time invested in matching well pays off across every session that follows.</p>
+
+        <h2>Failure Point 3: Mentors Are Left on Their Own</h2>
+
+        <p>Most mentors want to help. Very few know how to mentor. These are different skills, and assuming one implies the other is a setup for failure.</p>
+
+        <p>When mentors aren't trained on what their role actually is — how to ask questions instead of lecture, how to hold a productive conversation, how to follow up without being overbearing — they default to one of two modes: giving unsolicited advice, or going silent because they don't know what to say. Neither mode produces the outcomes your program exists to create.</p>
+
+        <p>Training doesn't need to be a full-day retreat. It can be a one-hour onboarding session, a short written guide, and a check-in at the midpoint of the program. What matters is that mentors don't feel like they're winging it. When mentors feel prepared and supported, they stay engaged. When they feel uncertain, they pull back — and the mentees feel it.</p>
+
+        <h2>Failure Point 4: No Mid-Program Accountability</h2>
+
+        <p>A mentorship program without check-ins is like a class without attendance — you lose people quietly, one at a time, and nobody knows until it's too late to do anything about it.</p>
+
+        <p>This is one of the failure points that surprises coordinators most. They assume that because pairs were enthusiastic at kickoff, they'll stay that way. But life intervenes. Schedules shift. One meeting gets rescheduled and then never rescheduled again. Without a structured touchpoint — a coordinator check-in, a brief survey, a visible progress marker — pairs drift, and the program shrinks around them.</p>
+
+        <p>Knowing how to run a mentorship program means building accountability into the calendar before the program starts. Set specific check-in dates. Send a mid-program pulse survey to both mentors and mentees. Flag any pair that hasn't met in three weeks and reach out directly. These aren't punitive measures — they're the infrastructure that keeps relationships alive when life gets busy.</p>
+
+        <h2>Failure Point 5: No Way to Measure What's Working</h2>
+
+        <p>If you can't measure it, you can't protect it. And if you can't protect it, you'll lose the budget, the buy-in, and eventually the program itself.</p>
+
+        <p>This is where most programs hit a wall at the end of year one. The coordinator knows the program mattered — she heard the stories, saw the connections form — but when she sits down to report to administration or request funding for year two, she's working with anecdotes and good feelings. That's not enough to secure a budget line or convince a skeptical principal.</p>
+
+        <p>A functional mentorship program structure includes data collection from the start: participation rates, meeting frequency, pre/post surveys, and at least one measurable outcome tied to the program's stated goal. You don't need a research team. You need a tracking sheet and two or three metrics that you decide on before the program launches, not after.</p>
+
+        <h2>The Real Problem Is a Lack of Systems, Not a Lack of Caring</h2>
+
+        <p>Here's the honest truth: the professionals who run these programs — coordinators, student success advisors, counselors, Greek life chapter officers — are already doing three jobs at once. Asking them to also build a mentorship program infrastructure from scratch, while managing everything else on their plate, is how programs fail before they have a chance to work.</p>
+
+        <p>The good news is that systems can be borrowed. You don't have to design every session guide, matching rubric, check-in template, and outcome tracker yourself. That groundwork already exists.</p>
+
+        <p>Out of Office Labs builds plug-and-play mentorship program kits designed for exactly this situation — for the person who knows mentorship matters and needs the structure to make it actually run. Each kit includes session guides, matching tools, check-in frameworks, and reporting templates built specifically for K-12 schools, colleges, Greek life organizations, and student success teams.</p>
+
+        <p>You bring the program. The kit brings the infrastructure.</p>
+
+        <div class="article-cta-box">
+          <h3>Ready to stop building from scratch?</h3>
+          <p>Our mentorship kits include everything you need — session guides, matching tools, check-in frameworks, and reporting templates.</p>
+          <a href="/shop" class="btn--cta">Browse the kits →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="related-section">
+      <div class="container">
+        <div class="section-eyebrow">Related Articles</div>
+        <div class="related-grid">
+          <a href="/the-lab/k12-mentorship-program-guide" class="related-card">
+            <span class="related-card-tag">K-12 Guide</span>
+            <h3 class="related-card-title">The Complete Guide to Launching a K-12 Mentorship Program</h3>
+            <p class="related-card-desc">A practical guide to launching a K-12 mentorship program that lasts — who to involve, how to match students, what to track, and how to earn admin buy-in.</p>
+            <span class="related-card-read">Read article →</span>
+          </a>
+          <a href="/the-lab/mentorship-board-report" class="related-card">
+            <span class="related-card-tag">Reporting</span>
+            <h3 class="related-card-title">What Your Board Actually Wants to See in a Mentorship Report</h3>
+            <p class="related-card-desc">Boards don't want stories — they want three numbers. Here's what to put in your mentorship program report to protect your budget and earn year two.</p>
+            <span class="related-card-read">Read article →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Out of Office Labs home">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          </svg>
+          <span class="logo-text">Out of Office Labs</span>
+        </a>
+        <p class="footer-tagline">Templates, guides, and tools to launch or strengthen any mentorship program.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/programs" class="footer-link">Programs</a>
+        <a href="/the-lab" class="footer-link">The Lab</a>
+        <a href="/resources" class="footer-link">Resources</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <p class="footer-copy">© 2026 Out of Office Labs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('header--scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    themeToggle?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    });
+
+    (() => {
+      const toggle = document.getElementById('mobileToggle');
+      const nav = document.getElementById('mobileNav');
+      if(!toggle || !nav) return;
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.setAttribute('aria-hidden', String(open));
+        nav.classList.toggle('is-open', !open);
+        toggle.classList.toggle('is-open', !open);
+      });
+    })();
+
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fade-in--visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

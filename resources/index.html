@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Out of Office Labs</title>
+<meta name="description" content="The Greek Alumni Mentorship & Fundraising Kit — everything you need to launch in 30–60 days. Handbooks, templates, forms, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .resource-gated {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-alt);
+    border: 1.5px solid var(--color-divider);
+    border-radius: 8px;
+    padding: 8px 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .resource-gated svg { opacity: 0.5; }
+  .resource-item--gated { opacity: 0.85; }
+  .resource-item--gated .resource-name { color: var(--color-text-secondary); }
+  .gate-banner {
+    background: linear-gradient(135deg, rgba(10,74,78,0.06) 0%, rgba(125,212,215,0.08) 100%);
+    border: 1.5px solid rgba(125,212,215,0.35);
+    border-radius: 16px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gate-banner-icon { font-size: 2rem; flex-shrink: 0; }
+  .gate-banner-text strong { display: block; font-size: 1rem; color: var(--color-teal-dark); margin-bottom: 4px; }
+  .gate-banner-text p { font-size: 14px; color: var(--color-text-secondary); margin: 0; line-height: 1.6; }
+  .gate-banner-actions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+  @media (max-width: 680px) {
+    .gate-banner { flex-direction: column; align-items: flex-start; }
+    .gate-banner-actions { width: 100%; }
+    .resource-item {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .resource-info {
+      flex: 1;
+      min-width: 0;
+      width: calc(100% - 52px);
+    }
+    .resource-gated {
+      flex-basis: calc(100% - 52px);
+      margin-left: 52px;
+      white-space: normal;
+      align-self: flex-start;
+      font-size: 11px;
+      padding: 6px 10px;
+      box-sizing: border-box;
+      max-width: calc(100% - 52px);
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Out of Office Labs home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+        </svg>
+        <span class="logo-text">Out of Office Labs</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/programs" class="nav-link">Programs</a>
+        <a href="/the-lab" class="nav-link">The Lab</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/shop" class="nav-link nav-link--cta">Shop</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="/programs" class="mobile-nav-link">Programs</a>
+      <a href="/the-lab" class="mobile-nav-link">The Lab</a>
+      <a href="/about" class="mobile-nav-link">About</a>
+      <a href="/contact" class="mobile-nav-link">Contact</a>
+      <a href="/shop" class="mobile-nav-link">Shop</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <div class="page-eyebrow">The Kit</div>
+          <h1 class="page-heading">Everything pre-written.<br><em>You just customize.</em></h1>
+          <p class="page-sub">Every Out of Office Labs kit gives you the documents, templates, and tools to launch a structured mentorship program in 30–60 days — for K–12 schools, colleges, Greek organizations, and school districts. No starting from scratch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">How It Works</div>
+          <h2 class="section-heading">From zero to launched<br><em>in four weeks.</em></h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step fade-in">
+            <div class="step-num">Week 1</div>
+            <h3 class="step-title">Get Oriented</h3>
+            <p class="step-body">Read the Program Handbook and Timeline. Understand the full program flow so you can explain it confidently to your team or advisory board. Takes 30–45 minutes.</p>
+          </div>
+          <div class="step fade-in">
+            <div class="step-num">Week 2</div>
+            <h3 class="step-title">Customize Your Docs</h3>
+            <p class="step-body">Make copies of the key files and personalize them. Add your chapter name, set dates, customize the Welcome Letters and Event Invites. Takes 1–2 hours.</p>
+          </div>
+          <div class="step fade-in">
+            <div class="step-num">Week 3</div>
+            <h3 class="step-title">Launch Outreach</h3>
+            <p class="step-body">Use the LinkedIn post template and email outreach templates to recruit 10–20 alumni. Expect 5–15 interested alumni who fill out the questionnaire.</p>
+          </div>
+          <div class="step fade-in">
+            <div class="step-num">Week 4</div>
+            <h3 class="step-title">Run Your Kickoff</h3>
+            <p class="step-body">Lock in a date, send calendar invites using the Event Template, and run your kickoff with committed alumni and students. Momentum starts here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KIT CONTENTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">What's Inside</div>
+          <h2 class="section-heading">Every document.<br><em>Every template.</em></h2>
+          <p class="section-intro">Six organized folders — plus two fully designed presentation decks. Everything is ready to use — just drop in your name, dates, and real program data.</p>
+        </div>
+
+        <!-- Purchase gate banner -->
+        <div class="gate-banner">
+          <div class="gate-banner-icon">🔒</div>
+          <div class="gate-banner-text">
+            <strong>Documents are included with your kit purchase.</strong>
+            <p>Purchase any kit to get instant access to all templates, handbooks, forms, and both presentation decks — delivered as branded PDFs, editable Google Docs, and ready-to-present PPTX files.</p>
+          </div>
+          <div class="gate-banner-actions">
+            <a href="/shop" class="btn btn--primary">See Plans — from $297/yr</a>
+            <a href="/programs/greek-alumni" class="btn btn--ghost">See what's included</a>
+          </div>
+        </div>
+
+        <div class="resources-accordion">
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-trigger" aria-expanded="true">
+              <span class="accordion-num">00</span>
+              <span class="accordion-title">Start Here &amp; Program Overview</span>
+              <svg class="accordion-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" style="display:block">
+              <ul class="resource-list">
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Start Here – How to Use This Kit</div>
+                    <div class="resource-desc">Your step-by-step guide to getting the program off the ground in 30–60 days</div>
+                    <span class="resource-type">Guide</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Program Overview</div>
+                    <div class="resource-desc">5-minute summary of the full kit, what's included, and how everything fits together</div>
+                    <span class="resource-type">Overview</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-num">01</span>
+              <span class="accordion-title">Handbooks &amp; FAQ</span>
+              <svg class="accordion-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" style="display:none">
+              <ul class="resource-list">
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Alumni–Student Mentorship Program Handbook</div>
+                    <div class="resource-desc">How the program works, who does what, roles, responsibilities, and best practices for mentors and mentees</div>
+                    <span class="resource-type">Handbook</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Advisory Board Overview</div>
+                    <div class="resource-desc">Roles and responsibilities for alumni leaders supporting the program from the board level</div>
+                    <span class="resource-type">Reference</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Program FAQ</div>
+                    <div class="resource-desc">10 common questions from alumni and students — time commitment, matching, virtual vs. in-person, and more</div>
+                    <span class="resource-type">FAQ</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-num">02</span>
+              <span class="accordion-title">Forms &amp; Worksheets</span>
+              <svg class="accordion-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" style="display:none">
+              <ul class="resource-list">
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Mentorship Enrollment Questionnaire</div>
+                    <div class="resource-desc">Collects the right information to match mentors and mentees by career interests, availability, goals, and format preference</div>
+                    <span class="resource-type">Form</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">SMART Goals Worksheet</div>
+                    <div class="resource-desc">Helps each mentor–mentee pair define clear, measurable goals for the mentorship period and track progress</div>
+                    <span class="resource-type">Worksheet</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Feedback Survey</div>
+                    <div class="resource-desc">Mid-program and end-of-program survey to measure satisfaction and surface opportunities to improve</div>
+                    <span class="resource-type">Survey</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-num">03</span>
+              <span class="accordion-title">Communication Templates</span>
+              <svg class="accordion-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" style="display:none">
+              <ul class="resource-list">
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Mentor &amp; Mentee Welcome Letters</div>
+                    <div class="resource-desc">Onboarding messages that set expectations from day one and make both sides feel welcomed and prepared</div>
+                    <span class="resource-type">Template</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Event Invitation Templates</div>
+                    <div class="resource-desc">Ready-to-send invites for kickoffs, mixers, Lunch &amp; Learns, and closing celebrations — virtual and in-person versions</div>
+                    <span class="resource-type">Template</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">LinkedIn Post Template</div>
+                    <div class="resource-desc">A ready-to-post template to recruit alumni mentors — just drop in your chapter name and publish</div>
+                    <span class="resource-type">Template</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-num">04</span>
+              <span class="accordion-title">Program Management &amp; Tracking</span>
+              <svg class="accordion-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" style="display:none">
+              <ul class="resource-list">
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Program Timeline</div>
+                    <div class="resource-desc">Month-by-month schedule from kickoff through closing — September to May implementation calendar</div>
+                    <span class="resource-type">Timeline</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Advisory Board Meeting Agenda</div>
+                    <div class="resource-desc">Structure for reviewing participation, feedback, and next steps — run a tight, productive board meeting every time</div>
+                    <span class="resource-type">Agenda</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Success Story / Spotlight Template</div>
+                    <div class="resource-desc">Format for highlighting strong mentor–mentee pairs — use in fundraising appeals, social media, and chapter comms</div>
+                    <span class="resource-type">Template</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-num">05</span>
+              <span class="accordion-title">Presentation Decks</span>
+              <svg class="accordion-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" style="display:none">
+              <ul class="resource-list">
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Pre-Program Leadership Briefing Deck</div>
+                    <div class="resource-desc">9-slide deck built to win buy-in from boards, administrators, and advisory committees before you launch. Includes urgency case, research stats, program structure, and ROI framing. Ready to present on day one.</div>
+                    <span class="resource-type">PowerPoint Deck</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+                <li class="resource-item resource-item--gated">
+                  <div class="resource-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div class="resource-info">
+                    <div class="resource-name">Post-Program Impact Deck</div>
+                    <div class="resource-desc">Data-forward deck built to present outcomes, ROI, and the compounding case for continued investment after your first program year. Includes a live chart slide, KPI callouts, participant voice slides, and a subscription value frame. Replace the placeholders with your numbers and present.</div>
+                    <span class="resource-type">PowerPoint Deck</span>
+                  </div>
+                  <div class="resource-gated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Included with purchase
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMON MISTAKES -->
+    <section class="section section--offset">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">What We've Learned</div>
+          <h2 class="section-heading">5 mistakes to avoid<br><em>before you launch.</em></h2>
+        </div>
+        <div class="mistakes-grid">
+          <div class="mistake-card fade-in">
+            <div class="mistake-num">01</div>
+            <h3 class="mistake-title">Overthinking the launch</h3>
+            <p class="mistake-body">Don't wait for perfect. Send outreach this week with what you have. Done beats perfect every time in a first-semester program.</p>
+          </div>
+          <div class="mistake-card fade-in">
+            <div class="mistake-num">02</div>
+            <h3 class="mistake-title">Generic mass emails</h3>
+            <p class="mistake-body">Personalize at least the first line. Mention a specific memory, game, or connection. The templates give you the structure — you add the personal touch.</p>
+          </div>
+          <div class="mistake-card fade-in">
+            <div class="mistake-num">03</div>
+            <h3 class="mistake-title">No follow-up</h3>
+            <p class="mistake-body">70% of alumni will ignore the first message. Follow up 3–5 days later. The kit includes follow-up scripts so you're never starting from scratch.</p>
+          </div>
+          <div class="mistake-card fade-in">
+            <div class="mistake-num">04</div>
+            <h3 class="mistake-title">Skipping the kickoff event</h3>
+            <p class="mistake-body">This is where momentum starts. Make it happen even if only 5 people show up. The energy from that first event carries the program forward.</p>
+          </div>
+          <div class="mistake-card fade-in">
+            <div class="mistake-num">05</div>
+            <h3 class="mistake-title">Micromanaging pairs</h3>
+            <p class="mistake-body">Trust mentors and mentees to drive their own relationship. Your job is to facilitate and remove friction — not babysit. The kit builds that in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="kit-section">
+      <div class="container">
+        <div class="kit-inner kit-inner--centered">
+          <h2 class="kit-heading">Ready to get started?</h2>
+          <p class="kit-body" style="max-width: 560px; margin: 0 auto var(--space-10);">Get the full kit and launch your mentorship program this semester. Or talk to us first — we're happy to answer questions.</p>
+          <div class="cta-buttons">
+            <a href="/shop" class="btn btn--inverse">See Plans — from $297/yr</a>
+            <a href="/contact" class="btn btn--ghost-light">Talk to Us First</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <a href="/" class="logo footer-logo">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          </svg>
+          <span class="logo-text">Out of Office Labs</span>
+        </a>
+        <p class="footer-tagline">Templates, guides, and tools to launch or strengthen any mentorship program.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="/programs" class="footer-link">Programs</a>
+        <a href="/shop" class="footer-link">Shop</a>
+        <a href="/resources" class="footer-link">Resources</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <p class="footer-copy">© 2026 Out of Office Labs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('header--scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    themeToggle?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    });
+
+    (() => {
+      const toggle = document.getElementById('mobileToggle');
+      const nav = document.getElementById('mobileNav');
+      if(!toggle || !nav) return;
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.setAttribute('aria-hidden', String(open));
+        nav.classList.toggle('is-open', !open);
+        toggle.classList.toggle('is-open', !open);
+      });
+    })();
+
+    // Accordion
+    document.querySelectorAll('.accordion-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        const body = btn.nextElementSibling;
+        btn.setAttribute('aria-expanded', !isOpen);
+        body.style.display = isOpen ? 'none' : 'block';
+        btn.querySelector('.accordion-arrow').style.transform = isOpen ? '' : 'rotate(180deg)';
+      });
+    });
+
+    // Init first accordion arrow
+    document.querySelector('.accordion-trigger[aria-expanded="true"] .accordion-arrow').style.transform = 'rotate(180deg)';
+
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fade-in--visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

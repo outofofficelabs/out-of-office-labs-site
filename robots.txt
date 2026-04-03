@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+Disallow: /checklist-offer/
+Sitemap: https://outofofficelabs.com/sitemap.xml

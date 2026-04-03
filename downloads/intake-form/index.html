@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Mentorship Intake Form Template — Out of Office Labs</title>
+<meta name="description" content="Download a free, professional mentorship program intake form template. Includes mentor and mentee application forms — editable and ready to use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<style>
+  .download-hero {
+    background: linear-gradient(135deg, #0A4A4E 0%, #073538 100%);
+    padding: var(--space-16) 0 var(--space-20);
+    text-align: center;
+    color: #FAF7F2;
+  }
+  .download-hero .page-eyebrow { color: #7DD4D7; border-color: rgba(125,212,215,0.3); }
+  .download-hero h1 { color: #FAF7F2; }
+  .download-hero p { color: rgba(250,247,242,0.8); max-width: 540px; margin: 0 auto; }
+  .download-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    padding: var(--space-10);
+    max-width: 520px;
+    margin: -80px auto 0;
+    position: relative;
+    z-index: 2;
+  }
+  .download-card-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.4rem;
+    color: #0A4A4E;
+    margin-bottom: var(--space-2);
+  }
+  .download-card-sub {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+  }
+  .download-includes {
+    list-style: none;
+    margin-bottom: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .download-includes li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+  }
+  .download-includes li::before {
+    content: '✓';
+    color: #0A4A4E;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .download-form { display: flex; gap: var(--space-2); }
+  .download-input {
+    flex: 1;
+    padding: 11px 16px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    outline: none;
+  }
+  .download-input:focus { border-color: #0A4A4E; }
+  .download-btn {
+    background: #0A4A4E;
+    color: white;
+    font-weight: 700;
+    font-size: var(--text-sm);
+    padding: 11px 20px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background 0.2s;
+  }
+  .download-btn:hover { background: #073538; }
+  .download-note {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: var(--space-3);
+  }
+  .preview-section {
+    max-width: 720px;
+    margin: var(--space-16) auto 0;
+    padding: 0 var(--space-4);
+  }
+  .what-inside-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+    margin-top: var(--space-6);
+  }
+  @media (max-width: 560px) { .what-inside-grid { grid-template-columns: 1fr; } .download-form { flex-direction: column; } }
+  .inside-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+  }
+  .inside-card-title { font-weight: 700; color: #0A4A4E; margin-bottom: var(--space-2); font-size: var(--text-sm); }
+  .inside-card-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .inside-card-list li { font-size: var(--text-sm); color: var(--color-text-muted); padding-left: 14px; position: relative; }
+  .inside-card-list li::before { content: '—'; position: absolute; left: 0; color: #7DD4D7; }
+  .upsell-band {
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8) var(--space-10);
+    text-align: center;
+    margin-top: var(--space-12);
+    margin-bottom: var(--space-16);
+  }
+  .upsell-band p { color: var(--color-text-muted); font-size: var(--text-sm); margin-bottom: var(--space-4); }
+</style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Out of Office Labs home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+        </svg>
+        <span class="logo-text">Out of Office Labs</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/programs" class="nav-link">Programs</a>
+        <a href="/the-lab" class="nav-link">The Lab</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/shop" class="nav-link nav-link--cta">Shop</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="/programs" class="mobile-nav-link">Programs</a>
+      <a href="/the-lab" class="mobile-nav-link">The Lab</a>
+      <a href="/about" class="mobile-nav-link">About</a>
+      <a href="/contact" class="mobile-nav-link">Contact</a>
+      <a href="/shop" class="mobile-nav-link">Shop</a>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="download-hero">
+      <div class="container">
+        <div class="page-eyebrow" style="color:#7DD4D7;border-color:rgba(125,212,215,0.3);display:inline-block;margin-bottom:var(--space-4);">Free Template</div>
+        <h1 style="font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:#FAF7F2;margin-bottom:var(--space-4);">Mentorship Program<br><em>Intake Form Template</em></h1>
+        <p style="color:rgba(250,247,242,0.75);max-width:480px;margin:0 auto;line-height:1.7;">A professional, ready-to-use intake form for mentors and mentees. Download free — editable version included in every kit.</p>
+      </div>
+    </div>
+
+    <section class="section section--light" style="padding-top:var(--space-20);">
+      <div class="container">
+
+        <div class="download-card">
+          <div class="download-card-title">Download your free template</div>
+          <p class="download-card-sub">Enter your email and we'll send it instantly. You'll also get occasional program tips from The Lab — unsubscribe anytime.</p>
+          <ul class="download-includes">
+            <li>Mentee application form (full fields + availability grid)</li>
+            <li>Mentor application form (expertise + population preference)</li>
+            <li>Ready to print or send digitally</li>
+            <li>Editable version included in all OOL kits</li>
+          </ul>
+          <form class="download-form" action="https://app.kit.com/forms/9239681/subscriptions" method="post" id="downloadForm">
+            <input type="email" name="email_address" class="download-input" placeholder="your@email.edu" required>
+            <button type="submit" class="download-btn">Get the template →</button>
+          </form>
+          <p class="download-note">Free. No credit card. Unsubscribe anytime.</p>
+        </div>
+
+        <div class="preview-section">
+          <div class="section-eyebrow" style="text-align:center;">What's inside</div>
+          <h2 class="section-heading" style="text-align:center;">Two forms.<br><em>Everything you need to run matching.</em></h2>
+          <div class="what-inside-grid">
+            <div class="inside-card">
+              <div class="inside-card-title">Mentee Application</div>
+              <ul class="inside-card-list">
+                <li>Goals checkboxes (8 options)</li>
+                <li>Preferred mentor background</li>
+                <li>Meeting format preference</li>
+                <li>Weekly availability grid</li>
+                <li>Open response sections</li>
+              </ul>
+            </div>
+            <div class="inside-card">
+              <div class="inside-card-title">Mentor Application</div>
+              <ul class="inside-card-list">
+                <li>Areas of expertise (6 options)</li>
+                <li>Mentee population preference</li>
+                <li>Meeting format + availability</li>
+                <li>Motivation + advice prompts</li>
+                <li>Professional background fields</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="upsell-band">
+            <div class="section-eyebrow">Want the full system?</div>
+            <h3 style="font-family:'Instrument Serif',serif;font-size:1.3rem;margin-bottom:var(--space-2);">The intake form is just one piece.</h3>
+            <p>Every Out of Office Labs kit includes the editable intake forms plus session guides, matching tools, tracking spreadsheets, and board-ready reports. Everything you need to launch, run, and prove the value of your program.</p>
+            <a href="/shop" class="btn btn--primary">Browse the kits — $297/year →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <a href="/" class="logo footer-logo">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
+            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+          </svg>
+          <span class="logo-text">Out of Office Labs</span>
+        </a>
+        <p class="footer-tagline">Templates, guides, and tools to launch or strengthen any mentorship program.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="/programs" class="footer-link">Programs</a>
+        <a href="/the-lab" class="footer-link">The Lab</a>
+        <a href="/resources" class="footer-link">Resources</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <p class="footer-copy">© 2026 Out of Office Labs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('header--scrolled', window.scrollY > 20);
+    }, { passive: true });
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    themeToggle?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    });
+    (() => {
+      const toggle = document.getElementById('mobileToggle');
+      const nav = document.getElementById('mobileNav');
+      if(!toggle || !nav) return;
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.setAttribute('aria-hidden', String(open));
+        nav.classList.toggle('is-open', !open);
+        toggle.classList.toggle('is-open', !open);
+      });
+    })();
+
+    // After form submit, trigger download
+    document.getElementById('downloadForm')?.addEventListener('submit', function(e) {
+      setTimeout(() => {
+        const link = document.createElement('a');
+        link.href = '/downloads/intake-form/mentorship-intake-form-template.pdf';
+        link.download = 'OOL-Mentorship-Intake-Form-Template.pdf';
+        link.click();
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
