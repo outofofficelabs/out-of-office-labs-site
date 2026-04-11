@@ -1,535 +1,572 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-<!--
-   ______                            __
-  / ____/___  ____ ___  ____  __  __/ /____  _____
- / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
-\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
-                    /_/--><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Out of Office Labs — Run Mentorship. Not Spreadsheets.</title>
-<meta name="description" content="Out of Office Labs provides ready-to-launch mentorship program kits for K-12 schools, school districts, colleges, universities, fraternity and sorority organizations, and student success teams. Each kit includes session guides, matching tools, tracking sheets, and board-ready reports — starting at $97. One-time purchase.">
-<meta property="og:title" content="Out of Office Labs — Run Mentorship. Not Spreadsheets.">
-<meta property="og:description" content="Out of Office Labs provides ready-to-launch mentorship program kits for K-12 schools, school districts, colleges, universities, fraternity and sorority organizations, and student success teams. Each kit includes session guides, matching tools, tracking sheets, and board-ready reports — starting at $97. One-time purchase.">
-<meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Out of Office Labs — Mentorship Systems for Institutions</title>
+  <meta name="description" content="Ready-to-launch mentorship kits and systems for K-12 schools, universities, fraternities, sororities, and member organizations. Structured. Measurable. No extra staff required.">
 
-<!-- Fonts: Plus Jakarta Sans (body) + Instrument Serif (display) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Out of Office Labs — Mentorship Systems for Institutions">
+  <meta property="og:description" content="Ready-to-launch mentorship kits and systems for K-12 schools, universities, Greek life, and member organizations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://outofofficelabs.com">
 
-<link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,800&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18057278766"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18057278766');
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Out of Office Labs","url":"https://outofofficelabs.com","description":"Out of Office Labs provides plug-and-play mentorship program kits for K-12 schools, school districts, colleges, universities, and Greek life organizations.","offers":{"@type":"AggregateOffer","lowPrice":"297","highPrice":"2997","priceCurrency":"USD"}}
-</script>
-<!-- b:20260403202335 -->
-<!-- b:20260403205150 -->
-<!-- b:20260404002146 -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./home.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A5F'/%3E%3Cpath d='M8 10h16v2H8zM8 15h12v2H8zM8 20h14v2H8z' fill='%23D4880E'/%3E%3C/svg%3E">
 </head>
 <body>
 
-  <!-- ANNOUNCEMENT BAR -->
-  <div class="announce-bar" id="announceBar">
-    <div class="announce-inner">
-      <span class="announce-badge">NEW</span>
-      <span class="announce-text">Launch Partner Program — Keep <strong>100% of your first 5 sales</strong> (~$485). Limited spots open.</span>
-      <a href="/affiliate/" class="announce-cta">See the offer →</a>
-    </div>
-    <button class="announce-close" id="announceClose" aria-label="Dismiss">&times;</button>
-  </div>
-  <style>
-  .announce-bar{background:#0A4A4E;color:#FAF7F2;padding:11px 20px;display:flex;align-items:center;justify-content:center;gap:16px;position:relative;z-index:200;font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;line-height:1.4;}
-  .announce-inner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;}
-  .announce-badge{background:#7DD4D7;color:#0A4A4E;font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:2px 8px;border-radius:999px;white-space:nowrap;}
-  .announce-text{color:rgba(250,247,242,.9);}
-  .announce-text strong{color:#7DD4D7;font-weight:700;}
-  .announce-cta{color:#fff;font-weight:700;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.4);transition:border-color .2s;}
-  .announce-cta:hover{border-color:#7DD4D7;color:#7DD4D7;}
-  .announce-close{position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(250,247,242,.6);font-size:1.25rem;cursor:pointer;padding:4px 8px;line-height:1;transition:color .2s;}
-  .announce-close:hover{color:#fff;}
-  .announce-bar.hidden{display:none;}
-  </style>
+  <!-- Skip link -->
+  <a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:999;background:var(--color-primary);color:#fff;padding:var(--space-2) var(--space-4);border-radius:0 0 var(--radius-md) 0;" onfocus="this.style.position='fixed';this.style.width='auto';this.style.height='auto';this.style.clip='auto';this.style.overflow='visible';" onblur="this.className='sr-only';">Skip to content</a>
 
-  <!-- ===== HEADER ===== -->
-  <header class="header" id="header">
-    <div class="header-inner container">
-      <a href="/" class="logo" aria-label="Out of Office Labs home">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
-          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+  <!-- ========================= HEADER ========================= -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="#" class="header__logo" aria-label="Out of Office Labs — home">
+        <!-- SVG Logo Mark -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="var(--color-primary)"/>
+          <rect x="7" y="9" width="18" height="2.5" rx="1" fill="var(--color-accent)"/>
+          <rect x="7" y="14" width="13" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.7"/>
+          <rect x="7" y="19" width="15" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.5"/>
         </svg>
-        <span class="logo-text">Out of Office Labs</span>
+        Out of Office Labs
       </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="/programs" class="nav-link">Programs</a>
-        <a href="/the-lab" class="nav-link">The Lab</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link">Contact</a>
-        <a href="/affiliate" class="nav-link">Partner Program</a>
-        <a href="/shop" class="nav-link nav-link--cta">Shop</a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="#who">Who It's For</a>
+        <a href="#how">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#outcomes">Results</a>
+        <a href="#about">About</a>
       </nav>
 
-      <div class="header-actions">
+      <div class="header__actions">
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+        <a href="#pricing" class="btn btn--primary btn--sm header__cta">View Kits</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
       </div>
     </div>
 
     <!-- Mobile nav -->
-    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-      <a href="/programs" class="mobile-nav-link">Programs</a>
-      <a href="/the-lab" class="mobile-nav-link">The Lab</a>
-      <a href="/about" class="mobile-nav-link">About</a>
-      <a href="/contact" class="mobile-nav-link">Contact</a>
-      <a href="/affiliate" class="mobile-nav-link">Partner Program</a>
-      <a href="/shop" class="mobile-nav-link">Shop</a>
-    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#who">Who It's For</a>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#outcomes">Results</a>
+      <a href="#about">About</a>
+      <a href="mailto:hello@outofofficelabs.com" class="btn btn--primary" style="margin-top:var(--space-4);">Get Started</a>
+    </nav>
   </header>
 
-  <main>
+  <main id="main">
 
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="hero-inner container">
-        <div class="hero-content">
-          <div class="hero-eyebrow">Mentorship program kits for schools</div>
-          <h1 class="hero-heading">Launch or strengthen<br><em>your mentorship program.</em></h1>
-          <p class="hero-sub">Complete templates, guides, and tools for K-12 schools, campuses, and chapters — whether you're starting from scratch or adding structure to what you've already built.</p>
-          <p class="hero-built">Built with administrators, counselors, and coordinators who are already doing three jobs.</p>
-          <div class="hero-ctas">
-            <a href="/contact" class="btn btn--primary">Talk about your program</a>
-            <a href="/shop" class="btn btn--ghost">Browse the Mentorship Kit →</a>
-          </div>
-          <div class="hero-tags">
-            <a href="/k12-hub/" class="tag">K–12 Hub →</a>
-              <a href="/programs/k12" class="tag">K–12 programs</a>
-            <a href="/programs/college-access" class="tag">College access teams</a>
-            <a href="/programs/alumni-mentoring" class="tag">Alumni mentoring</a>
-            <a href="/programs/greek-alumni" class="tag">Greek organizations</a>
-            <a href="/programs/school-districts" class="tag">School districts</a>
-          </div>
-        </div>
-
-        <!-- Template Preview Stack -->
-        <div class="hero-templates">
-          <div class="template-stack">
-            <div class="template-card template-card--back">
-              <img src="/images/template-roadmap.png" alt="30-60 Day Launch Roadmap template" class="template-img" loading="eager" width="800" height="1035">
-            </div>
-            <div class="template-card template-card--mid">
-              <img src="/images/template-college-access.png" alt="College Access Kit overview template" class="template-img" loading="eager" width="800" height="1035">
-            </div>
-            <div class="template-card template-card--front">
-              <img src="/images/template-whats-inside.png" alt="K-12 Mentorship Kit What's Inside overview" class="template-img" loading="eager" width="800" height="1035">
-            </div>
-          </div>
-          <p class="template-caption">Preview: K-12 Mentorship Kit — 18+ ready-to-use templates</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== LEAD MAGNET OPT-IN ===== -->
-    <section class="section optin-section" id="free-checklist">
+    <!-- ========================= HERO ========================= -->
+    <section class="hero section" aria-labelledby="hero-heading">
       <div class="container">
-        <div class="optin-inner">
-          <div class="optin-text">
-            <div class="section-eyebrow" style="color:#7DD4D7;">Free Resource</div>
-            <h2 class="optin-heading">The 30-Day Mentorship Launch Checklist</h2>
-            <p class="optin-sub">Every step, every template, every form — on one page. Download free and strengthen or launch your program this semester.</p>
-          </div>
-          <form class="optin-form" onsubmit="handleOptinSubmit(event)">
-            <input type="hidden" name="_redirect" value="https://outofofficelabs.com/?subscribed=1">
-            <div class="optin-fields">
-              <input class="optin-input" type="email" name="email_address" placeholder="Your work email" required aria-label="Email address">
-              <button class="btn optin-btn" type="submit" style="background:#7DD4D7;color:#0A4A4E;font-weight:700;border:none;padding:14px 28px;border-radius:8px;font-size:1rem;cursor:pointer;white-space:nowrap;">Get the Free Checklist →</button>
+        <div class="hero__inner">
+          <div class="hero__content">
+            <span class="hero__badge">Productized Mentorship Systems</span>
+            <h1 id="hero-heading">Structured mentorship your institution can deploy in weeks, not semesters.</h1>
+            <p class="hero__subtitle">Ready-to-launch kits with intake forms, matching logic, communication templates, and proof-of-impact reporting. Built for lean teams that need results without extra staff or platform sprawl.</p>
+            <div class="hero__ctas">
+              <a href="#pricing" class="btn btn--primary btn--lg">View Mentorship Kits</a>
+              <a href="/contact/" class="btn btn--outline btn--lg">Talk Through a Pilot</a>
             </div>
-            <p class="optin-disclaimer">No spam. Unsubscribe anytime. We'll also send you 2 follow-up tips.</p>
-          </form>
-        </div>
-      </div>
-    </section>
+          </div>
 
-    <!-- ===== WHAT WE DO ===== -->
-    <section class="section section--light" id="what-we-do">
-      <div class="container">
-        <div class="section-label">What we actually do</div>
-        <h2 class="section-heading">We turn <em>"we should have a mentorship program"</em> into an operational system.</h2>
-        <div class="cards-grid">
-          <div class="card">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <h3 class="card-title">Mentorship that actually fits your school</h3>
-            <p class="card-body">We start with your constraints: schedules, staffing, culture, and safety requirements. Then we design a mentorship rhythm that can actually run in your building.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-            </div>
-            <h3 class="card-title">Systems instead of heroics</h3>
-            <p class="card-body">Clear roles, clear flows, and pre-built templates for everything: signups, matching, communication, meetings, and reporting.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-            </div>
-            <h3 class="card-title">AI that does the grunt work</h3>
-            <p class="card-body">From inbox triage to data summaries and program reports, we use AI where it helps your staff get hours back — not where it adds noise.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== WHY MENTORSHIP FAILS ===== -->
-    <section class="section section--split" id="why-it-fails">
-      <div class="container">
-        <div class="split-layout split-layout--single">
-          <div class="split-text">
-            <div class="section-label">Why mentorship fails (and how to fix it)</div>
-            <h2 class="section-heading">Most programs struggle to scale because they rely on goodwill instead of systems.</h2>
-            <div class="fail-groups">
-              <div class="fail-group">
-                <h3 class="fail-group-title">Built on goodwill</h3>
-                <ul class="fail-list">
-                  <li>One enthusiastic staff member runs everything… until they burn out.</li>
-                  <li>Mentors say yes once, then disappear when schedules get tight.</li>
-                  <li>No one owns the data, so leadership never really sees the impact.</li>
-                </ul>
+          <div class="hero__visual" aria-hidden="true">
+            <!-- Product dashboard preview cards -->
+            <div class="hero__stat-card">
+              <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-2);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                <span style="font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500;">Active Mentorship Pairs</span>
               </div>
-              <div class="fail-group">
-                <h3 class="fail-group-title">No clear structure</h3>
-                <ul class="fail-list">
-                  <li>Mentors and mentees show up and ask, "So… what should we talk about?"</li>
-                  <li>Meetings get skipped because there's no cadence and no nudges.</li>
-                  <li>Everyone cares, but no one knows what "good" looks like.</li>
-                </ul>
-              </div>
-              <div class="fail-group">
-                <h3 class="fail-group-title">Invisible work</h3>
-                <ul class="fail-list">
-                  <li>Coordinators live in spreadsheets and "just checking in" emails.</li>
-                  <li>Reporting takes days, so you only do it at the end of the year.</li>
-                  <li>You're constantly re-explaining the program to new stakeholders.</li>
-                </ul>
-              </div>
+              <span class="hero__stat-value">142</span>
+              <div class="hero__stat-bar"><div class="hero__stat-fill" style="width:78%;background:var(--color-primary);"></div></div>
+            </div>
+            <div class="hero__stat-card">
+              <span class="hero__stat-value" style="color:var(--color-success);">94%</span>
+              <span class="hero__stat-label">Meeting Adherence</span>
+            </div>
+            <div class="hero__stat-card">
+              <span class="hero__stat-value" style="color:var(--color-accent);">3.2×</span>
+              <span class="hero__stat-label">Retention Lift</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ===== KIT / CTA BAND ===== -->
-    <section class="section section--teal" id="kit">
+    <!-- ========================= TRUST BAR ========================= -->
+    <div class="trust-bar fade-in">
       <div class="container">
-        <div class="kit-inner">
-          <div class="kit-text">
-            <div class="section-label section-label--inverse">Mentorship Program In-a-Box</div>
-            <h2 class="section-heading section-heading--inverse">17 documents. Everything you need to launch a safe, structured mentorship cycle this semester.</h2>
-            <ul class="kit-list">
-              <li>Full program presentation deck (editable, board-ready)</li>
-              <li>Mentor &amp; mentee intake forms + consent language</li>
-              <li>Semester-long session guide (5 meetings scripted)</li>
-              <li>Matching worksheet (runs in Google Sheets)</li>
-              <li>Milestone Tracker (auto-calculates completion rates)</li>
-              <li>Pre-program Leadership Briefing Deck (9 slides)</li>
-              <li>Post-program Impact Deck (board-ready)</li>
-              <li>Emergency Protocol &amp; Disclosure Guide <strong>(NEW)</strong></li>
-              <li>Survives staff turnover — everything is documented so the next coordinator can hit the ground running</li>
-              <li><em>...and 9 more templates included.</em></li>
-            </ul>
-            <p class="kit-no-need"><strong>What you don't have to do:</strong> build custom software, convene a giant committee, or guess what mentors should talk about. The presentation decks alone are worth the price — most programs spend weeks building these from scratch.</p>
-            <a href="/shop" class="btn btn--white">See what's inside →</a>
-          </div>
-          <div class="kit-visual">
-            <img src="images/ool-school.png" alt="Modern school building with students" class="kit-img">
-          </div>
+        <p class="trust-bar__label">Designed for teams at</p>
+        <div class="trust-bar__logos">
+          <span class="trust-bar__logo">State Universities</span>
+          <span class="trust-bar__logo">K-12 Districts</span>
+          <span class="trust-bar__logo">Greek Councils</span>
+          <span class="trust-bar__logo">Alumni Boards</span>
+          <span class="trust-bar__logo">Member Orgs</span>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ===== DECK CALLOUT BAND ===== -->
-    <section class="section section--light" id="decks">
+    <!-- ========================= WHO IT'S FOR ========================= -->
+    <section id="who" class="section" aria-labelledby="who-heading">
       <div class="container">
         <div class="section-header">
-          <div class="section-eyebrow">Presentation Decks — Included With Every Kit</div>
-          <h2 class="section-heading">Walk in ready to present.<br><em>Walk out with a yes.</em></h2>
-          <p class="section-intro">Most programs spend weeks building leadership decks from scratch. Every kit includes two professionally designed, data-backed PPTX files — ready to open and present.</p>
+          <span class="section-label">Who It's For</span>
+          <h2 class="section-title" id="who-heading">Built for the people who actually run these programs.</h2>
+          <p class="section-desc">You don't need more ideas. You need a system that runs without burning out your two-person team — and produces proof your board or dean can see.</p>
         </div>
-        <div class="deck-callout-grid">
-          <div class="deck-callout-card">
-            <div class="deck-callout-label">Before You Launch</div>
-            <h3 class="deck-callout-title">Pre-Program Leadership Briefing</h3>
-            <p class="deck-callout-body">A 9-slide deck built to win buy-in from boards, administration, and advisory committees. Covers the urgency case, the research evidence, what mentees actually get, how the program runs, and the ROI framing — all in one clean, board-ready presentation.</p>
-            <ul class="deck-callout-list">
-              <li>Student-focused outcome statistics (internship rates, graduation lift, giving data)</li>
-              <li>Access framing — what mentors give students that cannot be replicated any other way</li>
-              <li>Program structure and 11-component overview</li>
-              <li>Fully branded, presenter notes included</li>
-            </ul>
+
+        <div class="audience-grid stagger">
+          <div class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h5"/></svg>
+            <h3>K-12 Schools &amp; Districts</h3>
+            <p>Deploy peer and teacher-student mentoring across buildings without adding FTE. Get compliance-ready documentation and district-level reporting.</p>
+            <div class="audience-card__tags">
+              <span class="audience-card__tag">Superintendents</span>
+              <span class="audience-card__tag">Counselors</span>
+              <span class="audience-card__tag">Student Services</span>
+            </div>
           </div>
-          <div class="deck-callout-card">
-            <div class="deck-callout-label">After Your First Year</div>
-            <h3 class="deck-callout-title">Post-Program Impact Deck</h3>
-            <p class="deck-callout-body">A data-forward deck that turns your first year into a compelling case for continued investment. Drop in your numbers, walk leadership through what compounded, and make the case for sustained support — without writing a single slide from scratch.</p>
-            <ul class="deck-callout-list">
-              <li>Live chart slide for monthly session data (just replace bar heights)</li>
-              <li>KPI callout cards with your key metrics</li>
-              <li>Participant voice slide (mentee + mentor quotes)</li>
-              <li>Closing slide: "This Is Where It Compounds." — the year-over-year value frame</li>
-            </ul>
+
+          <div class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <h3>Colleges &amp; Universities</h3>
+            <p>Campus-wide mentorship infrastructure for student success offices. Pair first-generation, at-risk, or transfer students with mentors who keep showing up.</p>
+            <div class="audience-card__tags">
+              <span class="audience-card__tag">Student Success</span>
+              <span class="audience-card__tag">Retention Teams</span>
+              <span class="audience-card__tag">Academic Advising</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            <h3>Fraternities, Sororities &amp; Greek Councils</h3>
+            <p>Give new members a structured path from bid day to initiation. Standards chairs and FSL directors get accountability data — not vibes.</p>
+            <div class="audience-card__tags">
+              <span class="audience-card__tag">Chapter Presidents</span>
+              <span class="audience-card__tag">FSL Directors</span>
+              <span class="audience-card__tag">Standards Chairs</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <h3>Alumni Boards &amp; Member Orgs</h3>
+            <p>Turn alumni engagement from annual-dinner energy into sustained, trackable mentoring. Give alumni a lane that feels like service, not performative check-ins.</p>
+            <div class="audience-card__tags">
+              <span class="audience-card__tag">Alumni Relations</span>
+              <span class="audience-card__tag">Board Members</span>
+              <span class="audience-card__tag">Association Leads</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <h3>Student Success &amp; Campus Operators</h3>
+            <p>You're running three programs with one coordinator. These kits handle the structure so your team can focus on the humans, not the spreadsheets.</p>
+            <div class="audience-card__tags">
+              <span class="audience-card__tag">Coordinators</span>
+              <span class="audience-card__tag">Program Directors</span>
+              <span class="audience-card__tag">Campus Ops</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== WORLD OF MENTORSHIP / STORIES ===== -->
-    <section class="section section--light" id="stories">
+    <!-- ========================= HOW IT WORKS ========================= -->
+    <section id="how" class="section" style="background:var(--color-surface-2);" aria-labelledby="how-heading">
       <div class="container">
-        <div class="section-label">Program Spotlights — From the Lab</div>
-        <h2 class="section-heading">Guides, stories, and real-life lessons<br>from programs in the field.</h2>
-        <div class="stories-grid">
-          <a href="/world-of-mentorship/rural-high-school" class="story-card">
-            <div class="story-num">01</div>
-            <h3 class="story-title">How a rural high school made mentorship part of the school day</h3>
-            <p class="story-body">Instead of asking teachers to do more after hours, this school reorganized advisory time and used simple guardrails to make mentoring feel safe and predictable.</p>
-            <span class="story-read">Read the story →</span>
-          </a>
-          <a href="/world-of-mentorship/charter-network" class="story-card">
-            <div class="story-num">02</div>
-            <h3 class="story-title">From 'buddy program' to data-backed mentoring</h3>
-            <p class="story-body">A small charter network turned a loosely defined buddy system into a measurable intervention aligned to graduation and belonging outcomes.</p>
-            <span class="story-read">Read the story →</span>
-          </a>
-          <a href="/world-of-mentorship/alumni-pool" class="story-card">
-            <div class="story-num">03</div>
-            <h3 class="story-title">Letting alumni do the heavy lifting (without burning them out)</h3>
-            <p class="story-body">One urban campus built an opt-in alumni mentor pool with clear expectations, light-touch automation, and real support for first-gen students.</p>
-            <span class="story-read">Read the story →</span>
-          </a>
+        <div class="section-header">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title" id="how-heading">From purchase to live program in weeks.</h2>
+          <p class="section-desc">Each kit is a complete mentorship operating system — not a platform subscription or a consulting engagement. Buy it, customize it, launch it.</p>
         </div>
-        <div class="stories-footer">
-          <a href="/the-lab" class="link-arrow">More from The Lab →</a>
+
+        <div class="steps-grid stagger">
+          <div class="step-card">
+            <h3>Pick Your Kit</h3>
+            <p>Select the tier that matches your team size and scope. Single chapter, full campus, or entire district — each kit scales to the operation.</p>
+          </div>
+          <div class="step-card">
+            <h3>Customize &amp; Load</h3>
+            <p>Plug in your institution's language, cohort names, and timeline. Intake forms, matching logic, and communication templates are pre-built — you just configure.</p>
+          </div>
+          <div class="step-card">
+            <h3>Launch &amp; Measure</h3>
+            <p>Run your pilot cohort. Track engagement, meeting adherence, and follow-through. Hand leadership a board-ready impact recap with real numbers.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIAL ===== -->
-    <section class="section section--testimonial">
-      <div class="container container--narrow">
-        <blockquote class="testimonial">
-          <svg class="quote-mark" width="48" height="36" viewBox="0 0 48 36" fill="none" aria-hidden="true">
-            <path d="M0 36V22.5C0 10.5 6 3 18 0l3 4.5C14 6.5 10.5 10.5 10.5 16.5H18V36H0ZM30 36V22.5C30 10.5 36 3 48 0l3 4.5C44 6.5 40.5 10.5 40.5 16.5H48V36H30Z" fill="var(--color-primary)" opacity="0.15"/>
-          </svg>
-          <p class="testimonial-text">"The kit gave us the forms, the emails, and the meeting guides. We launched a mentorship season in four weeks and finally had data to share with admin."</p>
-          <footer class="testimonial-attr">
-            <span class="testimonial-name">Assistant Principal</span>
-            <span class="testimonial-loc">Ohio</span>
+    <!-- ========================= WHAT'S IN EVERY KIT ========================= -->
+    <section class="section" aria-labelledby="whats-inside-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What's Inside</span>
+          <h2 class="section-title" id="whats-inside-heading">Every kit ships with the full operating system.</h2>
+          <p class="section-desc">No half-baked templates. Each component is designed to work together — from first intake to final impact report.</p>
+        </div>
+
+        <div class="whats-inside stagger">
+          <div class="whats-inside__item">
+            <svg class="whats-inside__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <div>
+              <h3>Intake &amp; Application Forms</h3>
+              <p>Pre-built forms for mentors and mentees. Capture goals, availability, preferences, and boundaries upfront.</p>
+            </div>
+          </div>
+          <div class="whats-inside__item">
+            <svg class="whats-inside__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <div>
+              <h3>Matching Logic Framework</h3>
+              <p>Data-informed pairing criteria and scoring rubrics. Match on goals, experience level, availability — not random assignment.</p>
+            </div>
+          </div>
+          <div class="whats-inside__item">
+            <svg class="whats-inside__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <div>
+              <h3>Communication Templates</h3>
+              <p>Welcome sequences, meeting nudges, mid-point check-ins, and wrap-up messages. Pre-written, editable, ready to send.</p>
+            </div>
+          </div>
+          <div class="whats-inside__item">
+            <svg class="whats-inside__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            <div>
+              <h3>Accountability Checklists</h3>
+              <p>Week-by-week task lists for mentors, mentees, and coordinators. Everyone knows what's expected and when.</p>
+            </div>
+          </div>
+          <div class="whats-inside__item">
+            <svg class="whats-inside__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <div>
+              <h3>Impact Reporting Templates</h3>
+              <p>Board-ready recap documents. Attendance data, engagement scores, qualitative highlights — formatted for deans, boards, or HQ.</p>
+            </div>
+          </div>
+          <div class="whats-inside__item">
+            <svg class="whats-inside__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div>
+              <h3>Program Playbook</h3>
+              <p>The coordinator's guide. Timeline, escalation paths, FAQ responses, and a "what to do when things go sideways" runbook.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= PRICING ========================= -->
+    <section id="pricing" class="section" style="background:var(--color-surface-2);" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header section-header--centered">
+          <span class="section-label">Pricing</span>
+          <h2 class="section-title" id="pricing-heading">Pick the kit that fits your operation.</h2>
+          <p class="section-desc">No subscriptions. No per-seat fees. Buy once, own it, customize it, and run it as many times as you need.</p>
+        </div>
+
+        <!-- Top 3 cards -->
+        <div class="pricing-grid stagger">
+          <div class="pricing-card">
+            <h3 class="pricing-card__name">Single Kit</h3>
+            <p class="pricing-card__for">For one chapter, one cohort, or one pilot program</p>
+            <p class="pricing-card__price">$97</p>
+            <ul class="pricing-card__features" role="list">
+              <li>Full intake &amp; application forms</li>
+              <li>Matching logic framework</li>
+              <li>Communication templates (10+)</li>
+              <li>Accountability checklists</li>
+              <li>Basic impact report template</li>
+            </ul>
+            <a href="https://buy.stripe.com/7sYaEZ2pX3xpeOh3FP6Zy0s" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Get the Single Kit</a>
+          </div>
+
+          <div class="pricing-card pricing-card--featured">
+            <h3 class="pricing-card__name">Pro Kit</h3>
+            <p class="pricing-card__for">For multi-chapter orgs or campus programs with 50+ pairs</p>
+            <p class="pricing-card__price">$297</p>
+            <ul class="pricing-card__features" role="list">
+              <li>Everything in Single Kit</li>
+              <li>Advanced matching rubrics</li>
+              <li>Coordinator playbook &amp; runbook</li>
+              <li>Mid-cycle check-in system</li>
+              <li>Board-ready impact reporting</li>
+              <li>Multi-cohort tracking templates</li>
+            </ul>
+            <a href="https://buy.stripe.com/dRm14pd4B3xpdKd3FP6Zy0v" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Get the Pro Kit</a>
+          </div>
+
+          <div class="pricing-card">
+            <h3 class="pricing-card__name">Campus License</h3>
+            <p class="pricing-card__for">For an entire campus, student affairs division, or Greek council</p>
+            <p class="pricing-card__price">$497</p>
+            <ul class="pricing-card__features" role="list">
+              <li>Everything in Pro Kit</li>
+              <li>Campus-wide rollout guide</li>
+              <li>Department-level customization</li>
+              <li>Admin training documentation</li>
+              <li>Cross-program analytics templates</li>
+              <li>Priority email support</li>
+            </ul>
+            <a href="https://buy.stripe.com/eVq4gB5C9gkbfSlb8h6Zy0w" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Get the Campus License</a>
+          </div>
+        </div>
+
+        <!-- Bottom 2 cards -->
+        <div class="pricing-grid__bottom stagger">
+          <div class="pricing-card">
+            <h3 class="pricing-card__name">District License</h3>
+            <p class="pricing-card__for">For school districts deploying mentorship across multiple buildings</p>
+            <p class="pricing-card__price">$1,697</p>
+            <ul class="pricing-card__features" role="list">
+              <li>Everything in Campus License</li>
+              <li>District-wide implementation plan</li>
+              <li>Building-level coordinator kits</li>
+              <li>Compliance &amp; documentation pack</li>
+              <li>Superintendent reporting templates</li>
+              <li>Dedicated onboarding session</li>
+            </ul>
+            <a href="https://buy.stripe.com/cNi6oJ2pX5Fx7lPgsB6Zy0x" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Get the District License</a>
+          </div>
+
+          <div class="pricing-card">
+            <h3 class="pricing-card__name">Implementation Call</h3>
+            <p class="pricing-card__for">For teams that want hands-on guidance to launch faster</p>
+            <p class="pricing-card__price">$200 <span>/ session</span></p>
+            <ul class="pricing-card__features" role="list">
+              <li>60-minute working session</li>
+              <li>Customization walkthrough</li>
+              <li>Cohort planning &amp; timeline</li>
+              <li>Stakeholder alignment strategy</li>
+              <li>Follow-up action plan document</li>
+            </ul>
+            <a href="https://buy.stripe.com/6oUbJ39Sp9VN21v1xH6Zy0p" class="btn btn--accent" target="_blank" rel="noopener noreferrer">Book an Implementation Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= OUTCOMES ========================= -->
+    <section id="outcomes" class="section" aria-labelledby="outcomes-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Outcomes</span>
+          <h2 class="section-title" id="outcomes-heading">The numbers your leadership team asks about.</h2>
+          <p class="section-desc">Structured mentorship programs don't just feel better — they produce data your board, dean, or HQ can act on.</p>
+        </div>
+
+        <div class="outcomes-grid stagger">
+          <div class="outcome-card">
+            <p class="outcome-card__metric">↑ Retention</p>
+            <h3>Higher Meeting Attendance</h3>
+            <p>Mentored cohorts show higher meeting attendance and stickier officer pipelines than unstructured programs.</p>
+          </div>
+          <div class="outcome-card">
+            <p class="outcome-card__metric">↑ Follow-Through</p>
+            <h3>Shared Accountability</h3>
+            <p>Pairs own commitments together. Philanthropy, recruitment, and retention work stays on track because someone is watching — and being watched.</p>
+          </div>
+          <div class="outcome-card">
+            <p class="outcome-card__metric">↑ Engagement</p>
+            <h3>Meaningful Alumni Participation</h3>
+            <p>Give alumni and partners a lane that feels like service — not performative check-ins or annual-dinner guilt trips.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= TESTIMONIAL ========================= -->
+    <section class="testimonial-section fade-in" aria-labelledby="testimonial-heading">
+      <div class="container">
+        <blockquote>
+          <p class="testimonial__quote" id="testimonial-heading">We finally have a mentoring rhythm we can defend to our board. Pairs are meeting, new members are engaged, and we have actual data to prove it.</p>
+          <footer class="testimonial__author">
+            <div class="testimonial__avatar" aria-hidden="true">DS</div>
+            <div>
+              <cite class="testimonial__name" style="font-style:normal;">Director of Student Affairs</cite>
+              <p class="testimonial__role">Mid-Size State University</p>
+            </div>
           </footer>
         </blockquote>
       </div>
     </section>
 
-    <!-- ===== FINAL CTA ===== -->
-    <section class="section section--cta-final">
-      <div class="container text-center">
-        <h2 class="cta-final-heading">Ready to build or strengthen a program that lasts?</h2>
-        <p class="cta-final-sub">Talk to us about your program. No pitch, no pressure — just a real conversation about what mentorship could look like at your school.</p>
-        <div class="cta-final-actions">
-          <a href="/contact" class="btn btn--primary btn--lg">Talk about your program</a>
-          <a href="/shop" class="btn btn--outline btn--lg">Browse the Mentorship Kit</a>
+    <!-- ========================= ABOUT / FOUNDER ========================= -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="founder-section">
+          <div class="founder__image" aria-hidden="true">
+            <!-- Abstract operator icon -->
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+              <rect width="120" height="120" rx="16" fill="var(--color-surface-offset)"/>
+              <circle cx="60" cy="45" r="20" fill="var(--color-primary)" opacity="0.15"/>
+              <circle cx="60" cy="45" r="12" fill="var(--color-primary)" opacity="0.3"/>
+              <rect x="30" y="72" width="60" height="24" rx="12" fill="var(--color-primary)" opacity="0.15"/>
+            </svg>
+          </div>
+          <div class="founder__content">
+            <span class="section-label">About the Founder</span>
+            <h2 id="about-heading">Built by an operator, not a consultant.</h2>
+            <p>I've spent 25 years building and leading technical teams, advising chapters, and watching good mentoring ideas die in spreadsheets. Out of Office Labs is where that operator experience gets packaged into systems that lean teams can actually run.</p>
+            <p>This isn't a consulting practice. It's a product company. You buy a kit, you own the system, and your team runs it. I built what I wished existed when I was the one advising chapters and coordinating mentoring programs with zero budget and a shared Google Sheet.</p>
+            <div class="founder__stats">
+              <div class="founder__stat">
+                <span class="founder__stat-value">25+</span>
+                <span class="founder__stat-label">Years in Ops</span>
+              </div>
+              <div class="founder__stat">
+                <span class="founder__stat-value">100+</span>
+                <span class="founder__stat-label">Chapters Advised</span>
+              </div>
+              <div class="founder__stat">
+                <span class="founder__stat-value">$0</span>
+                <span class="founder__stat-label">VC Raised</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ========================= CTA ========================= -->
+    <section class="cta-section fade-in" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to run mentorship like an operation?</h2>
+        <p>Pick a kit, customize it for your institution, and have a live program in weeks. No platform to learn. No consultants to manage. Just structured mentorship that works.</p>
+        <div class="cta-section__actions">
+          <a href="#pricing" class="btn btn--primary btn--lg">View Mentorship Kits</a>
+          <a href="/contact/" class="btn btn--outline btn--lg">Talk Through a Pilot</a>
+        </div>
+        <p class="cta-section__contact">Or email us directly at <a href="mailto:hello@outofofficelabs.com">hello@outofofficelabs.com</a></p>
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="logo logo--sm" aria-label="Out of Office Labs">
-          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
-            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#" class="footer__logo" aria-label="Out of Office Labs — home">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="6" fill="var(--color-primary)"/>
+            <rect x="7" y="9" width="18" height="2.5" rx="1" fill="var(--color-accent)"/>
+            <rect x="7" y="14" width="13" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.7"/>
+            <rect x="7" y="19" width="15" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.5"/>
           </svg>
-          <span>Out of Office Labs</span>
+          Out of Office Labs
         </a>
-        <p class="footer-tagline">Templates, guides, and tools to launch or strengthen any mentorship program.</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/contact">Talk about your program</a>
-        <a href="/shop">Browse the Kit</a>
-        <a href="/the-lab">The Lab</a>
-        <a href="/affiliate">Partner Program</a>
-        <a href="mailto:hello@outofofficelabs.com">hello@outofofficelabs.com</a>
-        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
-      </nav>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Out of Office Labs</span>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="#who">Who It's For</a>
+          <a href="#pricing">Pricing</a>
+          <a href="mailto:hello@outofofficelabs.com">Contact</a>
+        </nav>
+        <p class="footer__copy">&copy; 2026 Out of Office Labs. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- ========================= SCRIPTS ========================= -->
   <script>
-    // Dark/light mode toggle
-    (function(){
+    // Theme toggle
+    (function () {
       const t = document.querySelector('[data-theme-toggle]');
       const r = document.documentElement;
       let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
       r.setAttribute('data-theme', d);
-      if(t) {
-        const sunIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-        const moonIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      if (t) {
+        updateIcon();
         t.addEventListener('click', () => {
           d = d === 'dark' ? 'light' : 'dark';
           r.setAttribute('data-theme', d);
           t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
-          t.innerHTML = d === 'dark' ? sunIcon : moonIcon;
+          updateIcon();
+        });
+      }
+      function updateIcon() {
+        if (!t) return;
+        t.innerHTML = d === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      }
+    })();
+
+    // Mobile menu toggle
+    (function () {
+      const btn = document.querySelector('.mobile-menu-btn');
+      const nav = document.getElementById('mobile-nav');
+      if (btn && nav) {
+        btn.addEventListener('click', () => {
+          const open = nav.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', open);
+          btn.innerHTML = open
+            ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>'
+            : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
+        });
+        // Close on link click
+        nav.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => {
+            nav.classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
+          });
         });
       }
     })();
 
-    // Mobile menu
-    (function(){
-      const toggle = document.getElementById('mobileToggle');
-      const nav = document.getElementById('mobileNav');
-      if(!toggle || !nav) return;
-      toggle.addEventListener('click', () => {
-        const open = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!open));
-        nav.setAttribute('aria-hidden', String(open));
-        nav.classList.toggle('is-open', !open);
-        toggle.classList.toggle('is-open', !open);
-      });
-    })();
-
-    // Scroll-aware header
-    (function(){
-      const header = document.getElementById('header');
+    // Hide header on scroll down, show on scroll up
+    (function () {
+      const header = document.querySelector('.header');
       let lastY = 0;
+      let ticking = false;
       window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        header.classList.toggle('header--scrolled', y > 10);
-        header.classList.toggle('header--hidden', y > lastY && y > 120);
-        lastY = y;
-      }, { passive: true });
-    })();
-
-    // Fade-in on scroll
-    (function(){
-      document.body.classList.add('js-animate');
-      const els = document.querySelectorAll('.card, .story-card, .fail-group, .kit-text, .kit-visual');
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      els.forEach(el => obs.observe(el));
-    })();
-  </script>
-  <!-- Lemon Squeezy checkout overlay -->
-  <script>
-  async function handleOptinSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const emailInput = form.querySelector('input[type="email"]');
-    const btn = form.querySelector('button[type="submit"]');
-    const email = emailInput ? emailInput.value : '';
-    if (!email) return;
-
-    const originalText = btn.textContent;
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    try {
-      // Add to Klaviyo Leads list
-      await fetch('https://a.klaviyo.com/api/profile-subscriptions-bulk-create-jobs/', {
-        method: 'POST',
-        headers: {
-          'Authorization': 'Klaviyo-API-Key pk_0c4a6b8a014ad04fbca5f44f2ff7609673',
-          'revision': '2024-02-15',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          data: {
-            type: 'profile-subscription-bulk-create-job',
-            attributes: {
-              profiles: {
-                data: [{
-                  type: 'profile',
-                  attributes: {
-                    email: email,
-                    subscriptions: { email: { marketing: { consent: 'SUBSCRIBED' } } }
-                  }
-                }]
-              },
-              list_id: 'XwsCxS'
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const y = window.scrollY;
+            if (y > 100 && y > lastY) {
+              header.classList.add('header--hidden');
+            } else {
+              header.classList.remove('header--hidden');
             }
-          }
-        })
-      });
-
-      // Send checklist via Brevo
-      await fetch('https://api.brevo.com/v3/smtp/email', {
-        method: 'POST',
-        headers: {
-          'api-key': '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',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          to: [{ email: email }],
-          templateId: 1,
-          sender: { name: 'Out of Office Labs', email: 'hello@outofofficelabs.com' }
-        })
-      });
-
-      // Show success
-      form.innerHTML = '<p style="color: #7DD4D7; font-weight: 500;">Check your inbox — your checklist is on its way. Use code CHECKLIST50 for 50% off any kit.</p>';
-
-    } catch(err) {
-      btn.textContent = originalText;
-      btn.disabled = false;
-    }
-  }
-  </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a mentorship program kit?","acceptedAnswer":{"@type":"Answer","text":"A mentorship program kit is a complete set of templates and tools needed to launch and run a structured mentorship program. Out of Office Labs kits include intake forms, session guides, mentor-matching tools, engagement tracking sheets, and board-ready impact reports \u2014 all delivered in Google Docs, Slides, and Sheets."}},{"@type":"Question","name":"How much does a mentorship program kit cost?","acceptedAnswer":{"@type":"Answer","text":"Out of Office Labs mentorship program kits start at $97 (one-time purchase). The Pro Kit is $297 and includes a 90-minute implementation call. The Campus License (all 5 kits) is $497, and the District License is $1,697."}},{"@type":"Question","name":"Who are mentorship program kits for?","acceptedAnswer":{"@type":"Answer","text":"Out of Office Labs kits are designed for K-12 school counselors, school district administrators, college and university student affairs teams, fraternity and sorority advisors, college access program coordinators, and student success teams."}},{"@type":"Question","name":"Do I need new software to use a mentorship program kit?","acceptedAnswer":{"@type":"Answer","text":"No. All Out of Office Labs kits are delivered in Google Docs, Google Slides, and Google Sheets. No new platform, no IT approval, and no per-student fees required."}},{"@type":"Question","name":"How long does it take to launch a mentorship program with these kits?","acceptedAnswer":{"@type":"Answer","text":"Most organizations using Out of Office Labs kits launch their mentorship program within 2-4 weeks. Traditional program builds take 40+ staff hours. The kits eliminate that rebuild cycle entirely."}}]}
-</script>
-
-  <script>
-    (function(){
-      if(localStorage.getItem('ool_announce_dismissed')) {
-        var bar = document.getElementById('announceBar');
-        if(bar) bar.classList.add('hidden');
-      }
-      var btn = document.getElementById('announceClose');
-      if(btn) btn.addEventListener('click', function(){
-        document.getElementById('announceBar').classList.add('hidden');
-        localStorage.setItem('ool_announce_dismissed','1');
+            lastY = y;
+            ticking = false;
+          });
+          ticking = true;
+        }
       });
     })();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id === '#') return;
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   </script>
+
 </body>
 </html>
