@@ -1,0 +1,5 @@
+[functions]
+  directory = "netlify/functions"
+
+# Redirect for clean function URLs (optional)
+# The functions are accessible at /.netlify/functions/get-kit and /.netlify/functions/stripe-webhook

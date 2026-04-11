@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You — Out of Office Labs</title>
-  <meta name="description" content="Thank you for your purchase. Here's what happens next.">
+  <meta name="description" content="Thank you for your purchase. Access your mentorship operations kit.">
+  <meta name="robots" content="noindex, nofollow">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,800&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../base.css">
   <link rel="stylesheet" href="../site.css">
@@ -25,8 +26,9 @@
       </a>
       <nav class="header__nav" aria-label="Main navigation">
         <a href="/solutions/">Solutions</a>
-        <a href="/shop/">Kits &amp; Pricing</a>
+        <a href="/shop/">Kit</a>
         <a href="/resources/">Resources</a>
+        <a href="/the-lab/">The Lab</a>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
       </nav>
@@ -34,7 +36,7 @@
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="/shop/" class="btn btn--primary btn--sm header__cta">View Kits</a>
+        <a href="/shop/" class="btn btn--primary btn--sm header__cta">Get the Kit</a>
         <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
@@ -42,8 +44,9 @@
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
       <a href="/solutions/">Solutions</a>
-      <a href="/shop/">Kits &amp; Pricing</a>
+      <a href="/shop/">Kit</a>
       <a href="/resources/">Resources</a>
+      <a href="/the-lab/">The Lab</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
@@ -53,26 +56,58 @@
 
     <section class="section" style="text-align:center;padding-block:clamp(var(--space-16),10vw,var(--space-32));">
       <div class="container container--narrow">
+
+        <!-- Success icon -->
         <div style="width:64px;height:64px;border-radius:50%;background:var(--color-accent-surface);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-6);">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
         </div>
-        <h1 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--color-text);letter-spacing:-0.025em;margin-bottom:var(--space-4);">Thank you for your purchase.</h1>
-        <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-8);max-width:48ch;margin-inline:auto;">Your kit is on its way to your inbox. Check your email for access instructions and a link to your documents.</p>
 
+        <h1 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--color-text);letter-spacing:-0.025em;margin-bottom:var(--space-4);">Thank you for your purchase.</h1>
+
+        <!-- Kit name (populated dynamically) -->
+        <p id="kit-name-line" style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-8);max-width:48ch;margin-inline:auto;display:none;"></p>
+
+        <!-- Loading state -->
+        <div id="loading-state" style="margin-bottom:var(--space-8);">
+          <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.7;">Loading your kit details...</p>
+        </div>
+
+        <!-- Download links (populated dynamically) -->
+        <div id="download-links" style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);text-align:left;margin-bottom:var(--space-8);display:none;">
+          <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:var(--space-4);">Your kit is ready</h2>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <a id="pdf-link" href="#" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3) var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);text-decoration:none;color:var(--color-text);transition:all var(--transition-interactive);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span><strong>Download PDF Overview</strong><br><span style="font-size:var(--text-xs);color:var(--color-text-muted);" id="pdf-filename"></span></span>
+            </a>
+            <a id="drive-link" href="#" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3) var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);text-decoration:none;color:var(--color-text);transition:all var(--transition-interactive);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span><strong>Open Google Drive Folder</strong><br><span style="font-size:var(--text-xs);color:var(--color-text-muted);">Copy to your Drive, customize, and launch</span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Fallback (shown if session lookup fails or no session_id) -->
+        <div id="fallback-state" style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);text-align:left;margin-bottom:var(--space-8);display:none;">
+          <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:var(--space-4);">Check your email</h2>
+          <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Your kit download links have been sent to the email address you used at checkout. If you don't see it within a few minutes, check your spam folder.</p>
+        </div>
+
+        <!-- Next steps (always visible) -->
         <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);text-align:left;display:flex;flex-direction:column;gap:var(--space-4);margin-bottom:var(--space-8);">
-          <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);">What happens next</h2>
+          <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);">What to do next</h2>
           <div style="display:flex;gap:var(--space-3);align-items:start;">
             <span style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:700;">1</span>
             <div>
-              <p style="font-weight:600;color:var(--color-text);font-size:var(--text-sm);">Check your email</p>
-              <p style="font-size:var(--text-sm);color:var(--color-text-muted);">You'll receive a confirmation with links to your Google Docs kit within minutes.</p>
+              <p style="font-weight:600;color:var(--color-text);font-size:var(--text-sm);">Copy to your Drive</p>
+              <p style="font-size:var(--text-sm);color:var(--color-text-muted);">Open the Google Drive folder and use File → Make a copy for each document. This gives you a fully editable version.</p>
             </div>
           </div>
           <div style="display:flex;gap:var(--space-3);align-items:start;">
             <span style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:700;">2</span>
             <div>
-              <p style="font-weight:600;color:var(--color-text);font-size:var(--text-sm);">Make a copy</p>
-              <p style="font-size:var(--text-sm);color:var(--color-text-muted);">Copy the documents to your own Drive and start customizing for your institution.</p>
+              <p style="font-weight:600;color:var(--color-text);font-size:var(--text-sm);">Customize for your org</p>
+              <p style="font-size:var(--text-sm);color:var(--color-text-muted);">Add your branding, adjust timelines, and tailor the language to your institution.</p>
             </div>
           </div>
           <div style="display:flex;gap:var(--space-3);align-items:start;">
@@ -84,9 +119,9 @@
           </div>
         </div>
 
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3);">Need help getting started?</p>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3);">Want hands-on help setting up?</p>
         <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:var(--space-3);">
-          <a href="https://buy.stripe.com/6oUbJ39Sp9VN21v1xH6Zy0p" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Book an Implementation Call</a>
+          <a href="https://buy.stripe.com/6oUbJ39Sp9VN21v1xH6Zy0p" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Book an Implementation Call — $200</a>
           <a href="mailto:hello@outofofficelabs.com" class="btn btn--outline">Email Support</a>
         </div>
       </div>
@@ -108,8 +143,9 @@
         </a>
         <nav class="footer__links" aria-label="Footer navigation">
           <a href="/solutions/">Solutions</a>
-          <a href="/shop/">Kits &amp; Pricing</a>
+          <a href="/shop/">Kit</a>
           <a href="/resources/">Resources</a>
+          <a href="/the-lab/">The Lab</a>
           <a href="/about/">About</a>
           <a href="/contact/">Contact</a>
           <a href="mailto:hello@outofofficelabs.com">Email</a>
@@ -120,5 +156,89 @@
   </footer>
 
   <script src="../site.js" defer></script>
+  <script>
+    // Kit data mapping — product IDs to download links
+    const KIT_DATA = {
+      'prod_UJhLqLV7CMTCtR': {
+        name: 'K-12 Mentorship Operations Kit',
+        pdfUrl: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view',
+        pdfName: 'K12-School-Mentorship-Kit.pdf',
+        driveUrl: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view'
+      },
+      'prod_UJhLdAYVvuoiyp': {
+        name: 'Greek Life Mentorship Operations Kit',
+        pdfUrl: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view',
+        pdfName: 'START-HERE-Greek-Alumni-Kit.pdf',
+        driveUrl: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view'
+      },
+      'prod_UJhLY2ReCdFi2e': {
+        name: 'Higher Ed Mentorship Operations Kit',
+        pdfUrl: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view',
+        pdfName: 'Higher-Ed-Alumni-Mentoring-Kit.pdf',
+        driveUrl: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view'
+      },
+      'prod_UJhLDfQiI9DDCv': {
+        name: 'College Access Mentorship Operations Kit',
+        pdfUrl: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view',
+        pdfName: 'College-Access-Mentorship-Kit.pdf',
+        driveUrl: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view'
+      },
+      'prod_UJhLSBHdHpIfdp': {
+        name: 'School District Mentorship Operations Kit',
+        pdfUrl: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view',
+        pdfName: 'School-District-Mentorship-Kit.pdf',
+        driveUrl: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view'
+      }
+    };
+
+    (async function() {
+      const params = new URLSearchParams(window.location.search);
+      const sessionId = params.get('session_id');
+      
+      const loadingEl = document.getElementById('loading-state');
+      const downloadEl = document.getElementById('download-links');
+      const fallbackEl = document.getElementById('fallback-state');
+      const kitNameEl = document.getElementById('kit-name-line');
+
+      if (!sessionId) {
+        // No session ID — show fallback
+        loadingEl.style.display = 'none';
+        fallbackEl.style.display = 'block';
+        kitNameEl.textContent = 'Your kit download links have been sent to your email.';
+        kitNameEl.style.display = 'block';
+        return;
+      }
+
+      try {
+        // Call Netlify Function to get kit info from session
+        const res = await fetch('/.netlify/functions/get-kit?session_id=' + encodeURIComponent(sessionId));
+        if (!res.ok) throw new Error('Session lookup failed');
+        
+        const data = await res.json();
+        const kit = KIT_DATA[data.product_id];
+
+        if (kit) {
+          // Populate download links
+          document.getElementById('pdf-link').href = kit.pdfUrl;
+          document.getElementById('pdf-filename').textContent = kit.pdfName;
+          document.getElementById('drive-link').href = kit.driveUrl;
+          
+          kitNameEl.textContent = 'You purchased the ' + kit.name + '.';
+          kitNameEl.style.display = 'block';
+          
+          loadingEl.style.display = 'none';
+          downloadEl.style.display = 'block';
+        } else {
+          throw new Error('Unknown product');
+        }
+      } catch (err) {
+        // Session lookup failed — show fallback
+        loadingEl.style.display = 'none';
+        fallbackEl.style.display = 'block';
+        kitNameEl.textContent = 'Your kit download links have been sent to your email.';
+        kitNameEl.style.display = 'block';
+      }
+    })();
+  </script>
 </body>
 </html>

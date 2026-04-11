@@ -1267,3 +1267,206 @@
   color: var(--color-text-muted);
   line-height: 1.6;
 }
+
+/* ===========================
+   KIT HERO (Single-SKU store)
+   =========================== */
+.kit-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));
+  padding: var(--space-8);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+@media (min-width: 768px) {
+  .kit-hero {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.kit-hero__price-block {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .kit-hero__price-block {
+    text-align: left;
+    padding-right: var(--space-8);
+    border-right: 1px solid var(--color-border);
+  }
+}
+
+.kit-hero__price {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 2rem + 4vw, 5rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.kit-hero__price-note {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .kit-hero__price-note {
+    margin-inline: 0;
+  }
+}
+
+.kit-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.kit-hero__subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 52ch;
+}
+
+/* ===========================
+   AUDIENCE CARDS
+   =========================== */
+.audience-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .audience-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.audience-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  transition:
+    box-shadow var(--transition-interactive),
+    transform var(--transition-interactive),
+    border-color var(--transition-interactive);
+}
+
+.audience-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.audience-card__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+
+.audience-card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.audience-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.audience-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-5);
+  flex: 1;
+}
+
+.audience-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ===========================
+   IMPLEMENTATION CALL CARD
+   =========================== */
+.impl-call-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .impl-call-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.impl-call-card__content {
+  flex: 1;
+}
+
+.impl-call-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.impl-call-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: var(--space-4);
+  max-width: 52ch;
+}
+
+.impl-call-card__action {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.impl-call-card__price {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-3);
+}
