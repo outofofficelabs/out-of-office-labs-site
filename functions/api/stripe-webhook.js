@@ -1,18 +1,11 @@
-// Netlify Function: Stripe Webhook Handler
+// Cloudflare Pages Function: Stripe Webhook Handler
 // Receives checkout.session.completed events and sends delivery emails
-// Endpoint: /.netlify/functions/stripe-webhook
+// Endpoint: /api/stripe-webhook
 //
 // Required env vars:
 //   STRIPE_SECRET_KEY — Stripe secret key
 //   STRIPE_WEBHOOK_SECRET — Webhook signing secret
 //   RESEND_API_KEY — Resend API key for sending emails
-//
-// Setup in Stripe Dashboard:
-//   Webhook endpoint: https://outofofficelabs.com/.netlify/functions/stripe-webhook
-//   Events: checkout.session.completed
-
-const https = require('https');
-const crypto = require('crypto');
 
 // ─── Kit delivery mapping ───────────────────────────────────────
 const KIT_DATA = {
@@ -43,8 +36,8 @@ const KIT_DATA = {
   }
 };
 
-// ─── Stripe webhook signature verification ──────────────────────
-function verifyStripeSignature(payload, signature, secret) {
+// ─── Stripe webhook signature verification (Web Crypto API) ─────
+async function verifyStripeSignature(payload, signature, secret) {
   const elements = signature.split(',');
   let timestamp = null;
   let sig = null;
@@ -62,76 +55,33 @@ function verifyStripeSignature(payload, signature, secret) {
   if (age > 300) return false;
 
   const signedPayload = timestamp + '.' + payload;
-  const expectedSig = crypto
-    .createHmac('sha256', secret)
-    .update(signedPayload, 'utf8')
-    .digest('hex');
 
-  return crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expectedSig));
-}
+  // Use Web Crypto API (Cloudflare Workers compatible)
+  const encoder = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    'raw',
+    encoder.encode(secret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  );
+  const signatureBuffer = await crypto.subtle.sign('HMAC', key, encoder.encode(signedPayload));
+  const expectedSig = Array.from(new Uint8Array(signatureBuffer))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
 
-// ─── Stripe API helper ──────────────────────────────────────────
-function stripeRequest(path) {
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.stripe.com',
-      path: path,
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + process.env.STRIPE_SECRET_KEY,
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    };
-    const req = https.request(options, (res) => {
-      let data = '';
-      res.on('data', (chunk) => { data += chunk; });
-      res.on('end', () => {
-        try { resolve(JSON.parse(data)); } catch (e) { reject(e); }
-      });
-    });
-    req.on('error', reject);
-    req.end();
-  });
-}
-
-// ─── Resend email helper ────────────────────────────────────────
-function sendEmail(to, subject, html) {
-  return new Promise((resolve, reject) => {
-    const postData = JSON.stringify({
-      from: 'Out of Office Labs <hello@outofofficelabs.com>',
-      to: [to],
-      subject: subject,
-      html: html
-    });
-
-    const options = {
-      hostname: 'api.resend.com',
-      path: '/emails',
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer ' + process.env.RESEND_API_KEY,
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(postData)
-      }
-    };
-
-    const req = https.request(options, (res) => {
-      let data = '';
-      res.on('data', (chunk) => { data += chunk; });
-      res.on('end', () => {
-        try { resolve(JSON.parse(data)); } catch (e) { resolve(data); }
-      });
-    });
-    req.on('error', reject);
-    req.write(postData);
-    req.end();
-  });
+  // Constant-time comparison
+  if (sig.length !== expectedSig.length) return false;
+  let mismatch = 0;
+  for (let i = 0; i < sig.length; i++) {
+    mismatch |= sig.charCodeAt(i) ^ expectedSig.charCodeAt(i);
+  }
+  return mismatch === 0;
 }
 
 // ─── Build delivery email HTML ──────────────────────────────────
 function buildEmailHtml(kit) {
-  return `
-<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html>
 <head><meta charset="UTF-8"></head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 16px; color: #1A1D23; background: #FAFAF8;">
@@ -191,29 +141,37 @@ function buildEmailHtml(kit) {
 }
 
 // ─── Main handler ───────────────────────────────────────────────
-exports.handler = async function(event) {
+export async function onRequest(context) {
+  const { request, env } = context;
+
   // Only accept POST
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method not allowed' };
+  if (request.method !== 'POST') {
+    return new Response('Method not allowed', { status: 405 });
   }
+
+  const body = await request.text();
 
   // Verify webhook signature
-  const signature = event.headers['stripe-signature'];
-  if (!signature || !process.env.STRIPE_WEBHOOK_SECRET) {
+  const signature = request.headers.get('stripe-signature');
+  if (!signature || !env.STRIPE_WEBHOOK_SECRET) {
     console.error('Missing signature or webhook secret');
-    return { statusCode: 400, body: 'Missing signature' };
+    return new Response('Missing signature', { status: 400 });
   }
 
-  if (!verifyStripeSignature(event.body, signature, process.env.STRIPE_WEBHOOK_SECRET)) {
+  const isValid = await verifyStripeSignature(body, signature, env.STRIPE_WEBHOOK_SECRET);
+  if (!isValid) {
     console.error('Invalid webhook signature');
-    return { statusCode: 401, body: 'Invalid signature' };
+    return new Response('Invalid signature', { status: 401 });
   }
 
-  const payload = JSON.parse(event.body);
+  const payload = JSON.parse(body);
 
   // Only process checkout.session.completed events
   if (payload.type !== 'checkout.session.completed') {
-    return { statusCode: 200, body: JSON.stringify({ received: true, skipped: true }) };
+    return new Response(
+      JSON.stringify({ received: true, skipped: true }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 
   const session = payload.data.object;
@@ -221,14 +179,24 @@ exports.handler = async function(event) {
 
   if (!customerEmail) {
     console.error('No customer email in session:', session.id);
-    return { statusCode: 200, body: JSON.stringify({ received: true, no_email: true }) };
+    return new Response(
+      JSON.stringify({ received: true, no_email: true }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 
   try {
     // Get the full session with line items to find the product
-    const fullSession = await stripeRequest(
-      '/v1/checkout/sessions/' + session.id + '?expand[]=line_items'
+    const stripeRes = await fetch(
+      `https://api.stripe.com/v1/checkout/sessions/${session.id}?expand[]=line_items`,
+      {
+        headers: {
+          'Authorization': `Bearer ${env.STRIPE_SECRET_KEY}`,
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }
     );
+    const fullSession = await stripeRes.json();
 
     const lineItem = fullSession.line_items?.data?.[0];
     const productId = lineItem?.price?.product;
@@ -236,28 +204,40 @@ exports.handler = async function(event) {
 
     if (!kit) {
       console.log('Unknown product or non-kit purchase:', productId);
-      return { statusCode: 200, body: JSON.stringify({ received: true, unknown_product: true }) };
+      return new Response(
+        JSON.stringify({ received: true, unknown_product: true }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
-    // Send delivery email
-    const emailResult = await sendEmail(
-      customerEmail,
-      'Your ' + kit.name + ' is Ready — Out of Office Labs',
-      buildEmailHtml(kit)
-    );
+    // Send delivery email via Resend
+    const emailRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: 'Out of Office Labs <hello@outofofficelabs.com>',
+        to: [customerEmail],
+        subject: `Your ${kit.name} is Ready — Out of Office Labs`,
+        html: buildEmailHtml(kit)
+      })
+    });
+    const emailResult = await emailRes.json();
 
     console.log('Delivery email sent to', customerEmail, 'for', kit.name, '| Result:', JSON.stringify(emailResult));
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ received: true, email_sent: true, kit: kit.name })
-    };
+    return new Response(
+      JSON.stringify({ received: true, email_sent: true, kit: kit.name }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
   } catch (err) {
     console.error('Webhook processing failed:', err);
     // Return 200 so Stripe doesn't retry — log the error for investigation
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ received: true, error: err.message })
-    };
+    return new Response(
+      JSON.stringify({ received: true, error: err.message }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
   }
-};
+}
