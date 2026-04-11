@@ -33,8 +33,33 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Out of Office Labs","url":"https://outofofficelabs.com","description":"Out of Office Labs provides plug-and-play mentorship program kits for K-12 schools, school districts, colleges, universities, and Greek life organizations.","offers":{"@type":"AggregateOffer","lowPrice":"297","highPrice":"2997","priceCurrency":"USD"}}
 </script>
+<!-- b:20260403202335 -->
+<!-- b:20260403205150 -->
+<!-- b:20260404002146 -->
 </head>
 <body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announce-bar" id="announceBar">
+    <div class="announce-inner">
+      <span class="announce-badge">NEW</span>
+      <span class="announce-text">Launch Partner Program — Keep <strong>100% of your first 5 sales</strong> (~$1,440). Limited spots open.</span>
+      <a href="/affiliate/" class="announce-cta">See the offer →</a>
+    </div>
+    <button class="announce-close" id="announceClose" aria-label="Dismiss">&times;</button>
+  </div>
+  <style>
+  .announce-bar{background:#0A4A4E;color:#FAF7F2;padding:11px 20px;display:flex;align-items:center;justify-content:center;gap:16px;position:relative;z-index:200;font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;line-height:1.4;}
+  .announce-inner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;}
+  .announce-badge{background:#7DD4D7;color:#0A4A4E;font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:2px 8px;border-radius:999px;white-space:nowrap;}
+  .announce-text{color:rgba(250,247,242,.9);}
+  .announce-text strong{color:#7DD4D7;font-weight:700;}
+  .announce-cta{color:#fff;font-weight:700;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.4);transition:border-color .2s;}
+  .announce-cta:hover{border-color:#7DD4D7;color:#7DD4D7;}
+  .announce-close{position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(250,247,242,.6);font-size:1.25rem;cursor:pointer;padding:4px 8px;line-height:1;transition:color .2s;}
+  .announce-close:hover{color:#fff;}
+  .announce-bar.hidden{display:none;}
+  </style>
 
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
@@ -54,6 +79,7 @@
         <a href="/the-lab" class="nav-link">The Lab</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
+        <a href="/affiliate" class="nav-link">Partner Program</a>
         <a href="/shop" class="nav-link nav-link--cta">Shop</a>
       </nav>
 
@@ -73,6 +99,7 @@
       <a href="/the-lab" class="mobile-nav-link">The Lab</a>
       <a href="/about" class="mobile-nav-link">About</a>
       <a href="/contact" class="mobile-nav-link">Contact</a>
+      <a href="/affiliate" class="mobile-nav-link">Partner Program</a>
       <a href="/shop" class="mobile-nav-link">Shop</a>
     </div>
   </header>
@@ -83,7 +110,7 @@
     <section class="hero">
       <div class="hero-inner container">
         <div class="hero-content">
-          <div class="hero-eyebrow">Mentorship infrastructure for schools</div>
+          <div class="hero-eyebrow">Mentorship program kits for schools</div>
           <h1 class="hero-heading">Launch or strengthen<br><em>your mentorship program.</em></h1>
           <p class="hero-sub">Complete templates, guides, and tools for K-12 schools, campuses, and chapters — whether you're starting from scratch or adding structure to what you've already built.</p>
           <p class="hero-built">Built with administrators, counselors, and coordinators who are already doing three jobs.</p>
@@ -92,18 +119,15 @@
             <a href="/shop" class="btn btn--ghost">Browse the Mentorship Kit →</a>
           </div>
           <div class="hero-tags">
-            <a href="/programs/k12" class="tag">K–12 programs</a>
+            <a href="/k12-hub/" class="tag">K–12 Hub →</a>
+              <a href="/programs/k12" class="tag">K–12 programs</a>
             <a href="/programs/college-access" class="tag">College access teams</a>
             <a href="/programs/alumni-mentoring" class="tag">Alumni mentoring</a>
             <a href="/programs/greek-alumni" class="tag">Greek organizations</a>
             <a href="/programs/school-districts" class="tag">School districts</a>
           </div>
         </div>
-        <div class="hero-image-wrap">
-          <div class="hero-video-wrap" style="width:100%;border-radius:inherit;aspect-ratio:16/9;overflow:hidden;">
-            <iframe src="https://customer-5vry1h7avigak34b.cloudflarestream.com/e89b7ddebf3e1f5bea468e86f99dd2db/iframe?preload=none&poster=https%3A%2F%2Fcustomer-5vry1h7avigak34b.cloudflarestream.com%2Fe89b7ddebf3e1f5bea468e86f99dd2db%2Fthumbnails%2Fthumbnail.jpg" title="Welcome to Out of Office Labs" frameborder="0" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;border-radius:inherit;"></iframe>
-          </div>
-        </div>
+
       </div>
     </section>
 
@@ -114,7 +138,7 @@
           <div class="optin-text">
             <div class="section-eyebrow" style="color:#7DD4D7;">Free Resource</div>
             <h2 class="optin-heading">The 30-Day Mentorship Launch Checklist</h2>
-            <p class="optin-sub">Every step, every template, every form — on one page. Download free and launch your program this semester.</p>
+            <p class="optin-sub">Every step, every template, every form — on one page. Download free and strengthen or launch your program this semester.</p>
           </div>
           <form class="optin-form" onsubmit="handleOptinSubmit(event)">
             <input type="hidden" name="_redirect" value="https://outofofficelabs.com/?subscribed=1">
@@ -165,7 +189,7 @@
         <div class="split-layout split-layout--single">
           <div class="split-text">
             <div class="section-label">Why mentorship fails (and how to fix it)</div>
-            <h2 class="section-heading">Most programs collapse because they rely on goodwill instead of systems.</h2>
+            <h2 class="section-heading">Most programs struggle to scale because they rely on goodwill instead of systems.</h2>
             <div class="fail-groups">
               <div class="fail-group">
                 <h3 class="fail-group-title">Built on goodwill</h3>
@@ -312,7 +336,7 @@
     <!-- ===== FINAL CTA ===== -->
     <section class="section section--cta-final">
       <div class="container text-center">
-        <h2 class="cta-final-heading">Ready to build something that actually runs?</h2>
+        <h2 class="cta-final-heading">Ready to build or strengthen a program that lasts??</h2>
         <p class="cta-final-sub">Talk to us about your program. No pitch, no pressure — just a real conversation about what mentorship could look like at your school.</p>
         <div class="cta-final-actions">
           <a href="/contact" class="btn btn--primary btn--lg">Talk about your program</a>
@@ -342,7 +366,9 @@
         <a href="/contact">Talk about your program</a>
         <a href="/shop">Browse the Kit</a>
         <a href="/the-lab">The Lab</a>
+        <a href="/affiliate">Partner Program</a>
         <a href="mailto:hello@outofofficelabs.com">hello@outofofficelabs.com</a>
+        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
       </nav>
       <div class="footer-bottom">
         <span>&copy; 2026 Out of Office Labs</span>
@@ -475,5 +501,19 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a mentorship program kit?","acceptedAnswer":{"@type":"Answer","text":"A mentorship program kit is a complete set of templates and tools needed to launch and run a structured mentorship program. Out of Office Labs kits include intake forms, session guides, mentor-matching tools, engagement tracking sheets, and board-ready impact reports \u2014 all delivered in Google Docs, Slides, and Sheets."}},{"@type":"Question","name":"How much does a mentorship program kit cost?","acceptedAnswer":{"@type":"Answer","text":"Out of Office Labs mentorship program kits start at $297/year per kit. School district kits are $347/year. The All 5 Kits Bundle is $497/year. Campus licenses start at $1,497/year."}},{"@type":"Question","name":"Who are mentorship program kits for?","acceptedAnswer":{"@type":"Answer","text":"Out of Office Labs kits are designed for K-12 school counselors, school district administrators, college and university student affairs teams, fraternity and sorority advisors, college access program coordinators, and student success teams."}},{"@type":"Question","name":"Do I need new software to use a mentorship program kit?","acceptedAnswer":{"@type":"Answer","text":"No. All Out of Office Labs kits are delivered in Google Docs, Google Slides, and Google Sheets. No new platform, no IT approval, and no per-student fees required."}},{"@type":"Question","name":"How long does it take to launch a mentorship program with these kits?","acceptedAnswer":{"@type":"Answer","text":"Most organizations using Out of Office Labs kits launch their mentorship program within 2-4 weeks. Traditional program builds take 40+ staff hours. The kits eliminate that rebuild cycle entirely."}}]}
 </script>
+
+  <script>
+    (function(){
+      if(localStorage.getItem('ool_announce_dismissed')) {
+        var bar = document.getElementById('announceBar');
+        if(bar) bar.classList.add('hidden');
+      }
+      var btn = document.getElementById('announceClose');
+      if(btn) btn.addEventListener('click', function(){
+        document.getElementById('announceBar').classList.add('hidden');
+        localStorage.setItem('ool_announce_dismissed','1');
+      });
+    })();
+  </script>
 </body>
 </html>

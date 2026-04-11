@@ -288,7 +288,72 @@
       border-radius: 999px;
       line-height: 1.4;
     }
+
+    /* === SEE WHAT'S INSIDE PREVIEWS === */
+    .kit-previews-section {
+      background: var(--color-bg-alt);
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      border-top: 1px solid rgba(10,74,78,0.08);
+    }
+    .kit-previews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 860px) {
+      .kit-previews-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    }
+    .kit-preview-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(10,74,78,0.1);
+      box-shadow: 0 4px 16px rgba(10,74,78,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .kit-preview-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(10,74,78,0.13);
+    }
+    .kit-preview-img-wrap {
+      width: 100%;
+      overflow: hidden;
+      background: var(--color-bg-alt);
+    }
+    .kit-preview-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .kit-preview-card:hover .kit-preview-img-wrap img {
+      transform: scale(1.02);
+    }
+    .kit-preview-caption {
+      padding: 1rem 1.25rem 1.25rem;
+      border-top: 1px solid rgba(10,74,78,0.07);
+    }
+    .kit-preview-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-teal);
+      margin-bottom: 0.35rem;
+    }
+    .kit-preview-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-heading);
+      line-height: 1.4;
+    }
   </style>
+<!-- b:20260403202335 -->
+<!-- b:20260403205150 -->
+<!-- b:20260404002146 -->
 </head>
 <body>
 
@@ -309,6 +374,7 @@
         <a href="/the-lab" class="nav-link">The Lab</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
+        <a href="/affiliate" class="nav-link">Partner Program</a>
         <a href="/shop" class="nav-link nav-link--cta">Shop</a>
       </nav>
       <div class="header-actions">
@@ -325,6 +391,7 @@
       <a href="/the-lab" class="mobile-nav-link">The Lab</a>
       <a href="/about" class="mobile-nav-link">About</a>
       <a href="/contact" class="mobile-nav-link">Contact</a>
+      <a href="/affiliate" class="mobile-nav-link">Partner Program</a>
       <a href="/shop" class="mobile-nav-link">Shop</a>
     </div>
   </header>
@@ -335,7 +402,7 @@
     <section class="shop-hero">
       <div class="container">
         <div class="section-eyebrow">Shop</div>
-        <h1 class="shop-hero-heading">Buy once. Launch your program.<br><em>Run it every year.</em></h1>
+        <h1 class="shop-hero-heading">Buy once. Launch or strengthen your program.<br><em>Run it every year.</em></h1>
         <p class="shop-hero-sub">Every kit is a complete, plug-and-play mentorship program — templates, guides, and playbooks included. Annual subscription. Cancel anytime.</p>
         <p class="shop-hero-sub">Every kit works whether you're starting fresh or systematizing a program you've been running for years. The tools fit into what you're already doing.</p>
       </div>
@@ -356,6 +423,44 @@
       </div>
     </section>
 
+    <!-- SEE WHAT'S INSIDE -->
+    <section class="kit-previews-section">
+      <div class="container">
+        <div class="section-eyebrow">What's Inside Every Kit</div>
+        <h2 class="section-heading" style="max-width:560px;">See what you get<br><em>before you buy.</em></h2>
+        <p class="section-intro" style="max-width:600px;">Every kit ships with a structured program handbook, session guides, matching tools, communication templates, and outcome tracking documents — all ready to customize with your school or org name.</p>
+        <div class="kit-previews-grid">
+          <div class="kit-preview-card">
+            <div class="kit-preview-img-wrap">
+              <img src="/assets/previews/preview-session-guide.png" alt="Kit document list showing all included templates, session guides, and forms" loading="lazy" width="1275" height="1452">
+            </div>
+            <div class="kit-preview-caption">
+              <div class="kit-preview-label">Document Inventory</div>
+              <div class="kit-preview-title">Every document, organized by category — foundation, intake forms, session guides, communications, and tracking</div>
+            </div>
+          </div>
+          <div class="kit-preview-card">
+            <div class="kit-preview-img-wrap">
+              <img src="/assets/previews/preview-launch-roadmap.png" alt="30-60 day launch roadmap showing week-by-week steps from program setup through first session" loading="lazy" width="1275" height="1452">
+            </div>
+            <div class="kit-preview-caption">
+              <div class="kit-preview-label">Launch Roadmap</div>
+              <div class="kit-preview-title">A 30–60 day week-by-week launch plan — setup, document customization, mentor recruitment, and kickoff</div>
+            </div>
+          </div>
+          <div class="kit-preview-card">
+            <div class="kit-preview-img-wrap">
+              <img src="/assets/previews/preview-matching-worksheet.png" alt="Session guide structure showing 5-part format: opening activity, check-in, main topic, goal review, and next steps" loading="lazy" width="1275" height="1452">
+            </div>
+            <div class="kit-preview-caption">
+              <div class="kit-preview-label">Session Guide Format</div>
+              <div class="kit-preview-title">Every session guide follows a proven 5-part structure so mentors always know what to do — no improvising needed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PRODUCT GRID -->
     <section class="section">
       <div class="container">
@@ -369,7 +474,7 @@
             <span class="shop-card-new-badge">NEW — 17 documents</span>
             <div>
               <div class="shop-card-icon">🏛️</div>
-              <div class="shop-badge" style="margin: var(--space-2) 0;">Most Popular</div>
+              
             </div>
             <h3 class="shop-card-title">Greek Alumni Mentorship &amp; Fundraising Kit</h3>
             <p class="shop-card-desc">A complete system to connect alumni with active members — and turn those relationships into a fundraising pipeline.</p>
@@ -397,7 +502,7 @@
                 <div class="shop-price-amount">$297</div>
                 <div class="shop-price-term">per year · cancel anytime</div>
               </div>
-              <a href="https://buy.stripe.com/bJe3cx2pXc3VdKd6S16Zy00" class="btn btn--primary" data-ls-product="greek-alumni-kit">Subscribe — $297/yr →</a>
+              <a href="https://buy.stripe.com/8x27sN0hP3xp6hLdgp6Zy0a" class="btn btn--primary" data-ls-product="greek-alumni-kit">Subscribe — $297/yr →</a>
               <a href="/programs/greek-alumni" class="shop-learn-more">Learn more →</a>
             </div>
           </div>
@@ -407,7 +512,7 @@
             <span class="shop-card-new-badge">NEW — 17 documents</span>
             <div class="shop-card-icon">🏫</div>
             <h3 class="shop-card-title">K–12 School Mentorship Program Kit</h3>
-            <p class="shop-card-desc">A counselor-friendly framework for launching and sustaining an in-school mentorship program from day one.</p>
+            <p class="shop-card-desc">A counselor-friendly framework for launching or strengthening an in-school mentorship program.</p>
             <ul class="shop-card-includes">
               <li>Full program presentation deck (editable, board-ready)</li>
               <li>Mentor &amp; mentee intake forms + consent language</li>
@@ -432,7 +537,7 @@
                 <div class="shop-price-amount">$297</div>
                 <div class="shop-price-term">per year · cancel anytime</div>
               </div>
-              <a href="https://buy.stripe.com/9B6eVf1lTd7Z6hL2BL6Zy01" class="btn btn--primary" data-ls-product="k12-mentorship-kit">Subscribe — $297/yr →</a>
+              <a href="https://buy.stripe.com/3cIdRbd4B3xpgWpdgp6Zy0b" class="btn btn--primary" data-ls-product="k12-mentorship-kit">Subscribe — $297/yr →</a>
               <a href="/programs/k12" class="shop-learn-more">Learn more →</a>
             </div>
           </div>
@@ -467,7 +572,7 @@
                 <div class="shop-price-amount">$347</div>
                 <div class="shop-price-term">per year · cancel anytime</div>
               </div>
-              <a href="https://buy.stripe.com/7sYaEZ2pXd7Zay17W56Zy04" class="btn btn--primary" data-ls-product="school-districts-kit">Subscribe — $347/yr →</a>
+              <a href="https://buy.stripe.com/eVq3cx2pXgkbeOh6S16Zy0e" class="btn btn--primary" data-ls-product="school-districts-kit">Subscribe — $347/yr →</a>
               <a href="/programs/school-districts" class="shop-learn-more">Learn more →</a>
             </div>
           </div>
@@ -502,7 +607,7 @@
                 <div class="shop-price-amount">$297</div>
                 <div class="shop-price-term">per year · cancel anytime</div>
               </div>
-              <a href="https://buy.stripe.com/9B6fZj9Spec335z9096Zy02" class="btn btn--primary" data-ls-product="college-access-kit">Subscribe — $297/yr →</a>
+              <a href="https://buy.stripe.com/3cIbJ38OlgkbeOhdgp6Zy0c" class="btn btn--primary" data-ls-product="college-access-kit">Subscribe — $297/yr →</a>
               <a href="/programs/college-access" class="shop-learn-more">Learn more →</a>
             </div>
           </div>
@@ -537,7 +642,7 @@
                 <div class="shop-price-amount">$297</div>
                 <div class="shop-price-term">per year · cancel anytime</div>
               </div>
-              <a href="https://buy.stripe.com/dRmeVf1lT4BtfSl6S16Zy03" class="btn btn--primary" data-ls-product="alumni-mentoring-kit">Subscribe — $297/yr →</a>
+              <a href="https://buy.stripe.com/bJe00lc0x7NF35zdgp6Zy0d" class="btn btn--primary" data-ls-product="alumni-mentoring-kit">Subscribe — $297/yr →</a>
               <a href="/programs/alumni-mentoring" class="shop-learn-more">Learn more →</a>
             </div>
           </div>
@@ -622,7 +727,7 @@
               <div class="bundle-price-amount">$497<span style="font-size:1rem; font-weight:400; opacity:0.7;">/yr</span></div>
               <div class="bundle-price-save">Save $1,038/yr vs. individual</div>
             </div>
-            <a href="https://buy.stripe.com/cNi8wRaWt2tl21v6S16Zy05" class="btn btn--primary" data-ls-product="all-kits-bundle" style="white-space:nowrap;">Subscribe — $497/yr →</a>
+            <a href="https://buy.stripe.com/dRm6oJaWt4Bt7lP4JT6Zy0f" class="btn btn--primary" data-ls-product="all-kits-bundle" style="white-space:nowrap;">Subscribe — $497/yr →</a>
           </div>
         </div>
 
@@ -677,7 +782,8 @@
         <a href="/resources">Resources</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
-              <a href="/affiliate">Partner Program</a>
+        <a href="/affiliate" class="footer-link">Partner Program</a>
+        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
       </nav>
       <div class="footer-bottom">
         <span>&copy; 2026 Out of Office Labs. All rights reserved.</span>
