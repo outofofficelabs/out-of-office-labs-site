@@ -1,235 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Write a Mentorship Program Proposal That Gets Approved | Out of Office Labs</title>
-<meta name="description" content="A practical guide to writing a mentorship program proposal that school boards, university leadership, and Greek alumni councils will actually approve — with the six sections that matter most.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../style.css">
-<style>
-  .breadcrumb {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    color: rgba(255,255,255,0.55);
-    margin-bottom: var(--space-6);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.35em;
-  }
-  .breadcrumb a {
-    color: rgba(255,255,255,0.65);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .breadcrumb a:hover { color: #fff; }
-  .breadcrumb .sep { opacity: 0.4; }
-  .breadcrumb .current { color: rgba(255,255,255,0.85); }
-
-  .article-read-meta {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: rgba(255,255,255,0.6);
-    margin-top: var(--space-4);
-  }
-  .article-read-meta span { display: inline-flex; align-items: center; gap: 0.35em; }
-
-  .container--article ul,
-  .container--article ol {
-    font-size: var(--text-base);
-    font-family: var(--font-body);
-    line-height: 1.8;
-    color: var(--color-text);
-    margin: 0 0 var(--space-5);
-    padding-left: var(--space-6);
-  }
-  .container--article li {
-    margin-bottom: var(--space-2);
-  }
-
-  .article-cta-box {
-    background: #0A4A4E;
-    border-radius: var(--radius-xl, 16px);
-    padding: var(--space-10) var(--space-8);
-    text-align: center;
-    margin: var(--space-12) 0 0;
-  }
-  .article-cta-box h3 {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 400;
-    color: #fff;
-    margin: 0 0 var(--space-4);
-  }
-  .article-cta-box p {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: rgba(255,255,255,0.75);
-    margin: 0 0 var(--space-6) !important;
-    line-height: 1.6;
-  }
-  .article-cta-box .btn--cta {
-    display: inline-block;
-    background: #fff;
-    color: #0A4A4E;
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: var(--text-base);
-    padding: 0.85em 2em;
-    border-radius: var(--radius-full, 100px);
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
-  }
-  .article-cta-box .btn--cta:hover {
-    background: #e8e5df;
-    transform: translateY(-1px);
-  }
-
-  .related-section {
-    padding: var(--space-16, 4rem) 0;
-    background: var(--color-bg, #f8f6f1);
-  }
-  .related-section .section-eyebrow {
-    margin-bottom: var(--space-6);
-  }
-  .related-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
-  @media (max-width: 640px) {
-    .related-grid { grid-template-columns: 1fr; }
-  }
-  .related-card {
-    background: var(--color-surface-2, #fff);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg, 12px);
-    padding: var(--space-7, 1.75rem);
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
-  }
-  .related-card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-    border-color: var(--color-primary);
-  }
-  .related-card-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    background: rgba(10,74,78,0.08);
-    padding: 3px 10px;
-    border-radius: 100px;
-    width: fit-content;
-  }
-  .related-card-title {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 400;
-    color: var(--color-primary);
-    line-height: 1.35;
-    margin: 0;
-  }
-  .related-card-desc {
-    font-size: var(--text-sm);
-    font-family: var(--font-body);
-    color: var(--color-text-muted);
-    line-height: 1.65;
-    margin: 0;
-    flex: 1;
-  }
-  .related-card-read {
-    font-size: var(--text-sm);
-    font-family: var(--font-body);
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-top: var(--space-2);
-  }
-
-  .container--article h2 {
-    color: #0A4A4E;
-  }
-</style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Start a Mentorship Program in a K-12 School","author":{"@type":"Organization","name":"Out of Office Labs"},"publisher":{"@type":"Organization","name":"Out of Office Labs","url":"https://outofofficelabs.com"},"url":"https://outofofficelabs.com/the-lab/k12-mentorship-program-guide/"}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Write a Mentorship Program Proposal That Gets Approved — Out of Office Labs</title>
+  <meta name="description" content="A practical guide to writing a mentorship program proposal that school boards, university leadership, and Greek alumni councils will actually approve — with the six sections that matter most.">
+  <meta property="og:title" content="How to Write a Mentorship Program Proposal That Gets Approved — Out of Office Labs">
+  <meta property="og:description" content="A practical guide to writing a mentorship program proposal that school boards, university leadership, and Greek alumni councils will actually approve — with the six sections that matter most.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://outofofficelabs.com/the-lab/mentorship-program-proposal-guide/">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,800&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../base.css">
+  <link rel="stylesheet" href="../../site.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A5F'/%3E%3Cpath d='M8 10h16v2H8zM8 15h12v2H8zM8 20h14v2H8z' fill='%23D4880E'/%3E%3C/svg%3E">
 </head>
 <body>
 
-  <header class="header" id="header">
-    <div class="header-inner container">
-      <a href="/" class="logo" aria-label="Out of Office Labs home">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
-          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+  <a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:999;background:var(--color-primary);color:#fff;padding:var(--space-2) var(--space-4);" onfocus="this.style.position='fixed';this.style.width='auto';this.style.height='auto';this.style.clip='auto';" onblur="this.className='sr-only';">Skip to content</a>
+
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="Out of Office Labs — home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="var(--color-primary)"/>
+          <rect x="7" y="9" width="18" height="2.5" rx="1" fill="var(--color-accent)"/>
+          <rect x="7" y="14" width="13" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.7"/>
+          <rect x="7" y="19" width="15" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.5"/>
         </svg>
-        <span class="logo-text">Out of Office Labs</span>
+        Out of Office Labs
       </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="/programs" class="nav-link">Programs</a>
-        <a href="/the-lab" class="nav-link nav-link--active">The Lab</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link">Contact</a>
-        <a href="/shop" class="nav-link nav-link--cta">Shop</a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/solutions/">Solutions</a>
+        <a href="/shop/">Kits &amp; Pricing</a>
+        <a href="/resources/" aria-current="page">Resources</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
       </nav>
-      <div class="header-actions">
+      <div class="header__actions">
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+        <a href="/shop/" class="btn btn--primary btn--sm header__cta">View Kits</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
       </div>
     </div>
-    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-      <a href="/programs" class="mobile-nav-link">Programs</a>
-      <a href="/the-lab" class="mobile-nav-link">The Lab</a>
-      <a href="/about" class="mobile-nav-link">About</a>
-      <a href="/contact" class="mobile-nav-link">Contact</a>
-      <a href="/shop" class="mobile-nav-link">Shop</a>
-    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="/solutions/">Solutions</a>
+      <a href="/shop/">Kits &amp; Pricing</a>
+      <a href="/resources/">Resources</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
   </header>
 
-  <main>
+  <main id="main">
 
-    <section class="article-hero">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep">›</span>
-          <a href="/the-lab">The Lab</a>
-          <span class="sep">›</span>
-          <span class="current">K-12 Mentorship Program Guide</span>
-        </nav>
-        <div class="article-meta">
-          <span class="article-tag">K-12 Guide</span>
-        </div>
-        <h1 class="article-heading">How to Write a Mentorship Program Proposal That Gets Approved</h1>
-        <p class="article-sub">A practical, step-by-step guide for coordinators — from your first planning meeting to your year-end report to administration.</p>
-        <div class="article-read-meta">
-          <span>📖 10 min read</span>
-          <span>·</span>
-          <span>March 2026</span>
-        </div>
+    <section class="page-hero">
+      <div class="container container--narrow">
+        <a href="/the-lab/" style="font-size:var(--text-xs);color:var(--color-text-faint);text-decoration:none;display:inline-flex;align-items:center;gap:var(--space-1);margin-bottom:var(--space-4);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to The Lab
+        </a>
+        <span class="page-hero__badge">Strategy</span>
+        <h1 style="max-width:28ch;">How to Write a Mentorship Program Proposal That Gets Approved</h1>
+        <p>A practical guide to writing a mentorship program proposal that school boards, university leadership, and Greek alumni councils will actually approve — with the six sections that matter most.</p>
       </div>
     </section>
 
-    <section class="article-body-section">
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="article-content">
+          <section class="article-body-section">
       <div class="container--article">
 
         <div class="article-lede">
@@ -369,68 +212,48 @@
         </div>
       </div>
     </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section fade-in">
+      <div class="container">
+        <h2>Put this into practice with a ready-made kit.</h2>
+        <p>Every kit includes the systems, templates, and reporting frameworks discussed in this guide.</p>
+        <div class="cta-section__actions">
+          <a href="/shop/" class="btn btn--primary btn--lg">View Mentorship Kits</a>
+          <a href="/the-lab/" class="btn btn--outline btn--lg">More from The Lab</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner container">
-      <div class="footer-brand">
-        <a href="/" class="logo" aria-label="Out of Office Labs home">
-          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
-            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="/" class="footer__logo" aria-label="Out of Office Labs — home">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="6" fill="var(--color-primary)"/>
+            <rect x="7" y="9" width="18" height="2.5" rx="1" fill="var(--color-accent)"/>
+            <rect x="7" y="14" width="13" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.7"/>
+            <rect x="7" y="19" width="15" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.5"/>
           </svg>
-          <span class="logo-text">Out of Office Labs</span>
+          Out of Office Labs
         </a>
-        <p class="footer-tagline">Templates, guides, and tools to launch or strengthen any mentorship program.</p>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="/solutions/">Solutions</a>
+          <a href="/shop/">Kits &amp; Pricing</a>
+          <a href="/resources/">Resources</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@outofofficelabs.com">Email</a>
+        </nav>
+        <p class="footer__copy">&copy; 2026 Out of Office Labs. All rights reserved.</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/programs" class="footer-link">Programs</a>
-        <a href="/the-lab" class="footer-link">The Lab</a>
-        <a href="/resources" class="footer-link">Resources</a>
-        <a href="/about" class="footer-link">About</a>
-        <a href="/contact" class="footer-link">Contact</a>
-        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
-      </nav>
-    </div>
-    <div class="footer-bottom container">
-      <p class="footer-copy">© 2026 Out of Office Labs. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('header--scrolled', window.scrollY > 20);
-    }, { passive: true });
-
-    const themeToggle = document.querySelector('[data-theme-toggle]');
-    themeToggle?.addEventListener('click', () => {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    });
-
-    (() => {
-      const toggle = document.getElementById('mobileToggle');
-      const nav = document.getElementById('mobileNav');
-      if(!toggle || !nav) return;
-      toggle.addEventListener('click', () => {
-        const open = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!open));
-        nav.setAttribute('aria-hidden', String(open));
-        nav.classList.toggle('is-open', !open);
-        toggle.classList.toggle('is-open', !open);
-      });
-    })();
-
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fade-in--visible'); observer.unobserve(e.target); } }),
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+  <script src="../../site.js" defer></script>
 </body>
 </html>

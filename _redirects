@@ -1,0 +1,17 @@
+# Netlify redirects — old pages to new structure
+/programs/*              /solutions/       301
+/programs                /solutions/       301
+/k12-hub/*               /solutions/       301
+/k12-hub                 /solutions/       301
+/affiliate/*             /shop/            301
+/affiliate               /shop/            301
+/checklist-offer/*       /shop/            301
+/checklist-offer         /shop/            301
+/webinar/*               /resources/       301
+/webinar                 /resources/       301
+/world-of-mentorship/*   /resources/       301
+/world-of-mentorship     /resources/       301
+/downloads/*             /shop/            301
+/downloads               /shop/            301
+/insights/*              /the-lab/         301
+/insights                /the-lab/         301

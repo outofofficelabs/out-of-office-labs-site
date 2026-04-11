@@ -1,261 +1,176 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Out of Office Labs — Mentorship Program Kits for Education</title>
-<meta name="description" content="Out of Office Labs builds ready-to-run mentorship program kits for K-12 schools, school districts, colleges, and Greek life organizations. Every template, guide, and tool is built so programs launch fast and run year after year.">
-<meta property="og:title" content="About Out of Office Labs — Mentorship Program Kits for Education">
-<meta property="og:description" content="Out of Office Labs builds ready-to-run mentorship program kits for K-12 schools, school districts, colleges, and Greek life organizations. Every template, guide, and tool is built so programs launch fast and run year after year.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Out of Office Labs</title>
+  <meta name="description" content="Out of Office Labs builds productized mentorship systems for institutions. Founded by an operator with 25+ years in technical leadership and chapter advising.">
+  <meta property="og:title" content="About — Out of Office Labs">
+  <meta property="og:description" content="Productized mentorship systems built by an operator, not a consultant.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://outofofficelabs.com/about/">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,800&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A5F'/%3E%3Cpath d='M8 10h16v2H8zM8 15h12v2H8zM8 20h14v2H8z' fill='%23D4880E'/%3E%3C/svg%3E">
 </head>
 <body>
 
-  <header class="header" id="header">
-    <div class="header-inner container">
-      <a href="/" class="logo" aria-label="Out of Office Labs home">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
-          <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-          <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-          <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+  <a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:999;background:var(--color-primary);color:#fff;padding:var(--space-2) var(--space-4);" onfocus="this.style.position='fixed';this.style.width='auto';this.style.height='auto';this.style.clip='auto';" onblur="this.className='sr-only';">Skip to content</a>
+
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="Out of Office Labs — home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="var(--color-primary)"/>
+          <rect x="7" y="9" width="18" height="2.5" rx="1" fill="var(--color-accent)"/>
+          <rect x="7" y="14" width="13" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.7"/>
+          <rect x="7" y="19" width="15" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.5"/>
         </svg>
-        <span class="logo-text">Out of Office Labs</span>
+        Out of Office Labs
       </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="/programs" class="nav-link">Programs</a>
-        <a href="/the-lab" class="nav-link">The Lab</a>
-        <a href="/about" class="nav-link nav-link--active">About</a>
-        <a href="/contact" class="nav-link">Contact</a>
-        <a href="/shop" class="nav-link nav-link--cta">Shop</a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/solutions/">Solutions</a>
+        <a href="/shop/">Kits &amp; Pricing</a>
+        <a href="/resources/">Resources</a>
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/contact/">Contact</a>
       </nav>
-      <div class="header-actions">
+      <div class="header__actions">
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+        <a href="/shop/" class="btn btn--primary btn--sm header__cta">View Kits</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
       </div>
     </div>
-    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-      <a href="/programs" class="mobile-nav-link">Programs</a>
-      <a href="/the-lab" class="mobile-nav-link">The Lab</a>
-      <a href="/about" class="mobile-nav-link">About</a>
-      <a href="/contact" class="mobile-nav-link">Contact</a>
-      <a href="/shop" class="mobile-nav-link">Shop</a>
-    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="/solutions/">Solutions</a>
+      <a href="/shop/">Kits &amp; Pricing</a>
+      <a href="/resources/">Resources</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
   </header>
 
-  <main>
+  <main id="main">
 
-    <!-- HERO -->
     <section class="page-hero">
       <div class="container">
-        <div class="page-hero-inner">
-          <div class="page-eyebrow">About Us</div>
-          <h1 class="page-heading">Ready-to-run programs<br><em>that last year after year.</em></h1>
-          <p class="page-sub">Out of Office Labs gives schools, districts, and organizations the complete templates, guides, and tools they need to launch a mentorship program — and keep it running no matter who's in charge.</p>
-        </div>
+        <span class="page-hero__badge">About</span>
+        <h1>Built by an operator, not a consultant.</h1>
+        <p>Out of Office Labs is a product company that builds mentorship operating systems for institutions. No consulting retainers. No platform subscriptions. Just structured systems your team can own and run.</p>
       </div>
     </section>
 
-    <!-- MISSION -->
-    <section class="section section--light">
+    <!-- Founder -->
+    <section class="section" aria-labelledby="founder-heading">
       <div class="container">
-        <div class="split-panel split-panel--reverse">
-          <div class="split-text">
-            <div class="section-eyebrow">Our Mission</div>
-            <h2 class="section-heading">Every student deserves<br><em>a path to someone who's been there.</em></h2>
-            <p class="section-body">Mentorship changes outcomes — but only when the program behind it is built to last. We give coordinators, counselors, and program directors the structure they need to launch quickly, run consistently, and hand off confidently.</p>
-            <p class="section-body">Every kit is ready to use on day one. Customize the details, add your school name, and you're running — without rebuilding anything from scratch.</p>
+        <div class="grid-2" style="align-items:center;gap:var(--space-12);">
+          <div style="background:var(--color-surface-2);border-radius:var(--radius-xl);aspect-ratio:1;display:flex;align-items:center;justify-content:center;">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+              <rect width="120" height="120" rx="16" fill="var(--color-surface)"/>
+              <circle cx="60" cy="45" r="20" fill="var(--color-primary)" opacity="0.15"/>
+              <circle cx="60" cy="45" r="12" fill="var(--color-primary)" opacity="0.3"/>
+              <rect x="30" y="72" width="60" height="24" rx="12" fill="var(--color-primary)" opacity="0.15"/>
+            </svg>
           </div>
-          <div class="split-image-wrap" style="aspect-ratio:16/9;">
-            <iframe src="https://customer-5vry1h7avigak34b.cloudflarestream.com/409a47ad57a841d2c64cc9cf6492dfbe/iframe?preload=none&poster=https%3A%2F%2Fcustomer-5vry1h7avigak34b.cloudflarestream.com%2F409a47ad57a841d2c64cc9cf6492dfbe%2Fthumbnails%2Fthumbnail.jpg" title="About Out of Office Labs" frameborder="0" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block;border-radius:inherit;"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div>
+            <span class="section-label">The Founder</span>
+            <h2 class="section-title" id="founder-heading">25 years of building, leading, and advising.</h2>
+            <p class="section-desc" style="margin-bottom:var(--space-4);">I've spent 25 years building and leading technical teams, advising chapters, and watching good mentoring ideas die in spreadsheets. Out of Office Labs is where that operator experience gets packaged into systems that lean teams can actually run.</p>
+            <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-6);">This isn't a consulting practice. It's a product company. You buy a kit, you own the system, and your team runs it. I built what I wished existed when I was the one advising chapters and coordinating mentoring programs with zero budget and a shared Google Sheet.</p>
 
-    <!-- VALUES -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header" style="text-align:center;">
-          <div class="section-eyebrow">What We Believe</div>
-          <h2 class="section-heading">The principles behind<br><em>everything we build.</em></h2>
-        </div>
-        <div class="values-grid">
-          <div class="value-card fade-in">
-            <div class="value-icon">🔧</div>
-            <h3 class="value-title">Built to last, not just launch</h3>
-            <p class="value-body">A program with documented templates and clear processes keeps running when staff turns over, semesters change, and budgets shift. We build for year three, not just day one.</p>
-          </div>
-          <div class="value-card fade-in">
-            <div class="value-icon">🤝</div>
-            <h3 class="value-title">Relationships are the outcome</h3>
-            <p class="value-body">Documents and templates are just scaffolding. The real result is a student who has someone in their corner — and an alum who stayed connected.</p>
-          </div>
-          <div class="value-card fade-in">
-            <div class="value-icon">⚡</div>
-            <h3 class="value-title">Done beats perfect</h3>
-            <p class="value-body">A mentorship program that launches imperfectly this semester does more good than a perfect one that launches never. We build for momentum.</p>
-          </div>
-          <div class="value-card fade-in">
-            <div class="value-icon">🏫</div>
-            <h3 class="value-title">Built for real constraints</h3>
-            <p class="value-body">We design for the counselor doing three jobs, the chapter president with 18 credit hours, and the advisor who volunteers on weekends. Real life, not ideal conditions.</p>
-          </div>
-          <div class="value-card fade-in">
-            <div class="value-icon">🔄</div>
-            <h3 class="value-title">Handoff-ready by design</h3>
-            <p class="value-body">Every kit is built so the next coordinator can open it, understand it, and run it — without needing to track down the person who built it.</p>
-          </div>
-          <div class="value-card fade-in">
-            <div class="value-icon">📈</div>
-            <h3 class="value-title">Outcomes over activity</h3>
-            <p class="value-body">We measure what matters — relationships formed, goals met, alumni who stayed engaged — not just meetings held or forms submitted.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHO WE SERVE -->
-    <section class="section section--offset">
-      <div class="container">
-        <div class="split-panel">
-          <div class="split-image-wrap">
-            <img src="/images/ool-school.png" alt="School hallway with students" class="split-image">
-          </div>
-          <div class="split-text">
-            <div class="section-eyebrow">Who We Serve</div>
-            <h2 class="section-heading">Schools, districts,<br><em>and Greek organizations.</em></h2>
-            <p class="section-body">We started in K–12 schools, helping administrators and counselors run mentorship programs that fit inside the school day without requiring extra staff.</p>
-            <p class="section-body">We expanded into Greek organizations because the opportunity is the same: alumni who want to give back, students who need mentors, and a gap between the two that structured programming closes.</p>
-            <p class="section-body">Both worlds need the same thing — structure that makes the human connection possible, then gets out of the way.</p>
-            <div class="about-tags">
-              <a href="/programs/k12" class="tag">K–12 programs</a>
-              <a href="/programs/college-access" class="tag">College access teams</a>
-              <a href="/programs/alumni-mentoring" class="tag">Alumni mentoring</a>
-              <a href="/programs/greek-alumni" class="tag">Greek organizations</a>
-              <a href="/programs/school-districts" class="tag">School districts</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT MAKES US DIFFERENT -->
-    <section class="kit-section">
-      <div class="container">
-        <div class="kit-inner kit-inner--centered">
-          <div class="kit-text">
-            <div class="section-eyebrow" style="color: #7dd4d7; border-color: rgba(125,212,215,0.3)">Why Out of Office Labs</div>
-            <h2 class="kit-heading">We've done the work<em>so you don't have to.</em></h2>
-            <p class="kit-body">Every template, handbook, and worksheet in our kits has been built from real mentorship programs — not from a whiteboard. The experience is already in the documents. You just add your details.</p>
-            <div class="kit-outcomes">
-              <div class="kit-outcome">
-                <div class="kit-outcome-icon">✓</div>
-                <div>Pre-built for real-world constraints — not ideal scenarios</div>
+            <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);">
+              <div class="stat-block" style="text-align:left;padding:0;">
+                <p class="stat-block__value">25+</p>
+                <p class="stat-block__label">Years in Ops</p>
               </div>
-              <div class="kit-outcome">
-                <div class="kit-outcome-icon">✓</div>
-                <div>Designed to be handed off year after year without losing momentum</div>
+              <div class="stat-block" style="text-align:left;padding:0;">
+                <p class="stat-block__value">100+</p>
+                <p class="stat-block__label">Chapters Advised</p>
               </div>
-              <div class="kit-outcome">
-                <div class="kit-outcome-icon">✓</div>
-                <div>Customizable in hours, not weeks — just drop in your details</div>
-              </div>
-              <div class="kit-outcome">
-                <div class="kit-outcome-icon">✓</div>
-                <div>Direct support available when you need to move fast or solve something unusual</div>
+              <div class="stat-block" style="text-align:left;padding:0;">
+                <p class="stat-block__value">$0</p>
+                <p class="stat-block__label">VC Raised</p>
               </div>
             </div>
-            <a href="/programs" class="btn btn--inverse">See Our Programs →</a>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Philosophy -->
+    <section class="section" style="background:var(--color-surface-2);" aria-labelledby="philosophy-heading">
+      <div class="container container--narrow">
+        <div class="section-header section-header--centered">
+          <span class="section-label">Philosophy</span>
+          <h2 class="section-title" id="philosophy-heading">What we believe.</h2>
+        </div>
+
+        <div style="display:grid;gap:var(--space-6);">
+          <div class="card" style="cursor:default;transform:none;">
+            <h3>Mentorship needs structure to work.</h3>
+            <p>Good intentions aren't a system. A program without intake, matching, tracking, and reporting is a program that fizzles by week four.</p>
+          </div>
+          <div class="card" style="cursor:default;transform:none;">
+            <h3>Institutions deserve products, not projects.</h3>
+            <p>A consulting engagement ends. A platform subscription drains budget. A product you own keeps producing value as long as you run it.</p>
+          </div>
+          <div class="card" style="cursor:default;transform:none;">
+            <h3>Lean teams should be able to run great programs.</h3>
+            <p>You shouldn't need five FTEs and a six-figure budget to run mentoring that actually moves the needle. Our kits are designed for the one-person office.</p>
+          </div>
+          <div class="card" style="cursor:default;transform:none;">
+            <h3>Proof matters more than vibes.</h3>
+            <p>Every kit includes impact reporting. Because when your dean or board asks "is this working?" you should have an answer backed by data, not anecdotes.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section cta-section">
+    <section class="cta-section fade-in">
       <div class="container">
-        <div class="cta-block">
-          <h2 class="cta-heading">Want to work<br><em>with us?</em></h2>
-          <p class="cta-sub">Whether you need a kit, a consultation, or just want to talk through your program — we're here.</p>
-          <div class="cta-buttons">
-            <a href="/contact" class="btn btn--primary">Get in Touch</a>
-            <a href="/resources" class="btn btn--ghost-light">Browse the Kit →</a>
-          </div>
+        <h2>Ready to run mentorship like an operation?</h2>
+        <p>Pick a kit, customize it for your institution, and have a live program in weeks.</p>
+        <div class="cta-section__actions">
+          <a href="/shop/" class="btn btn--primary btn--lg">View Mentorship Kits</a>
+          <a href="/contact/" class="btn btn--outline btn--lg">Talk Through a Pilot</a>
         </div>
+        <p class="cta-section__contact">Or email us directly at <a href="mailto:hello@outofofficelabs.com">hello@outofofficelabs.com</a></p>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner container">
-      <div class="footer-brand">
-        <a href="/" class="logo footer-logo">
-          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-            <rect x="2" y="2" width="14" height="14" rx="2" fill="var(--color-primary)"/>
-            <rect x="20" y="2" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-            <rect x="2" y="20" width="14" height="14" rx="2" fill="var(--color-primary)" opacity="0.4"/>
-            <rect x="20" y="20" width="14" height="14" rx="2" fill="var(--color-primary)"/>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="/" class="footer__logo" aria-label="Out of Office Labs — home">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="6" fill="var(--color-primary)"/>
+            <rect x="7" y="9" width="18" height="2.5" rx="1" fill="var(--color-accent)"/>
+            <rect x="7" y="14" width="13" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.7"/>
+            <rect x="7" y="19" width="15" height="2.5" rx="1" fill="var(--color-accent)" opacity="0.5"/>
           </svg>
-          <span class="logo-text">Out of Office Labs</span>
+          Out of Office Labs
         </a>
-        <p class="footer-tagline">Templates, guides, and tools to launch or strengthen any mentorship program.</p>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="/solutions/">Solutions</a>
+          <a href="/shop/">Kits &amp; Pricing</a>
+          <a href="/resources/">Resources</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:hello@outofofficelabs.com">Email</a>
+        </nav>
+        <p class="footer__copy">&copy; 2026 Out of Office Labs. All rights reserved.</p>
       </div>
-      <nav class="footer-nav">
-        <a href="/programs" class="footer-link">Programs</a>
-        <a href="/the-lab" class="footer-link">The Lab</a>
-        <a href="/resources" class="footer-link">Resources</a>
-        <a href="/about" class="footer-link">About</a>
-        <a href="/contact" class="footer-link">Contact</a>
-        <a href="https://www.linkedin.com/company/113029407" class="footer-link" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
-      </nav>
-    </div>
-    <div class="footer-bottom container">
-      <p class="footer-copy">© 2026 Out of Office Labs. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('header--scrolled', window.scrollY > 20);
-    }, { passive: true });
-
-    const themeToggle = document.querySelector('[data-theme-toggle]');
-    themeToggle?.addEventListener('click', () => {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    });
-
-    (() => {
-      const toggle = document.getElementById('mobileToggle');
-      const nav = document.getElementById('mobileNav');
-      if(!toggle || !nav) return;
-      toggle.addEventListener('click', () => {
-        const open = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!open));
-        nav.setAttribute('aria-hidden', String(open));
-        nav.classList.toggle('is-open', !open);
-        toggle.classList.toggle('is-open', !open);
-      });
-    })();
-
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fade-in--visible'); observer.unobserve(e.target); } }),
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+  <script src="../site.js" defer></script>
 </body>
 </html>
