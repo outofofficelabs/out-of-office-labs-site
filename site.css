@@ -159,7 +159,7 @@
 }
 
 .section {
-  padding-block: clamp(var(--space-12), 8vw, var(--space-24));
+  padding-block: clamp(var(--space-10), 5vw, var(--space-16));
 }
 
 /* ===========================
@@ -429,7 +429,7 @@
    PAGE HERO (interior pages)
    =========================== */
 .page-hero {
-  padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+  padding-block: clamp(var(--space-8), 4vw, var(--space-12));
   border-bottom: 1px solid var(--color-divider);
 }
 
