@@ -151,27 +151,27 @@ const NEW_KIT_DRIVE_LINKS = {
   // Per-audience kits (Set A product IDs) — these match the buy.stripe.com links on the site
   'prod_UJhLqLV7CMTCtR': {
     name: 'K-12 Schools Kit',
-    driveLink: 'PASTE_NEW_K12_DRIVE_FOLDER_LINK_HERE',
+    driveLink: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view',
     quickStart: 'OOOL_QS_StartHere_K12_v1',
   },
   'prod_UJhLdAYVvuoiyp': {
     name: 'Greek Life Kit',
-    driveLink: 'PASTE_NEW_GL_DRIVE_FOLDER_LINK_HERE',
+    driveLink: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view',
     quickStart: 'OOOL_QS_StartHere_GL_v1',
   },
   'prod_UJhLY2ReCdFi2e': {
     name: 'Higher Ed Kit',
-    driveLink: 'PASTE_NEW_HE_DRIVE_FOLDER_LINK_HERE',
+    driveLink: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view',
     quickStart: 'OOOL_QS_StartHere_HE_v1',
   },
   'prod_UJhLDfQiI9DDCv': {
     name: 'College Access Kit',
-    driveLink: 'PASTE_NEW_CA_DRIVE_FOLDER_LINK_HERE',
+    driveLink: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view',
     quickStart: 'OOOL_QS_StartHere_CA_v1',
   },
   'prod_UJhLSBHdHpIfdp': {
     name: 'School District Kit',
-    driveLink: 'PASTE_NEW_SD_DRIVE_FOLDER_LINK_HERE',
+    driveLink: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view',
     quickStart: 'OOOL_QS_StartHere_SD_v1',
   },
 };
