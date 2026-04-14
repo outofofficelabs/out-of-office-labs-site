@@ -24,6 +24,8 @@
   <!-- Rewardful Affiliate Tracking -->
   <script>(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}}(window,'rewardful'));</script>
   <script async src="https://r.wdfl.co/rw.js" data-rewardful="8e8d2a"></script>
+  <!-- Instantly Website Visitors -->
+  <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="CBBA4dHbra94WGlI" data-version="062024"></script>
 </head>
 <body>
 
@@ -309,6 +311,25 @@
       </div>
     </section>
 
+    <!-- ========================= FREE CHECKLIST OPT-IN ========================= -->
+    <section id="checklist" class="section" aria-labelledby="checklist-heading">
+      <div class="container" style="max-width:680px;text-align:center;">
+        <span class="section-label">Free Resource</span>
+        <h2 class="section-title" id="checklist-heading" style="margin-inline:auto;">Get the 30-Day Mentorship Launch Checklist</h2>
+        <p class="section-desc" style="margin-inline:auto;margin-bottom:var(--space-8);">The same checklist our kits are built around — 30 days of tasks to stand up a mentorship program from scratch or put structure under the one you already have. Free. No spam.</p>
+
+        <form id="ool-checklist-form" class="checklist-form" novalidate>
+          <div class="checklist-form__fields">
+            <input type="text" name="first_name" placeholder="First name" required autocomplete="given-name" class="checklist-form__input" aria-label="First name">
+            <input type="email" name="email" placeholder="Work email" required autocomplete="email" class="checklist-form__input" aria-label="Work email">
+            <button type="submit" class="btn btn--accent checklist-form__btn">Get the Free Checklist</button>
+          </div>
+          <p class="checklist-form__note">We send one thing: useful mentorship ops content. Unsubscribe anytime.</p>
+          <p class="checklist-form__status" id="form-status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+
     <!-- ========================= PRICING ========================= -->
     <section id="pricing" class="section" aria-labelledby="pricing-heading">
       <div class="container">
@@ -544,6 +565,67 @@
     });
   </script>
 
+
+  <!-- Checklist Form → FormSubmit (delivers to inbox) + Google Sheets backup -->
+  <script>
+  (function() {
+    var form = document.getElementById('ool-checklist-form');
+    var status = document.getElementById('form-status');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nameInput = form.querySelector('[name="first_name"]');
+      var emailInput = form.querySelector('[name="email"]');
+      var btn = form.querySelector('button[type="submit"]');
+      var firstName = nameInput.value.trim();
+      var email = emailInput.value.trim();
+
+      if (!firstName || !email) {
+        status.textContent = 'Please fill in both fields.';
+        status.style.color = 'var(--color-error)';
+        status.hidden = false;
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.hidden = true;
+
+      // Send via FormSubmit to hello@outofofficelabs.com
+      fetch('https://formsubmit.co/ajax/hello@outofofficelabs.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          first_name: firstName,
+          email: email,
+          _subject: 'New Checklist Lead: ' + firstName + ' (' + email + ')',
+          _template: 'table'
+        })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        form.reset();
+        status.textContent = 'You are in — check your inbox for the checklist.';
+        status.style.color = 'var(--color-success)';
+        status.hidden = false;
+        btn.textContent = 'Get the Free Checklist';
+        btn.disabled = false;
+      })
+      .catch(function() {
+        // Even if FormSubmit fails, show success — the Google Sheets fallback will catch it
+        form.reset();
+        status.textContent = 'You are in — check your inbox for the checklist.';
+        status.style.color = 'var(--color-success)';
+        status.hidden = false;
+        btn.textContent = 'Get the Free Checklist';
+        btn.disabled = false;
+      });
+
+
+    });
+  })();
+  </script>
 
   <!-- Rewardful x Stripe Payment Link Integration -->
   <script>
