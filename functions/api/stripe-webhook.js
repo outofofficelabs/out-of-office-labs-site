@@ -11,11 +11,11 @@
 // ONE PRODUCT: $97 mentorship kit, 5 audience variants. No tiers.
 
 const ALL_DRIVE_LINKS = [
-  { name: 'Greek Alumni Kit', url: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view' },
-  { name: 'K-12 Kit', url: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view' },
-  { name: 'School District Kit', url: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view' },
-  { name: 'College Access Kit', url: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view' },
-  { name: 'Higher Ed Alumni Kit', url: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view' },
+  { name: 'Greek Alumni Kit', url: 'https://drive.google.com/drive/folders/1DFleUJyZsrb9-fbgNo6c4sg4zfeyLT50' },
+  { name: 'K-12 Kit', url: 'https://drive.google.com/drive/folders/1ds78ioL2vjqW38tU3RS6p0Xa-rPW8_-y' },
+  { name: 'School District Kit', url: 'https://drive.google.com/drive/folders/13daJu8ZlOC8kvyIZaSWnP7UIMd1eeh66' },
+  { name: 'College Access Kit', url: 'https://drive.google.com/drive/folders/1c0-hLYAKP_Ac8QmGovr5HONNsOy3eW6D' },
+  { name: 'Higher Ed Alumni Kit', url: 'https://drive.google.com/drive/folders/1WyCg0ibaubiMS0qiDQaIhzWOqk8jqJT6' },
 ];
 
 const KIT_DATA = {
@@ -24,64 +24,64 @@ const KIT_DATA = {
     name: 'Out of Office Labs Single Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view',
-    driveUrl: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1ds78ioL2vjqW38tU3RS6p0Xa-rPW8_-y'
   },
   // ARCHIVED: Pro Kit, Campus License, District License — no longer sold
-  // ── Set A: Per-audience kits (legacy, still honored) ──
+  // ── Set A: Per-audience kits ($97 each, active) ──
   'prod_UJhLqLV7CMTCtR': {
     name: 'K-12 Mentorship Operations Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view',
-    driveUrl: 'https://drive.google.com/file/d/1_F8HTIsKGs8Y21pONoaST23skTysAazJ/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1ds78ioL2vjqW38tU3RS6p0Xa-rPW8_-y'
   },
   'prod_UJhLdAYVvuoiyp': {
     name: 'Greek Life Mentorship Operations Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view',
-    driveUrl: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1DFleUJyZsrb9-fbgNo6c4sg4zfeyLT50'
   },
   'prod_UJhLY2ReCdFi2e': {
     name: 'Higher Ed Mentorship Operations Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view',
-    driveUrl: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1WyCg0ibaubiMS0qiDQaIhzWOqk8jqJT6'
   },
   'prod_UJhLDfQiI9DDCv': {
     name: 'College Access Mentorship Operations Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view',
-    driveUrl: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1c0-hLYAKP_Ac8QmGovr5HONNsOy3eW6D'
   },
   'prod_UJhLSBHdHpIfdp': {
     name: 'School District Mentorship Operations Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view',
-    driveUrl: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view'
+    driveUrl: 'https://drive.google.com/drive/folders/13daJu8ZlOC8kvyIZaSWnP7UIMd1eeh66'
   },
-  // ── Individual kits by product ID ──
+  // ── Individual kits by product ID (Set B legacy) ──
   'prod_UFfUBMfd9Dcyyc': {
     name: 'Greek Alumni Mentorship & Fundraising Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view',
-    driveUrl: 'https://drive.google.com/file/d/1uDQplAOwnTqn-8YJSKD10OgjTqTk7dTk/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1DFleUJyZsrb9-fbgNo6c4sg4zfeyLT50'
   },
   'prod_UFfULHbnzFtXvW': {
     name: 'School District Mentorship Scale Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view',
-    driveUrl: 'https://drive.google.com/file/d/1LMuzusakcvLTv-e7U2d4yXdfZWEKUXVK/view'
+    driveUrl: 'https://drive.google.com/drive/folders/13daJu8ZlOC8kvyIZaSWnP7UIMd1eeh66'
   },
   'prod_UFfUnjaf2d4bEs': {
     name: 'College Access Team Mentorship Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view',
-    driveUrl: 'https://drive.google.com/file/d/12nUQWvF5Zd2moamw0ovV-fOfhDB5AQ1v/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1c0-hLYAKP_Ac8QmGovr5HONNsOy3eW6D'
   },
   'prod_UFfUqwJPX6NPoQ': {
     name: 'Higher Ed Alumni Mentoring Kit',
     type: 'single',
     pdfUrl: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view',
-    driveUrl: 'https://drive.google.com/file/d/1c9hIwo0d3Zrd5PsKjfT0-jsgAXPkKEal/view'
+    driveUrl: 'https://drive.google.com/drive/folders/1WyCg0ibaubiMS0qiDQaIhzWOqk8jqJT6'
   }
 };
 
