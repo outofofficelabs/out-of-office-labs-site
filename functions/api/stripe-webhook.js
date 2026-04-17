@@ -354,11 +354,20 @@ export async function onRequest(context) {
       })
     });
     const emailResult = await emailRes.json();
+    const emailSentOk = emailRes.ok && emailResult?.id;
 
-    console.log('Delivery email sent to', customerEmail, 'for', kit.name, '| Result:', JSON.stringify(emailResult));
+    console.log('Delivery email attempt to', customerEmail, 'for', kit.name,
+      '| Status:', emailRes.status,
+      '| OK:', emailSentOk,
+      '| Result:', JSON.stringify(emailResult));
 
     return new Response(
-      JSON.stringify({ received: true, email_sent: true, kit: kit.name }),
+      JSON.stringify({
+        received: true,
+        email_sent: emailSentOk,
+        kit: kit.name,
+        ...(emailSentOk ? { resend_id: emailResult.id } : { email_error: emailResult })
+      }),
       { status: 200, headers: { 'Content-Type': 'application/json' } }
     );
   } catch (err) {
