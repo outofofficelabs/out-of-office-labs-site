@@ -184,87 +184,8 @@ function buildSingleKitEmailHtml(kit) {
 </html>`;
 }
 
-// REMOVED: buildBundleEmailHtml — no bundle products exist
-// REMOVED: buildProKitEmailHtml — no pro tier exists
+// REMOVED: buildBundleEmailHtml, buildProKitEmailHtml — no bundle/pro products exist
 // One product only: $97 single kit.
-if (false) { // dead code block — kept for reference, will be cleaned up
-function _deadBundleEmailHtml(kit) {
-  const linksHtml = kit.driveLinks.map(l =>
-    `<tr><td style="padding: 8px 0; border-bottom: 1px solid #E5E5DF;"><a href="${l.url}" style="color: #1E3A5F; text-decoration: none; font-weight: 600; font-size: 15px;">📁 ${l.name}</a></td></tr>`
-  ).join('');
-
-  return `<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"></head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 16px; color: #1A1D23; background: #FAFAF8;">
-  <div style="text-align: center; margin-bottom: 32px;">
-    <div style="display: inline-block; background: #1E3A5F; border-radius: 6px; padding: 8px 16px;">
-      <span style="color: #D4880E; font-weight: 700; font-size: 14px;">Out of Office Labs</span>
-    </div>
-  </div>
-
-  <h1 style="font-size: 24px; font-weight: 700; color: #1A1D23; margin-bottom: 8px;">Your ${kit.name} is ready.</h1>
-  <p style="color: #6B7080; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
-    All 5 of your mentorship kits are ready to download.
-  </p>
-
-  <div style="background: #FFFFFF; border: 1px solid #D8D8D2; border-radius: 8px; padding: 24px; margin-bottom: 24px;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
-      ${linksHtml}
-    </table>
-  </div>
-
-  <div style="background: #F5F5F2; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
-    <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 12px;">What to do next</h2>
-    <ol style="margin: 0; padding-left: 20px; color: #6B7080; font-size: 14px; line-height: 1.8;">
-      <li><strong style="color: #1A1D23;">Copy to your Drive</strong> — Use File → Make a copy for each document</li>
-      <li><strong style="color: #1A1D23;">Customize</strong> — Add your branding, adjust timelines</li>
-      <li><strong style="color: #1A1D23;">Launch your pilot</strong> — Follow the coordinator playbook</li>
-    </ol>
-  </div>
-
-  <p style="text-align: center; color: #6B7080; font-size: 14px; margin-bottom: 16px;">Need help getting started? Reply to this email — we read everything.</p>
-
-  <hr style="border: none; border-top: 1px solid #E5E5DF; margin: 32px 0;">
-  <p style="color: #A0A4AD; font-size: 12px; text-align: center;">
-    © 2026 Out of Office Labs · <a href="https://outofofficelabs.com" style="color: #A0A4AD;">outofofficelabs.com</a>
-  </p>
-</body>
-</html>`;
-}
-
-function _deadProKitEmailHtml(kit) {
-  return `<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"></head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 16px; color: #1A1D23; background: #FAFAF8;">
-  <div style="text-align: center; margin-bottom: 32px;">
-    <div style="display: inline-block; background: #1E3A5F; border-radius: 6px; padding: 8px 16px;">
-      <span style="color: #D4880E; font-weight: 700; font-size: 14px;">Out of Office Labs</span>
-    </div>
-  </div>
-
-  <h1 style="font-size: 24px; font-weight: 700; color: #1A1D23; margin-bottom: 8px;">Your Pro Kit purchase is confirmed.</h1>
-  <p style="color: #6B7080; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
-    Thank you for purchasing the <strong style="color: #1A1D23;">Pro Kit</strong>. Your purchase includes a complete mentorship kit, advanced coordinator playbook, multi-cohort tracking, priority support, and quarterly template updates.
-  </p>
-
-  <div style="background: #F5F5F2; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
-    <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 12px;">Next Step</h2>
-    <p style="color: #6B7080; font-size: 14px; line-height: 1.6; margin: 0;">
-      Reply to this email with your preferred program — <strong style="color: #1A1D23;">K-12, College Access, Greek Alumni, Higher Ed, or School Districts</strong> — and we'll send your kit right away.
-    </p>
-  </div>
-
-  <p style="text-align: center; color: #6B7080; font-size: 14px; margin-bottom: 16px;">Questions? Reply to this email — we read everything.</p>
-
-  <hr style="border: none; border-top: 1px solid #E5E5DF; margin: 32px 0;">
-  <p style="color: #A0A4AD; font-size: 12px; text-align: center;">
-    © 2026 Out of Office Labs · <a href="https://outofofficelabs.com" style="color: #A0A4AD;">outofofficelabs.com</a>
-  </p>
-</body>
-</html>`;
-}
 
 // ─── Main handler ───────────────────────────────────────────────
 export async function onRequest(context) {
