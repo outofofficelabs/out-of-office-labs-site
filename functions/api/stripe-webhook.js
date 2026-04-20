@@ -268,7 +268,7 @@ export async function onRequest(context) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'Out of Office Labs <hello@outofofficelabs.com>',
+        from: 'Out of Office Labs <hello@send.outofofficelabs.com>',
         to: [customerEmail],
         subject: `Your ${kit.name} is Ready — Out of Office Labs`,
         html: emailHtml
