@@ -628,12 +628,12 @@
       btn.textContent = 'Sending...';
       status.hidden = true;
 
-      // Send via FormSubmit to hello@outofofficelabs.com
-      fetch('https://formsubmit.co/ajax/hello@outofofficelabs.com', {
+      // Send to n8n webhook (checklist automation)
+      fetch('https://outofofficelabs.app.n8n.cloud/webhook/free-checklist-optin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          first_name: firstName,
+          name: firstName,
           email: email,
           _subject: 'New Checklist Lead: ' + firstName + ' (' + email + ')',
           _template: 'table'
