@@ -631,7 +631,7 @@
       // Send to n8n webhook (checklist automation)
       fetch('https://outofofficelabs.app.n8n.cloud/webhook/free-checklist-optin', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify({
           name: firstName,
           email: email,
