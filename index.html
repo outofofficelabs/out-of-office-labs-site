@@ -604,61 +604,55 @@
 
   <!-- Checklist Form → FormSubmit (delivers to inbox) + Google Sheets backup -->
   <script>
-  (function() {
-    var form = document.getElementById('ool-checklist-form');
-    var status = document.getElementById('form-status');
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var nameInput = form.querySelector('[name="first_name"]');
+(function() {
+    // Bind webhook submit handler to every checklist opt-in form on the page.
+    // Covers both the hero form (name="name") and the footer form (name="first_name").
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function(form) {
       var emailInput = form.querySelector('[name="email"]');
-      var btn = form.querySelector('button[type="submit"]');
-      var firstName = nameInput.value.trim();
-      var email = emailInput.value.trim();
+      var nameInput = form.querySelector('[name="first_name"], [name="name"]');
+      if (!emailInput || !nameInput) return;
 
-      if (!firstName || !email) {
-        status.textContent = 'Please fill in both fields.';
-        status.style.color = 'var(--color-error)';
-        status.hidden = false;
-        return;
+      var status = form.querySelector('#form-status, .form-status');
+      var btn = form.querySelector('button[type="submit"]');
+      var defaultBtnText = btn ? btn.textContent : 'Send';
+
+      function setStatus(msg, ok) {
+        if (status) {
+          status.textContent = msg;
+          status.style.color = ok ? 'var(--color-success)' : 'var(--color-error)';
+          status.hidden = false;
+        }
       }
 
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-      status.hidden = true;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var firstName = nameInput.value.trim();
+        var email = emailInput.value.trim();
+        if (!firstName || !email) {
+          setStatus('Please fill in both fields.', false);
+          return;
+        }
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+        if (status) status.hidden = true;
 
-      // Send to n8n webhook (checklist automation)
-      fetch('https://outofofficelabs.app.n8n.cloud/webhook/free-checklist-optin', {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify({
-          name: firstName,
-          email: email,
-          _subject: 'New Checklist Lead: ' + firstName + ' (' + email + ')',
-          _template: 'table'
+        // Send to n8n webhook (checklist automation)
+        fetch('https://outofofficelabs.app.n8n.cloud/webhook/free-checklist-optin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify({ name: firstName, email: email })
         })
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        form.reset();
-        status.textContent = 'You are in — check your inbox for the checklist.';
-        status.style.color = 'var(--color-success)';
-        status.hidden = false;
-        btn.textContent = 'Get the Free Checklist';
-        btn.disabled = false;
-      })
-      .catch(function() {
-        // Even if FormSubmit fails, show success — the Google Sheets fallback will catch it
-        form.reset();
-        status.textContent = 'You are in — check your inbox for the checklist.';
-        status.style.color = 'var(--color-success)';
-        status.hidden = false;
-        btn.textContent = 'Get the Free Checklist';
-        btn.disabled = false;
+        .then(function() {
+          form.reset();
+          setStatus('You are in \u2014 check your inbox for the checklist.', true);
+          if (btn) { btn.textContent = defaultBtnText; btn.disabled = false; }
+        })
+        .catch(function() {
+          form.reset();
+          setStatus('You are in \u2014 check your inbox for the checklist.', true);
+          if (btn) { btn.textContent = defaultBtnText; btn.disabled = false; }
+        });
       });
-
-
     });
   })();
   </script>
